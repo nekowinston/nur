@@ -5,16 +5,21 @@
 # Having pkgs default to <nixpkgs> is fine though, and it lets you use short
 # commands such as:
 #     nix-build -A mypackage
-
-{ pkgs ? import <nixpkgs> { } }:
-
-{
+{pkgs ? import <nixpkgs> {}}: {
   # The `lib`, `modules`, and `overlay` names are special
-  lib = import ./lib { inherit pkgs; }; # functions
+  lib = import ./lib {inherit pkgs;}; # functions
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  example-package = pkgs.callPackage ./pkgs/example-package { };
-  # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
-  # ...
+  cura = pkgs.callPackage ./pkgs/cura {};
+  discord-applemusic-rich-presence = pkgs.callPackage ./pkgs/discord-applemusic-rich-presence {};
+  discover-overlay = pkgs.callPackage ./pkgs/discover-overlay {};
+  # TODO: figure out pnpm
+  # emmet-ls = pkgs.callPackage ./pkgs/emmet-ls {};
+  helm-ls = pkgs.callPackage ./pkgs/helm-ls {};
+  jq-lsp = pkgs.callPackage ./pkgs/jq-lsp {};
+  mopidy-podcast-itunes = pkgs.callPackage ./pkgs/mopidy-podcast-itunes {};
+  org-stats = pkgs.callPackage ./pkgs/org-stats {};
+  papirus-folders-catppuccin = pkgs.callPackage ./pkgs/papirus-folders-catppuccin {};
+  vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools = pkgs.callPackage ./pkgs/vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools {};
 }
