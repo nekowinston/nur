@@ -2,6 +2,7 @@
   buildGoModule,
   fetchFromGitHub,
   lib,
+  stdenv,
   ...
 }:
 buildGoModule rec {
@@ -22,5 +23,6 @@ buildGoModule rec {
     homepage = "https://github.com/caarlos0/discord-applemusic-rich-presence";
     license = licenses.mit;
     platforms = platforms.darwin;
+    broken = stdenv.isLinux;
   };
 }
