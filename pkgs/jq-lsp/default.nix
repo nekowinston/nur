@@ -22,6 +22,5 @@ buildGo118Module rec {
     description = "jq language server";
     homepage = "https://github.com/wader/jq-lsp";
     license = licenses.mit;
-    maintainers = [maintainers.nekowinston];
   };
 }

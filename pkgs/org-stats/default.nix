@@ -21,6 +21,5 @@ buildGo118Module rec {
     description = "Get the contributor stats summary from all repos of any given organization";
     homepage = "https://github.com/caarlos0/org-stats";
     license = licenses.mit;
-    maintainers = [maintainers.nekowinston];
   };
 }

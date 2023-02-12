@@ -21,6 +21,5 @@ buildGo118Module rec {
     description = "helm language server";
     homepage = "https://github.com/mrjosh/helm-ls";
     license = licenses.mit;
-    maintainers = [maintainers.nekowinston];
   };
 }

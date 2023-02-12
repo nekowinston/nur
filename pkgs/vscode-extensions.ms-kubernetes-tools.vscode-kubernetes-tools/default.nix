@@ -14,6 +14,5 @@ vscode-utils.buildVscodeMarketplaceExtension {
     description = "Develop, deploy and debug Kubernetes applications";
     license = licenses.asl20;
     downloadPage = "https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools";
-    maintainers = [maintainers.nekowinston];
   };
 }

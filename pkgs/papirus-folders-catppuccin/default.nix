@@ -49,6 +49,5 @@ in
       description = "Soothing pastel theme for Papirus Icon Theme folders";
       homepage = "https://github.com/catppuccin/papirus-folders";
       license = licenses.mit;
-      maintainers = [maintainers.nekowinston];
     };
   }

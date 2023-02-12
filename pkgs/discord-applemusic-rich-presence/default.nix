@@ -21,7 +21,6 @@ buildGoModule rec {
     description = "Discord's Rich Presence from Apple Music";
     homepage = "https://github.com/caarlos0/discord-applemusic-rich-presence";
     license = licenses.mit;
-    maintainers = [maintainers.nekowinston];
     platforms = platforms.darwin;
   };
 }

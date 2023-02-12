@@ -24,6 +24,5 @@ buildNpmPackage {
     description = "Emmet language server";
     homepage = "https://github.com/aca/emmet-ls";
     license = licenses.mit;
-    maintainers = [maintainers.nekowinston];
   };
 }
