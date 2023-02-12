@@ -1,37 +1,77 @@
-# nur-packages-template
+# nekowinston/nur
 
-**A template for [NUR](https://github.com/nix-community/NUR) repositories**
+[![Build and populate cache](https://github.com/nekowinston/nur/actions/workflows/build.yml/badge.svg)](https://github.com/nekowinston/nur/actions/workflows/build.yml)
+[![Cachix Cache](https://img.shields.io/badge/cachix-nekowinston-blue.svg)](https://<YOUR_CACHIX_CACHE_NAME>.cachix.org)
 
-## Setup
+## What's available
 
-1. Click on [Use this template](https://github.com/nix-community/nur-packages-template/generate) to start a repo based on this template. (Do _not_ fork it.)
-2. Add your packages to the [pkgs](./pkgs) directory and to
-   [default.nix](./default.nix)
-   * Remember to mark the broken packages as `broken = true;` in the `meta`
-     attribute, or travis (and consequently caching) will fail!
-   * Library functions, modules and overlays go in the respective directories
-3. Choose your CI: Depending on your preference you can use github actions (recommended) or [Travis ci](https://travis-ci.com).
-   - Github actions: Change your NUR repo name and optionally add a cachix name in [.github/workflows/build.yml](./.github/workflows/build.yml) and change the cron timer
-     to a random value as described in the file
-   - Travis ci: Change your NUR repo name and optionally your cachix repo name in 
-   [.travis.yml](./.travis.yml). Than enable travis in your repo. You can add a cron job in the repository settings on travis to keep your cachix cache fresh
-5. Change your travis and cachix names on the README template section and delete
-   the rest
-6. [Add yourself to NUR](https://github.com/nix-community/NUR#how-to-add-your-own-repository)
+| Package                                                                      | Note             |
+| ---------------------------------------------------------------------------- | ---------------- |
+| [`cura`][cura]                                                               | AppImage wrapper |
+| [`discord-applemusic-rich-presence`][darp]                                   | macOS only       |
+| [`discover-overlay`][discover]                                               |                  |
+| [`helm-ls`][helm-ls]                                                         |                  |
+| [`jq-lsp`][jq-lsp]                                                           |                  |
+| [`mopidy-podcast-itunes`][mopidy-pi]                                         |                  |
+| [`org-stats`][org-stats]                                                     |                  |
+| [`papirus-folders-catppuccin`][papirus]                                      |                  |
+| [`vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools`][k8s-tools] | VSCode extension |
 
-## README template
+| Overlay          | Note         |
+| ---------------- | ------------ |
+| [`picom`][picom] | FT-Labs fork |
 
-# nur-packages
+[cura]: https://ultimaker.com/software/ultimaker-cura
+[darp]: https://github.com/caarlos0/discord-applemusic-rich-presence
+[discover]: https://github.com/trigg/Discover
+[helm-ls]: https://github.com/mrjosh/helm-ls
+[jq-lsp]: https://github.com/wader/jq-lsp
+[k8s-tools]: https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools
+[mopidy-pi]: https://github.com/tkem/mopidy-podcast-itunes
+[org-stats]: https://github.com/caarlos0/org-stats
+[papirus]: https://github.com/catppuccin/papirus-folders
+[picom]: https://github.com/FT-Labs/picom
 
-**My personal [NUR](https://github.com/nix-community/NUR) repository**
+## Usage
 
-<!-- Remove this if you don't use github actions -->
-![Build and populate cache](https://github.com/<YOUR-GITHUB-USER>/nur-packages/workflows/Build%20and%20populate%20cache/badge.svg)
+<!-- With `packageOverrides`: -->
 
-<!--
-Uncomment this if you use travis:
+With `overlays`:
 
-[![Build Status](https://travis-ci.com/<YOUR_TRAVIS_USERNAME>/nur-packages.svg?branch=master)](https://travis-ci.com/<YOUR_TRAVIS_USERNAME>/nur-packages)
--->
-[![Cachix Cache](https://img.shields.io/badge/cachix-<YOUR_CACHIX_CACHE_NAME>-blue.svg)](https://<YOUR_CACHIX_CACHE_NAME>.cachix.org)
+```nix
+{
+  inputs = {
+    nur.url = "github:nix-community/NUR";
+    nekowinston-nur.url = "github:nekowinston/nur";
+  };
 
+  outputs = {
+    self,
+    nixpkgs,
+    nur,
+    nekowinston-nur,
+    ...
+  }: let
+    overlays = final: prev: {
+      nur = import nur {
+        nurpkgs = prev;
+        pkgs = prev;
+        repoOverrides = {nekowinston = import nekowinston-nur {pkgs = prev;};};
+      };
+    };
+    # ... your other overlays
+  in {
+    system = "x86_64-linux";
+
+    modules = [
+      ({config, ...}: {
+        config = {
+          nixpkgs.overlays = [
+            overlays
+          ];
+        };
+      })
+    ];
+  };
+}
+```
