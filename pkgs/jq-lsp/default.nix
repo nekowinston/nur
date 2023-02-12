@@ -16,7 +16,7 @@ buildGo118Module rec {
     sha256 = "sha256-Xq0y685omljMOlxxqD1Q193G+UF0Y3ot5SXAzCma3S0=";
   };
 
-  vendorSha256 = "sha256-TdxnNPD06+HXPMbmwdnjgt5VteY+YI0gvmdl5KX5dEc=";
+  vendorSha256 = "sha256-ppQ81uERHBgOr/bm/CoDSWcK+IqHwvcL6RFi0DgoLuw=";
 
   meta = with lib; {
     description = "jq language server";
