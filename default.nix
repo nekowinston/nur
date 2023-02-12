@@ -20,6 +20,7 @@
   jq-lsp = pkgs.callPackage ./pkgs/jq-lsp {};
   mopidy-podcast-itunes = pkgs.callPackage ./pkgs/mopidy-podcast-itunes {};
   org-stats = pkgs.callPackage ./pkgs/org-stats {};
+  picom = pkgs.picom;
   papirus-folders-catppuccin = pkgs.callPackage ./pkgs/papirus-folders-catppuccin {};
   vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools = pkgs.callPackage ./pkgs/vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools {};
 }
