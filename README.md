@@ -15,11 +15,8 @@
 | [`mopidy-podcast-itunes`][mopidy-pi]                                         |                  |
 | [`org-stats`][org-stats]                                                     |                  |
 | [`papirus-folders-catppuccin`][papirus]                                      |                  |
+| [`picom-ft-labs`][picom]                                                     | FT-Labs fork     |
 | [`vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools`][k8s-tools] | VSCode extension |
-
-| Overlay          | Note         |
-| ---------------- | ------------ |
-| [`picom`][picom] | FT-Labs fork |
 
 [cura]: https://ultimaker.com/software/ultimaker-cura
 [darp]: https://github.com/caarlos0/discord-applemusic-rich-presence
@@ -58,8 +55,8 @@ With `overlays`:
         pkgs = prev;
         repoOverrides = {nekowinston = import nekowinston-nur {pkgs = prev;};};
       };
+      # ... your other overlays
     };
-    # ... your other overlays
   in {
     system = "x86_64-linux";
 
