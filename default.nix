@@ -21,4 +21,5 @@
   picom-ft-labs = pkgs.callPackage ./pkgs/picom-ft-labs {};
   papirus-folders-catppuccin = pkgs.callPackage ./pkgs/papirus-folders-catppuccin {};
   vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools = pkgs.callPackage ./pkgs/vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools {};
+  wezterm-nightly = pkgs.callPackage ./pkgs/wezterm-nightly {};
 }

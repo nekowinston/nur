@@ -1,9 +1,13 @@
 {
   description = "nekowinston NUR repository";
+
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+  inputs.rust-overlay.url = "github:oxalica/rust-overlay";
+
   outputs = {
     self,
     nixpkgs,
+    rust-overlay,
   }: let
     systems = [
       "x86_64-linux"
@@ -19,6 +23,7 @@
       import ./default.nix {
         pkgs = import nixpkgs {
           inherit system;
+          overlays = [rust-overlay.overlays.default];
         };
       });
   };
