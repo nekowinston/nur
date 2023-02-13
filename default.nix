@@ -14,13 +14,11 @@
   cura = pkgs.callPackage ./pkgs/cura {};
   discord-applemusic-rich-presence = pkgs.callPackage ./pkgs/discord-applemusic-rich-presence {};
   discover-overlay = pkgs.callPackage ./pkgs/discover-overlay {};
-  # TODO: figure out pnpm
-  # emmet-ls = pkgs.callPackage ./pkgs/emmet-ls {};
   helm-ls = pkgs.callPackage ./pkgs/helm-ls {};
   jq-lsp = pkgs.callPackage ./pkgs/jq-lsp {};
   mopidy-podcast-itunes = pkgs.callPackage ./pkgs/mopidy-podcast-itunes {};
   org-stats = pkgs.callPackage ./pkgs/org-stats {};
-  picom = pkgs.picom;
+  picom-ft-labs = pkgs.callPackage ./pkgs/picom-ft-labs {};
   papirus-folders-catppuccin = pkgs.callPackage ./pkgs/papirus-folders-catppuccin {};
   vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools = pkgs.callPackage ./pkgs/vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools {};
 }

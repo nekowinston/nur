@@ -1,3 +1,2 @@
 {
-  picom = import ./picom;
 }

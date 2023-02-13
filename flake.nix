@@ -19,7 +19,6 @@
       import ./default.nix {
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [import ./overlays];
         };
       });
   };
