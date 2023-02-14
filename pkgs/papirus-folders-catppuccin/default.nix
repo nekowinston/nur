@@ -2,10 +2,8 @@
   stdenvNoCC,
   lib,
   fetchFromGitHub,
-  papirus-icon-theme,
   gtk3,
-  bash,
-  getent,
+  papirus-icon-theme,
   flavor ? "mocha",
   accent ? "blue",
   ...
@@ -14,10 +12,10 @@
   validFlavors = ["latte" "frappe" "macchiato" "mocha"];
   pname = "catppuccin-papirus-folders";
 in
-  lib.checkListOfEnum "${pname}: accent color" validAccents [accent]
-  lib.checkListOfEnum "${pname}: flavor"
+  lib.checkListOfEnum "${pname}: accent colors" validAccents [accent]
+  lib.checkListOfEnum "${pname}: flavors"
   validFlavors [flavor]
-  stdenvNoCC.mkDerivation rec {
+  stdenvNoCC.mkDerivation {
     inherit pname;
     version = "unstable-2022-12-04";
 
@@ -28,21 +26,23 @@ in
       sha256 = "sha256-mFDfRVDA9WyriyFVzsI7iqmPopN56z54FvLkZDS2Dv8=";
     };
 
-    buildInputs = [bash getent gtk3 papirus-icon-theme];
+    nativeBuildInputs = [gtk3];
 
-    patchPhase = ''
-      substituteInPlace ./papirus-folders --replace "getent" "${getent}/bin/getent"
+    postPatch = ''
+      patchShebangs ./papirus-folders
     '';
 
     installPhase = ''
+      runHook preInstall
       mkdir -p $out/share/icons
-      cp -r ${papirus-icon-theme}/share/icons/Papirus* $out/share/icons
-      chmod -R u+rw $out
+      cp -r --no-preserve=mode ${papirus-icon-theme}/share/icons/Papirus* $out/share/icons
       cp -r src/* $out/share/icons/Papirus
       for theme in $out/share/icons/*; do
-        ${bash}/bin/bash ./papirus-folders -t $theme -o -C cat-${flavor}-${accent}
-        gtk-update-icon-cache --force $theme
+          USER_HOME=$HOME DISABLE_UPDATE_ICON_CACHE=1 \
+            ./papirus-folders -t $theme -o -C cat-${flavor}-${accent}
+          gtk-update-icon-cache --force $theme
       done
+      runHook postInstall
     '';
 
     meta = with lib; {
