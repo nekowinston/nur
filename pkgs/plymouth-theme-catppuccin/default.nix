@@ -2,9 +2,9 @@
   fetchFromGitHub,
   lib,
   pkgs,
-  stdenv,
+  stdenvNoCC,
 }:
-stdenv.mkDerivation {
+stdenvNoCC.mkDerivation {
   name = "plymouth-theme-catppuccin";
   version = "2022-12-10";
 
