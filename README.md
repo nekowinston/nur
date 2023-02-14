@@ -5,17 +5,17 @@
 
 ## What's available
 
-| General Packages                                     | Note             | Version    |
-| ---------------------------------------------------- | ---------------- | ---------- |
-| [`cura`][cura]                                       | AppImage wrapper | 5.2.2      |
-| [`discord-applemusic-rich-presence`][darp]           | macOS only       | 0.5.0      |
-| [`discover-overlay`][discover]                       |                  | 0.6.3      |
-| [`helm-ls`][helm-ls]                                 |                  | 2022-09-21 |
-| [`jq-lsp`][jq-lsp]                                   |                  | 2022-12-20 |
-| [`mopidy-podcast-itunes`][mopidy-pi]                 |                  | 2022-04-03 |
-| [`org-stats`][org-stats]                             |                  | 1.11.2     |
-| [`picom-ft-labs`][picom]                             | FT-Labs fork     | 2023-02-06 |
-| [`vscode-extensions.ms-kubernetes-tools`][k8s-tools] | VSCode extension | 1.3.11     |
+| General Packages                                                             | Note             | Version    |
+| ---------------------------------------------------------------------------- | ---------------- | ---------- |
+| [`cura`][cura]                                                               | AppImage wrapper | 5.2.2      |
+| [`discord-applemusic-rich-presence`][darp]                                   | macOS only       | 0.5.0      |
+| [`discover-overlay`][discover]                                               |                  | 0.6.3      |
+| [`helm-ls`][helm-ls]                                                         |                  | 2022-09-21 |
+| [`jq-lsp`][jq-lsp]                                                           |                  | 2022-12-20 |
+| [`mopidy-podcast-itunes`][mopidy-pi]                                         |                  | 2022-04-03 |
+| [`org-stats`][org-stats]                                                     |                  | 1.11.2     |
+| [`picom-ft-labs`][picom]                                                     | FT-Labs fork     | 2023-02-06 |
+| [`vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools`][k8s-tools] | VSCode extension | 1.3.11     |
 
 | Catppuccin Packages                     | Note                             | Version    |
 | --------------------------------------- | -------------------------------- | ---------- |
