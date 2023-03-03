@@ -5,19 +5,21 @@
 }:
 wezterm.overrideAttrs (oldAttrs: rec {
   pname = "wezterm-nightly";
-  version = "nightly-2023-02-14";
+  version = "nightly-2023-03-02";
+
+  patches = [];
 
   src = fetchFromGitHub {
     owner = "wez";
     repo = "wezterm";
-    rev = "a5c2b1f3adb06054bf522cb3d350697938d6f8e9";
-    sha256 = "sha256-dEL/GKE95y4pMs9bjuhp8s74VXgrbLrp8Ya20CFdMKI=";
+    rev = "2d05f8f1f24db6370f0791e9ec3a98ad38cf8b4d";
+    sha256 = "sha256-GL7vGne8fQIcu2u2lc5WOcPJfF6jlUZl3kKUPfkJEjc=";
     fetchSubmodules = true;
   };
 
   cargoDeps = oldAttrs.cargoDeps.overrideAttrs (lib.const {
     name = "wezterm-nightly-vendor.tar.gz";
     inherit src;
-    outputHash = "sha256-WbggJ691T/zV/9LCvggd4R4gATZK93/dT4U6nY9CUi0=";
+    outputHash = "sha256-7nSod8Pg5GSLO1jEC5r8zmM90Ys2sQ8lGKvYzQNouLA=";
   });
 })
