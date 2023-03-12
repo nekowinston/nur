@@ -1,7 +1,7 @@
 # nekowinston/nur
 
 [![Build and populate cache](https://github.com/nekowinston/nur/actions/workflows/build.yml/badge.svg)](https://github.com/nekowinston/nur/actions/workflows/build.yml)
-[![Cachix Cache](https://img.shields.io/badge/cachix-nekowinston-blue.svg)](https://<YOUR_CACHIX_CACHE_NAME>.cachix.org)
+[![Cachix Cache](https://img.shields.io/badge/cachix-nekowinston-blue.svg)](https://nekowinston.cachix.org)
 
 ## What's available
 
