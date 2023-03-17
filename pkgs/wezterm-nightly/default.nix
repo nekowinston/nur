@@ -20,7 +20,7 @@ in
     patches = [];
 
     postPatch = ''
-      echo wezterm-${version}  > .tag
+      echo ${version}  > .tag
       # tests are failing with: Unable to exchange encryption keys
       rm -r wezterm-ssh/tests
     '';

@@ -2,6 +2,7 @@ name: "Auto-update metadata"
 on:
   schedule:
     - cron: "11 7 * * *"
+  workflow_dispatch:
 jobs:
   update:
     runs-on: ubuntu-latest
