@@ -10,7 +10,7 @@ repo="wezterm"
 
 rev=$(curl -fsSL "https://api.github.com/repos/${owner}/${repo}/commits?per_page=1" | jq -r '.[0].sha')
 
-repoSha=$(nix-prefetch fetchFromGitHub --owner "$owner" --repo "$repo" --rev "$rev")
+repoSha=$(nix-prefetch fetchFromGitHub --owner "$owner" --repo "$repo" --rev "$rev" --fetchSubmodules)
 cargoSha256=$(nix-prefetch "{sha256}: let pkgs = import ./default.nix {}; pkg = pkgs.${name}.overrideAttrs (_: { src = pkgs.fetchFromGitHub { owner = \"${owner}\"; repo = \"${repo}\"; rev = \"${rev}\"; sha256 = \"${repoSha}\"; fetchSubmodules = true; }; }); in pkgs.wezterm-nightly.cargoDeps.overrideAttrs (_: {cargoSha256 = sha256;})")
 
 dir="$(dirname "$0")"

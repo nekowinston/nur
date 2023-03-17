@@ -1,7 +1,7 @@
 {
   owner = "wez";
   repo = "wezterm";
-  rev = "4afedd626dadd15d9c2929bab0e2063b54f61393";
-  sha256 = "sha256-C0tczggsqEYLcRtc5azNrwECujgBSa2ASw8talamCvM=";
-  cargoSha256 = "sha256-XJAeMDwtLtBzHMU/cb3lZgmcw5F3ifjKzKVmuP85/RY=";
+  rev = "203bd10d8e44fd20e628e83fd04c197f6c58b974";
+  sha256 = "sha256-M1cB+NcCf4CL9Lh3KyxnvEAFAWQo84WoQSGad53CGrE=";
+  cargoSha256 = "sha256-SjBf8pn2cUzp427dHq2jkLKOIsM8u9uf26EpNI8lfj8=";
 }

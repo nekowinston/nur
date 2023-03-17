@@ -7,21 +7,20 @@
 in
   wezterm.overrideAttrs (oldAttrs: rec {
     pname = "wezterm";
-    version = rev;
+    version = builtins.substring 0 7 rev;
     name = "${pname}-${version}";
 
     src = fetchFromGitHub {
       owner = "wez";
       repo = pname;
-      rev = version;
-      inherit sha256;
+      inherit rev sha256;
       fetchSubmodules = true;
     };
 
     patches = [];
 
     postPatch = ''
-      echo ${version} > .tag
+      echo wezterm-${version}  > .tag
       # tests are failing with: Unable to exchange encryption keys
       rm -r wezterm-ssh/tests
     '';
