@@ -5,6 +5,8 @@ on:
   workflow_dispatch:
 jobs:
   update:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -19,3 +21,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore: update metadata"
+          commit_author: "github-actions[bot]"
