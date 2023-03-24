@@ -3,7 +3,9 @@
   wezterm,
   fetchFromGitHub,
 }: let
-  inherit (import ../../meta/wezterm-nightly.nix) rev sha256 cargoSha256;
+  rev = "bc7acc18e02cdfee5d1ae72bf6b5d3b483479850";
+  sha256 = "sha256-ZOx0pLjOOIPrGQssde0mA6JXZ/Y/xhv1qSl7uSf/k0s=";
+  cargoSha256 = "sha256-ciZQRpKnvnBuDjZoOx3xxko6Nmvixb2y8wvOLxbh+Io=";
 in
   wezterm.overrideAttrs (oldAttrs: rec {
     pname = "wezterm";
