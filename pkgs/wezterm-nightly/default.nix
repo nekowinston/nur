@@ -3,9 +3,9 @@
   wezterm,
   fetchFromGitHub,
 }: let
-  rev = "cb5252a246a74958c4478495476ac99931a3a3d7";
-  sha256 = "sha256-MHyjLjkEC0AepKSTLWY4r2FpGm1hcKI3mQsefvas60A=";
-  cargoSha256 = "sha256-JTFvdj5ob5Sd37YMzmZlrJk+D5SGGVS39lkk5nqZYEY=";
+  rev = "2c9fd0ef6ceb978f0f1c8bf05f5cb9c047e3e062";
+  sha256 = "sha256-K7VZY3JQ+kf6Rvr2zYmtNBuRIWWRBgorzGANCJzS6Gg=";
+  cargoSha256 = "sha256-oXS5Ingn2d3gqBupryoXAub1rDdKeOViRoZetFO0hm4=";
 in
   wezterm.overrideAttrs (oldAttrs: rec {
     pname = "wezterm";
@@ -28,7 +28,7 @@ in
     '';
 
     cargoDeps = oldAttrs.cargoDeps.overrideAttrs (lib.const {
-      name = "wezterm-nightly-vendor.tar.gz";
+      name = "wezterm-nightly-vendor-${version}.tar.gz";
       inherit src;
       outputHash = cargoSha256;
     });
