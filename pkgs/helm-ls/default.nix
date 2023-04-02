@@ -6,13 +6,13 @@
 }:
 buildGo118Module rec {
   pname = "helm-ls";
-  version = "20220912";
+  version = "v0.0.3";
 
   src = fetchFromGitHub {
     owner = "mrjosh";
     repo = "helm-ls";
-    rev = "1552f4be6b43eb3fc6c61ce056f1d28f36650c62";
-    sha256 = "sha256-YSK7PBsk/NXsM7bFg6ebqiYDH94vsK45vMpZtDJqLnk=";
+    rev = version;
+    sha256 = "sha256-MiDbV+mfr1wcc0e0iwFPL8WniWKbPnr4zb79qniT2Kc=";
   };
 
   vendorSha256 = "sha256-EqZlmOoQtC3Iuf0LG2PL0K2pluGqbyA6132lzgF4+ic=";
