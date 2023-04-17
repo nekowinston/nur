@@ -3,9 +3,9 @@
   wezterm,
   fetchFromGitHub,
 }: let
-  rev = "e3e9821c4d2b32f8fafe841eafe53eb25608f50f";
-  sha256 = "sha256-SYK6MTbOnqd1O5KgFpFboyA3K7Dc6M44t1x8auyaLxY=";
-  cargoSha256 = "sha256-dc6qcofUHKtduRj1SpZxQhX53gSaif342g4Eknl9s/w=";
+  rev = "a4cf01dd55f0fee241a73ec1a515001ecdac6fec";
+  sha256 = "sha256-7ZYYZU2PTYKnNwjX9QxVpdgd9Tyxm2RVThhbT+7nX/Y=";
+  cargoSha256 = "sha256-VTdSylCXQqJdvFYTo2KowIA5PHF22H+DfZrX2EYYTNw=";
 in
   wezterm.overrideAttrs (oldAttrs: rec {
     pname = "wezterm";
