@@ -4,7 +4,8 @@
   fetchFromGitHub,
   pkgs,
 }: let
-  inherit (pkgs) stdenv lib ncurses perl pkg-config python3 fontconfig installShellFiles openssl libGL libX11 libxcb libxkbcommon xcbutil xcbutilimage xcbutilkeysyms xcbutilwm wayland zlib libiconv nixosTests runCommand vulkan-loader;
+  inherit (pkgs) fontconfig installShellFiles lib libGL libiconv libxkbcommon ncurses nixosTests openssl perl pkg-config python3 runCommand stdenv vulkan-loader wayland zlib;
+  inherit (pkgs.xorg) libX11 libxcb xcbutil xcbutilimage xcbutilkeysyms xcbutilwm;
   inherit (pkgs.darwin.apple_sdk.frameworks) CoreGraphics Cocoa Foundation UserNotifications;
 in
   rustPlatform.buildRustPackage rec {
