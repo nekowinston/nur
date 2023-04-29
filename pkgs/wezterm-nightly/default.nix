@@ -6,7 +6,7 @@
 }: let
   inherit (pkgs) fontconfig installShellFiles lib libGL libiconv libxkbcommon ncurses nixosTests openssl perl pkg-config python3 runCommand stdenv vulkan-loader wayland zlib;
   inherit (pkgs.xorg) libX11 libxcb xcbutil xcbutilimage xcbutilkeysyms xcbutilwm;
-  inherit (pkgs.darwin.apple_sdk.frameworks) CoreGraphics Cocoa Foundation UserNotifications;
+  inherit (pkgs.darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation UserNotifications;
 in
   rustPlatform.buildRustPackage rec {
     pname = "wezterm";
