@@ -16,9 +16,9 @@ in
     src = fetchFromGitHub {
       owner = "wez";
       repo = pname;
-      rev = "e771fa4c5ee6841583705f366ba6079fe1918d12";
+      rev = "9bc7de70eafcafca6e6e5cf21879f6e964c21448";
       fetchSubmodules = true;
-      sha256 = "sha256-c9uVP2GDJkAwhaWpavGcwjUn1dql1hUhQ4NVw1+pCPY=";
+      sha256 = "sha256-DcABoNM7N89izrYjtZjdcjhQKM2L8PNZCruWE5bbq3k=";
     };
     postPatch = ''
       echo ${version} > .tag
@@ -31,7 +31,6 @@ in
       lockFile = "${src}/Cargo.lock";
       outputHashes = {
         "image-0.24.5" = "sha256-fTajVwm88OInqCPZerWcSAm1ga46ansQ3EzAmbT58Js=";
-        "spa-0.3.0" = "sha256-udnxq7WOF7ktQPv1dK54ZiAXSVktes4gn+E2Q9W3FBw=";
         "xcb-imdkit-0.2.0" = "sha256-QOT9HLlA26DVPUF4ViKH2ckexUsu45KZMdJwoUhW+hA=";
       };
     };
