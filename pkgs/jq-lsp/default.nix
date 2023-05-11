@@ -2,18 +2,17 @@
   buildGo118Module,
   fetchFromGitHub,
   lib,
-  pkgs,
   ...
 }:
-buildGo118Module rec {
+buildGo118Module {
   pname = "jq-lsp";
   version = "20221220";
 
   src = fetchFromGitHub {
     owner = "wader";
     repo = "jq-lsp";
-    rev = "4aadc9e4bf54eb3c4e24ac9f780d23bd0a04d76a";
-    sha256 = "sha256-Xq0y685omljMOlxxqD1Q193G+UF0Y3ot5SXAzCma3S0=";
+    rev = "e962d87cf8db75c3a4aa08070e4ee48cceff01bf";
+    sha256 = "sha256-/1Srce7IDsFTNg2dxwnF2GK2BPsaOB2TAFLI64dX/SQ=";
   };
 
   vendorSha256 = "sha256-ppQ81uERHBgOr/bm/CoDSWcK+IqHwvcL6RFi0DgoLuw=";
