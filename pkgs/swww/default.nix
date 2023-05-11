@@ -6,16 +6,16 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "swww";
-  version = "0.7.2";
+  version = "0.7.3";
 
   src = fetchFromGitHub {
     owner = "Horus645";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-1SmCeIlcjOX3yCvpfqQ82uq4h2xlGhX9OCwKb6jGK78=";
+    sha256 = "sha256-58zUi6tftTvNoc/R/HO4RDC7n+NODKOrBCHH8QntKSY=";
   };
 
-  cargoSha256 = "sha256-08YM9yTCRJPHdOc1+7F3guYiP3y1WSi3/hzlDRVpitc=";
+  cargoSha256 = "sha256-hL5rOf0G+UBO8kyRXA1TqMCta00jGSZtF7n8ibjGi9k=";
 
   nativeBuildInputs = with pkgs; [pkg-config];
   buildInputs = with pkgs; [lz4 libxkbcommon];
@@ -24,5 +24,6 @@ rustPlatform.buildRustPackage rec {
     description = "A solution to your wayland wallpaper woes";
     homepage = "https://github.com/Horus645/swww";
     license = licenses.gpl3;
+    platforms = platforms.linux;
   };
 }

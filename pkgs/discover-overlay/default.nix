@@ -23,5 +23,6 @@ python3Packages.buildPythonApplication rec {
     homepage = "https://github.com/trigg/Discover";
     description = "Yet another discord overlay for linux";
     license = licenses.gpl3;
+    platforms = platforms.linux;
   };
 }

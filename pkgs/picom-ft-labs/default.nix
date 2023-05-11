@@ -3,7 +3,7 @@
   pcre2,
   fetchFromGitHub,
 }:
-picom.overrideAttrs (oldAttrs: rec {
+picom.overrideAttrs (oldAttrs: {
   pname = "picom-ft-labs";
   version = "unstable-2022-02-06";
 
@@ -12,7 +12,7 @@ picom.overrideAttrs (oldAttrs: rec {
   src = fetchFromGitHub {
     owner = "FT-Labs";
     repo = "picom";
-    sha256 = "sha256-uH0OuM36xnvGC6TMJ7r7nlx8ZUGgL8N6ia/6KzFksVY=";
-    rev = "bb2b4801f7aef81f0739a50bf272431f7d7d9549";
+    sha256 = "sha256-hDuL5g5+l0IUqq6jYdVXDtaTbheuLPzo/SaUY+WtoH8=";
+    rev = "dc9d1fe2481e7de1a52b0ff98b4253a4f5da0493";
   };
 })

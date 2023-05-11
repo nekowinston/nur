@@ -1,5 +1,4 @@
 {
-  fetchFromGitHub,
   lib,
   pkgs,
   stdenvNoCC,
