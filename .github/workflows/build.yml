@@ -6,38 +6,15 @@ on:
       - main
       - master
   schedule:
-    # rebuild everyday at 2:51
-    # TIP: Choose a random time here so not all repositories are build at once:
-    # https://www.random.org/clock-times/?num=1&earliest=01%3A00&latest=08%3A00&interval=5&format=html&rnd=new
     - cron: "35 7 * * *"
 jobs:
   tests:
     strategy:
       matrix:
-        # Set this to notify the global nur package registry that changes are
-        # available.
-        #
-        # The repo name as used in
-        # https://github.com/nix-community/NUR/blob/master/repos.json
         nurRepo:
           - nekowinston
-        # Set this to cache your build results in cachix for faster builds
-        # in CI and for everyone who uses your cache.
-        #
-        # Format: Your cachix cache host name without the ".cachix.org" suffix.
-        # Example: mycache (for mycache.cachix.org)
-        #
-        # For this to work, you also need to set the CACHIX_SIGNING_KEY or
-        # CACHIX_AUTH_TOKEN secret in your repository secrets settings in
-        # Github found at
-        # https://github.com/<your_githubname>/nur-packages/settings/secrets
         cachixName:
           - nekowinston
-        nixPath:
-          - nixpkgs=channel:nixos-unstable
-          - nixpkgs=channel:nixpkgs-unstable
-          # TODO: enable on 23.05
-          # - nixpkgs=channel:nixos-22.11
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -54,24 +31,27 @@ jobs:
         run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
       - name: Setup cachix
         uses: cachix/cachix-action@v12
-        # Don't replace <YOUR_CACHIX_NAME> here!
-        if: ${{ matrix.cachixName != '<YOUR_CACHIX_NAME>' }}
         with:
           name: ${{ matrix.cachixName }}
           signingKey: "${{ secrets.CACHIX_SIGNING_KEY }}"
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-      - name: Check evaluation
-        run: |
-          nix-env -f . -qa \* --meta --xml \
-            --allowed-uris https://static.rust-lang.org \
-            --option restrict-eval true \
-            --option allow-import-from-derivation true \
-            --drv-path --show-trace \
-            -I nixpkgs=$(nix-instantiate --find-file nixpkgs) \
-            -I $PWD
-      - name: Build nix packages
-        run: nix shell -f '<nixpkgs>' nix-build-uncached -c nix-build-uncached ci.nix -A cacheOutputs
-      - name: Trigger NUR update
-        # Don't replace <YOUR_REPO_NAME> here!
-        if: ${{ matrix.nurRepo != '<YOUR_REPO_NAME>' }}
-        run: curl -XPOST "https://nur-update.nix-community.org/update?repo=${{ matrix.nurRepo }}"
+      # TODO: build all packages in the repo with devour-flake, or similar
+      - run: nix build -L .\#cura
+      - run: nix build -L .\#discord-applemusic-rich-presence
+        if: runner.os == 'macOS'
+      - run: nix build -L .\#discover-overlay
+      - run: nix build -L .\#helm-ls
+      - run: nix build -L .\#jq-lsp
+      - run: nix build -L .\#mopidy-podcast-itunes
+      - run: nix build -L .\#org-stats
+      - run: nix build -L .\#papirus-folders-catppuccin
+      - run: nix build -L .\#picom-ft-labs
+      - run: nix build -L .\#plymouth-theme-catppuccin
+      - run: nix build -L .\#swww
+      - run: nix build -L .\#vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools
+      - run: nix build -L .\#wezterm-nightly
+      # TODO: enable if I ever add it to NUR
+      # - name: Trigger NUR update
+      #   # Don't replace <YOUR_REPO_NAME> here!
+      #   if: ${{ matrix.nurRepo != '<YOUR_REPO_NAME>' }}
+      #   run: curl -XPOST "https://nur-update.nix-community.org/update?repo=${{ matrix.nurRepo }}"

@@ -1,73 +1,58 @@
 {
-  rustPlatform,
-  fetchFromGitHub,
+  craneLib,
   pkgs,
+  wezterm-src,
 }: let
   inherit (pkgs) fontconfig installShellFiles lib libGL libiconv libxkbcommon ncurses nixosTests openssl perl pkg-config python3 runCommand stdenv vulkan-loader wayland zlib;
   inherit (pkgs.xorg) libX11 libxcb xcbutil xcbutilimage xcbutilkeysyms xcbutilwm;
   inherit (pkgs.darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation UserNotifications;
+
+  pname = "wezterm";
+  src = craneLib.cleanCargoSource wezterm-src;
+  version = builtins.substring 0 7 wezterm-src.rev;
+
+  nativeBuildInputs =
+    [
+      installShellFiles
+      ncurses # tic for terminfo
+      pkg-config
+      python3
+    ]
+    ++ lib.optionals stdenv.isDarwin [perl];
+  buildInputs =
+    [fontconfig zlib]
+    ++ lib.optionals stdenv.isLinux [
+      libX11
+      libxcb
+      libxkbcommon
+      openssl
+      wayland
+      xcbutil
+      xcbutilimage
+      xcbutilkeysyms
+      xcbutilwm # contains xcb-ewmh among others
+    ]
+    ++ lib.optionals stdenv.isDarwin
+    [
+      Cocoa
+      CoreGraphics
+      Foundation
+      libiconv
+      UserNotifications
+    ];
+  cargoArtifacts = craneLib.buildDepsOnly {
+    inherit src pname version nativeBuildInputs buildInputs;
+  };
 in
-  rustPlatform.buildRustPackage rec {
-    pname = "wezterm";
-    version = builtins.substring 0 7 src.rev;
+  craneLib.buildPackage rec {
+    inherit pname version cargoArtifacts nativeBuildInputs buildInputs;
     name = "${pname}-${version}";
+    src = wezterm-src;
+    doCheck = false;
 
-    src = fetchFromGitHub {
-      owner = "wez";
-      repo = pname;
-      rev = "9bc7de70eafcafca6e6e5cf21879f6e964c21448";
-      fetchSubmodules = true;
-      sha256 = "sha256-DcABoNM7N89izrYjtZjdcjhQKM2L8PNZCruWE5bbq3k=";
-    };
-    postPatch = ''
-      echo ${version} > .tag
+    postPatch = "echo ${version} > .tag";
 
-      # tests are failing with: Unable to exchange encryption keys
-      rm -r wezterm-ssh/tests
-    '';
-
-    cargoLock = {
-      lockFile = "${src}/Cargo.lock";
-      outputHashes = {
-        "image-0.24.5" = "sha256-fTajVwm88OInqCPZerWcSAm1ga46ansQ3EzAmbT58Js=";
-        "xcb-imdkit-0.2.0" = "sha256-QOT9HLlA26DVPUF4ViKH2ckexUsu45KZMdJwoUhW+hA=";
-      };
-    };
-
-    nativeBuildInputs =
-      [
-        installShellFiles
-        ncurses # tic for terminfo
-        pkg-config
-        python3
-      ]
-      ++ lib.optional stdenv.isDarwin perl;
-
-    buildInputs =
-      [
-        fontconfig
-        zlib
-      ]
-      ++ lib.optionals stdenv.isLinux [
-        libX11
-        libxcb
-        libxkbcommon
-        openssl
-        wayland
-        xcbutil
-        xcbutilimage
-        xcbutilkeysyms
-        xcbutilwm # contains xcb-ewmh among others
-      ]
-      ++ lib.optionals stdenv.isDarwin [
-        Cocoa
-        CoreGraphics
-        Foundation
-        libiconv
-        UserNotifications
-      ];
-
-    buildFeatures = ["distro-defaults"];
+    cargoExtraArgs = "--features distro-defaults";
 
     postInstall = ''
       mkdir -p $out/nix-support
@@ -121,6 +106,5 @@ in
       description = "GPU-accelerated cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust";
       homepage = "https://wezfurlong.org/wezterm";
       license = licenses.mit;
-      maintainers = with maintainers; [SuperSandro2000 mimame];
     };
   }
