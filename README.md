@@ -5,17 +5,18 @@
 
 ## What's available
 
-| General Packages                                                             | Note             | Version    |
-| ---------------------------------------------------------------------------- | ---------------- | ---------- |
-| [`cura`][cura]                                                               | AppImage wrapper | 5.2.2      |
-| [`discord-applemusic-rich-presence`][darp]                                   | macOS only       | 0.5.0      |
-| [`discover-overlay`][discover]                                               |                  | 0.6.3      |
-| [`helm-ls`][helm-ls]                                                         |                  | 2022-09-21 |
-| [`jq-lsp`][jq-lsp]                                                           |                  | 2022-12-20 |
-| [`mopidy-podcast-itunes`][mopidy-pi]                                         |                  | 2022-04-03 |
-| [`org-stats`][org-stats]                                                     |                  | 1.11.2     |
-| [`picom-ft-labs`][picom]                                                     | FT-Labs fork     | 2023-02-06 |
-| [`vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools`][k8s-tools] | VSCode extension | 1.3.11     |
+| General Packages                                                             | Note                                  | Version    |
+| ---------------------------------------------------------------------------- | ------------------------------------- | ---------- |
+| [`cura`][cura]                                                               | AppImage wrapper                      | 5.2.2      |
+| ~~[`discord-applemusic-rich-presence`][darp]~~                               | moved to [caarlos0/nur][caarlos0nur]! | 0.5.0      |
+| [`discover-overlay`][discover]                                               |                                       | 0.6.3      |
+| [`helm-ls`][helm-ls]                                                         |                                       | 2022-09-21 |
+| [`jq-lsp`][jq-lsp]                                                           |                                       | 2022-12-20 |
+| [`mopidy-podcast-itunes`][mopidy-pi]                                         |                                       | 2022-04-03 |
+| ~~[`org-stats`][org-stats]~~                                                 | moved to [caarlos0/nur][caarlos0nur]! | 1.11.2     |
+| [`picom-ft-labs`][picom]                                                     | FT-Labs fork                          | 2023-02-06 |
+| [`vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools`][k8s-tools] | VSCode extension                      | 1.3.11     |
+| [`wezterm`][wezterm]                                                         | nightly builds                        | git        |
 
 | Catppuccin Packages                     | Note                             | Version    |
 | --------------------------------------- | -------------------------------- | ---------- |
@@ -67,6 +68,7 @@ With `overlays`:
 ```
 
 [cura]: https://ultimaker.com/software/ultimaker-cura
+[caarlos0nur]: https://github.com/caarlos0/nur
 [darp]: https://github.com/caarlos0/discord-applemusic-rich-presence
 [discover]: https://github.com/trigg/Discover
 [helm-ls]: https://github.com/mrjosh/helm-ls
@@ -78,3 +80,4 @@ With `overlays`:
 [papirus-pr]: https://github.com/NixOS/nixpkgs/pull/207211
 [picom]: https://github.com/FT-Labs/picom
 [plymouth]: https://github.com/catppuccin/plymouth
+[wezterm]: https://github.com/wez/wezterm

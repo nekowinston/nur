@@ -17,12 +17,10 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   cura = pkgs.callPackage ./pkgs/cura {};
-  discord-applemusic-rich-presence = pkgs.callPackage ./pkgs/discord-applemusic-rich-presence {};
   discover-overlay = pkgs.callPackage ./pkgs/discover-overlay {};
   helm-ls = pkgs.callPackage ./pkgs/helm-ls {};
   jq-lsp = pkgs.callPackage ./pkgs/jq-lsp {};
   mopidy-podcast-itunes = pkgs.callPackage ./pkgs/mopidy-podcast-itunes {};
-  org-stats = pkgs.callPackage ./pkgs/org-stats {};
   papirus-folders-catppuccin = pkgs.callPackage ./pkgs/papirus-folders-catppuccin {};
   picom-ft-labs = pkgs.callPackage ./pkgs/picom-ft-labs {};
   plymouth-theme-catppuccin = pkgs.callPackage ./pkgs/plymouth-theme-catppuccin {};
