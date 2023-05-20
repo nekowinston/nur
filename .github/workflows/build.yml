@@ -1,53 +1,69 @@
-name: "Build and populate cache"
+name: Build and populate cache
+
 on:
-  pull_request:
   push:
     branches:
       - main
       - master
   schedule:
     - cron: "35 7 * * *"
+
 jobs:
-  tests:
+  build:
     strategy:
       matrix:
-        nurRepo:
-          - nekowinston
-        cachixName:
-          - nekowinston
-    runs-on: ubuntu-latest
+        os:
+          - ubuntu-latest
+          - macos-latest
+        nurRepo: [nekowinston]
+        cachixName: [nekowinston]
+
+    runs-on: ${{ matrix.os }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Install nix
         uses: cachix/install-nix-action@v20
         with:
-          nix_path: "${{ matrix.nixPath }}"
           install_url: https://releases.nixos.org/nix/nix-2.13.3/install
           extra_nix_config: |
             experimental-features = nix-command flakes
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+
       - name: Setup cachix
         uses: cachix/cachix-action@v12
         with:
           name: ${{ matrix.cachixName }}
           signingKey: "${{ secrets.CACHIX_SIGNING_KEY }}"
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+
       # TODO: build all packages in the repo with devour-flake, or similar
-      - run: nix build -L .\#cura
-      - run: nix build -L .\#discord-applemusic-rich-presence
+      - name: Build Linux packages
+        run: |
+          nix build -L .\#cura
+          nix build -L .\#discover-overlay
+          nix build -L .\#picom-ft-labs
+          nix build -L .\#papirus-folders-catppuccin
+          nix build -L .\#plymouth-theme-catppuccin
+          nix build -L .\#swww
+        if: runner.os == 'Linux'
+
+      - name: Build macOS packages
+        run: |
+          nix build -L .\#discord-applemusic-rich-presence
         if: runner.os == 'macOS'
-      - run: nix build -L .\#discover-overlay
-      - run: nix build -L .\#helm-ls
-      - run: nix build -L .\#jq-lsp
-      - run: nix build -L .\#mopidy-podcast-itunes
-      - run: nix build -L .\#org-stats
-      - run: nix build -L .\#papirus-folders-catppuccin
-      - run: nix build -L .\#picom-ft-labs
-      - run: nix build -L .\#plymouth-theme-catppuccin
-      - run: nix build -L .\#swww
-      - run: nix build -L .\#vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools
-      - run: nix build -L .\#wezterm-nightly
+
+      - name: Build common packages
+        run: |
+          nix build -L .\#helm-ls
+          nix build -L .\#jq-lsp
+          nix build -L .\#mopidy-podcast-itunes
+          nix build -L .\#org-stats
+          nix build -L .\#vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools
+          nix build -L .\#wezterm-nightly
+
       # TODO: enable if I ever add it to NUR
       # - name: Trigger NUR update
       #   # Don't replace <YOUR_REPO_NAME> here!
