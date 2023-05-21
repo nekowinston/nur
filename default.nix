@@ -26,5 +26,11 @@
   plymouth-theme-catppuccin = pkgs.callPackage ./pkgs/plymouth-theme-catppuccin {};
   swww = pkgs.callPackage ./pkgs/swww {};
   vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools = pkgs.callPackage ./pkgs/vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools {};
-  wezterm-nightly = pkgs.callPackage ./pkgs/wezterm-nightly {inherit wezterm-src craneLib;};
+  wezterm-nightly = pkgs.darwin.apple_sdk_11_0.callPackage ./pkgs/wezterm-nightly {
+    stdenv = with pkgs;
+      if stdenv.isDarwin
+      then darwin.apple_sdk_11_0.stdenv
+      else stdenv;
+    inherit wezterm-src craneLib;
+  };
 }

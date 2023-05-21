@@ -2,8 +2,9 @@
   craneLib,
   pkgs,
   wezterm-src,
+  stdenv,
 }: let
-  inherit (pkgs) fontconfig installShellFiles lib libGL libiconv libxkbcommon ncurses nixosTests openssl perl pkg-config python3 runCommand stdenv vulkan-loader wayland zlib;
+  inherit (pkgs) fontconfig installShellFiles lib libGL libiconv libxkbcommon ncurses nixosTests openssl perl pkg-config python3 runCommand vulkan-loader wayland zlib;
   inherit (pkgs.xorg) libX11 libxcb xcbutil xcbutilimage xcbutilkeysyms xcbutilwm;
   inherit (pkgs.darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation UserNotifications;
 
@@ -41,11 +42,11 @@
       UserNotifications
     ];
   cargoArtifacts = craneLib.buildDepsOnly {
-    inherit src pname version nativeBuildInputs buildInputs;
+    inherit src pname version nativeBuildInputs buildInputs stdenv;
   };
 in
   craneLib.buildPackage rec {
-    inherit pname version cargoArtifacts nativeBuildInputs buildInputs;
+    inherit pname version cargoArtifacts nativeBuildInputs buildInputs stdenv;
     name = "${pname}-${version}";
     src = wezterm-src;
     doCheck = false;
