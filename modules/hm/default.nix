@@ -1,0 +1,3 @@
+{
+  darkman = import ./darkman;
+}

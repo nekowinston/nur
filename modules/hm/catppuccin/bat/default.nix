@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  options,
   pkgs,
   ...
 }:
@@ -27,18 +26,9 @@ in {
       default = global.defaultTheme;
       description = "Choose a catppuccin bat theme";
     };
-    activationHook = mkEnableOption {
-      type = types.bool;
-      default = true;
-      description = "Regenerate the bat cache on HM activation";
-    };
   };
 
   config = mkIf cfg.enable {
-    home.activation = mkIf cfg.activationHook {
-      catppuccinBatCache = "${lib.getExe config.programs.bat.package} cache --build";
-    };
-
     programs.bat = {
       enable = true;
       config = {
@@ -47,12 +37,8 @@ in {
       themes = let
         getTheme = flavour:
           builtins.readFile (themepkg + "/Catppuccin-${flavour}.tmTheme");
-      in {
-        Catppuccin-mocha = getTheme "mocha";
-        Catppuccin-macchiato = getTheme "macchiato";
-        Catppuccin-frappe = getTheme "frappe";
-        Catppuccin-latte = getTheme "latte";
-      };
+      in
+        builtins.mapAttrs (k: v: getTheme k) builtins.listToAttrs ["mocha" "macchiato" "frappe" "latte"];
     };
   };
 }
