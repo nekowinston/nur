@@ -48,7 +48,9 @@ With `overlays`:
       nur = import nur {
         nurpkgs = prev;
         pkgs = prev;
-        repoOverrides = {nekowinston = import nekowinston-nur {pkgs = prev;};};
+        repoOverrides = {
+          nekowinston = nekowinston-nur.packages.${prev.system};
+        };
       };
       # ... your other overlays
     };
