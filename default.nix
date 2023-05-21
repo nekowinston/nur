@@ -16,6 +16,7 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  catppuccin-gtk = pkgs.callPackage ./pkgs/catppuccin-gtk {};
   cura = pkgs.callPackage ./pkgs/cura {};
   discover-overlay = pkgs.callPackage ./pkgs/discover-overlay {};
   helm-ls = pkgs.callPackage ./pkgs/helm-ls {};

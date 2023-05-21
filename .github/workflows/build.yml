@@ -42,6 +42,7 @@ jobs:
       # TODO: build all packages in the repo with devour-flake, or similar
       - name: Build Linux packages
         run: |
+          nix build -L .\#catppuccin-gtk
           nix build -L .\#cura
           nix build -L .\#discover-overlay
           nix build -L .\#picom-ft-labs
