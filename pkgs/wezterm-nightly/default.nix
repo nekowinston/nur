@@ -49,9 +49,12 @@ in
     inherit pname version cargoArtifacts nativeBuildInputs buildInputs stdenv;
     name = "${pname}-${version}";
     src = wezterm-src;
-    doCheck = false;
 
-    postPatch = "echo ${version} > .tag";
+    postPatch = ''
+      echo ${version} > .tag
+      # tests are failing with: Unable to exchange encryption keys
+      rm -r wezterm-ssh/tests
+    '';
 
     cargoExtraArgs = "--features distro-defaults";
 
@@ -99,7 +102,7 @@ in
           nativeBuildInputs = [ncurses];
         } ''
           mkdir -p $out/share/terminfo $out/nix-support
-          tic -x -o $out/share/terminfo ${src}/termwiz/data/wezterm.terminfo
+          tic -x -o $out/share/terminfo ${wezterm-src}/termwiz/data/wezterm.terminfo
         '';
     };
 
