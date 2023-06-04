@@ -51,7 +51,7 @@ in
     src = wezterm-src;
 
     postPatch = ''
-      echo ${version} > .tag
+      echo "${builtins.substring 0 8 wezterm-src.lastModifiedDate} (${version})" > .tag
       # tests are failing with: Unable to exchange encryption keys
       rm -r wezterm-ssh/tests
     '';
