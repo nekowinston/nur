@@ -14,10 +14,9 @@
 
   outputs = {
     self,
-    crane,
     nixpkgs,
-    wezterm-src,
-  }: let
+    ...
+  } @ inputs: let
     systems = [
       "aarch64-darwin"
       "aarch64-linux"
@@ -31,17 +30,13 @@
   in {
     packages = forAllSystems (system:
       import ./default.nix {
-        inherit wezterm-src;
-        craneLib = crane.lib.${system};
+        inherit (inputs) wezterm-src;
+        craneLib = inputs.crane.lib.${system};
         pkgs = import nixpkgs {
           inherit system;
         };
       });
-    devShells = forAllSystems (system:
-      import ./shell.nix {
-        pkgs = import nixpkgs {
-          inherit system;
-        };
-      });
+    darwinModules.default = import ./modules/darwin;
+    homeManagerModules.default = import ./modules/hm;
   };
 }

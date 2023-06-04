@@ -1,5 +1,5 @@
 {
   imports = [
-    ./darkman.nix
+    ./yabai.nix
   ];
 }
