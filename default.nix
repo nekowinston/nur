@@ -7,8 +7,12 @@
 #     nix-build -A mypackage
 {
   pkgs ? import <nixpkgs> {},
-  craneLib,
-  wezterm-src,
+  craneLib ? import (builtins.fetchTarball "https://github.com/ipetkov/crane/archive/refs/tags/v0.11.3.tar.gz") {inherit pkgs;},
+  wezterm-src ? (builtins.fetchGit {
+    url = "https://github.com/wez/wezterm";
+    ref = "main";
+    submodules = true;
+  }),
   ...
 }: {
   # The `lib`, `modules`, and `overlay` names are special
