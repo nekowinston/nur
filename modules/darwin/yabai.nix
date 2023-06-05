@@ -71,8 +71,8 @@ in {
     };
   };
 
-  config = mkMerge [
-    (mkIf cfg.enable {
+  config = mkIf cfg.enable (mkMerge [
+    {
       environment.systemPackages = [cfg.package];
       launchd.user.agents.yabai.serviceConfig = rec {
         ProgramArguments = ["${cfg.package}/bin/yabai" "-c" "${configFile}"];
@@ -83,12 +83,11 @@ in {
         StandardOutPath = mkIf (cfg.logFile != "") "${cfg.logFile}";
         StandardErrorPath = StandardOutPath;
       };
-    })
-
+    }
     (mkIf cfg.enableScriptingAddition {
       environment.etc."sudoers.d/yabai".text = let
         sha = builtins.hashFile "sha256" "${cfg.package}/bin/yabai";
       in "%admin ALL=(root) NOPASSWD: sha256:${sha} ${cfg.package}/bin/yabai --load-sa";
     })
-  ];
+  ]);
 }
