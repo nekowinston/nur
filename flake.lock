@@ -4,7 +4,9 @@
       "inputs": {
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "rust-overlay": "rust-overlay"
       },
       "locked": {
@@ -55,22 +57,6 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1676426280,
-        "narHash": "sha256-7DltKPrvCP0A9Iemv2ts1vnBYn5xQKScK/sb1VALlao=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "6d33e5e14fd12f99ba621683ae90cebadda753ca",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
         "lastModified": 1686338508,
         "narHash": "sha256-F0bZVV5ChaduBQwAdee0o3zazmCufbXxn/teqsVRqXU=",
         "owner": "NixOS",
@@ -88,7 +74,7 @@
     "root": {
       "inputs": {
         "crane": "crane",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "wezterm-src": "wezterm-src"
       }
     },

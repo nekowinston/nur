@@ -2,8 +2,9 @@
   description = "nekowinston NUR repository";
 
   inputs = {
-    crane.url = "github:ipetkov/crane/v0.12.2";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    crane.url = "github:ipetkov/crane/v0.12.2";
+    crane.inputs.nixpkgs.follows = "nixpkgs";
     wezterm-src = {
       type = "git";
       url = "https://github.com/wez/wezterm";
