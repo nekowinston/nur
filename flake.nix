@@ -2,7 +2,7 @@
   description = "nekowinston NUR repository";
 
   inputs = {
-    crane.url = "github:ipetkov/crane/v0.11.3";
+    crane.url = "github:ipetkov/crane/v0.12.2";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     wezterm-src = {
       type = "git";
