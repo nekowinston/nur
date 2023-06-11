@@ -30,6 +30,7 @@
   papirus-folders-catppuccin = pkgs.callPackage ./pkgs/papirus-folders-catppuccin {};
   picom-ft-labs = pkgs.callPackage ./pkgs/picom-ft-labs {};
   plymouth-theme-catppuccin = pkgs.callPackage ./pkgs/plymouth-theme-catppuccin {};
+  posy-improved-cursor = pkgs.callPackage ./pkgs/posy-improved-cursor {};
   swww = pkgs.callPackage ./pkgs/swww {};
   vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools = pkgs.callPackage ./pkgs/vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools {};
   wezterm-nightly = pkgs.darwin.apple_sdk_11_0.callPackage ./pkgs/wezterm-nightly {
