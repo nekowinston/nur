@@ -21,6 +21,7 @@
   nixosModules = import ./modules/nixos;
   overlays = import ./overlays; # nixpkgs overlays
 
+  apple-cursor = pkgs.callPackage ./pkgs/apple-cursor {};
   catppuccin-gtk = pkgs.callPackage ./pkgs/catppuccin-gtk {};
   cura = pkgs.callPackage ./pkgs/cura {};
   discover-overlay = pkgs.callPackage ./pkgs/discover-overlay {};
