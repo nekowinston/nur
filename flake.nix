@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    crane.url = "github:ipetkov/crane/v0.12.2";
+    crane.url = "github:ipetkov/crane/v0.11.3";
     crane.inputs.nixpkgs.follows = "nixpkgs";
     wezterm-src = {
       type = "git";
