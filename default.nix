@@ -28,12 +28,10 @@
   helm-ls = pkgs.callPackage ./pkgs/helm-ls {};
   jq-lsp = pkgs.callPackage ./pkgs/jq-lsp {};
   mopidy-podcast-itunes = pkgs.callPackage ./pkgs/mopidy-podcast-itunes {};
-  papirus-folders-catppuccin = pkgs.callPackage ./pkgs/papirus-folders-catppuccin {};
   picom-ft-labs = pkgs.callPackage ./pkgs/picom-ft-labs {};
   plymouth-theme-catppuccin = pkgs.callPackage ./pkgs/plymouth-theme-catppuccin {};
   posy-improved-cursor = pkgs.callPackage ./pkgs/posy-improved-cursor {};
   swww = pkgs.callPackage ./pkgs/swww {};
-  vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools = pkgs.callPackage ./pkgs/vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools {};
   wezterm-nightly = pkgs.darwin.apple_sdk_11_0.callPackage ./pkgs/wezterm-nightly {
     stdenv = with pkgs;
       if stdenv.isDarwin
