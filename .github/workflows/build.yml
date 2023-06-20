@@ -42,11 +42,9 @@ jobs:
       # TODO: build all packages in the repo with devour-flake, or similar
       - name: Build Linux packages
         run: |
-          nix build -L .\#catppuccin-gtk
           nix build -L .\#cura
           nix build -L .\#discover-overlay
           nix build -L .\#picom-ft-labs
-          nix build -L .\#papirus-folders-catppuccin
           nix build -L .\#plymouth-theme-catppuccin
           nix build -L .\#swww
         if: runner.os == 'Linux'
@@ -61,7 +59,6 @@ jobs:
           nix build -L .\#helm-ls
           nix build -L .\#jq-lsp
           nix build -L .\#mopidy-podcast-itunes
-          nix build -L .\#vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools
           nix build -L .\#wezterm-nightly
 
       # TODO: enable if I ever add it to NUR
