@@ -39,5 +39,6 @@
       });
     darwinModules.default = import ./modules/darwin;
     homeManagerModules.default = import ./modules/hm;
+    overlays.default = import ./overlays;
   };
 }
