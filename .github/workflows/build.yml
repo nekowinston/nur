@@ -56,7 +56,9 @@ jobs:
 
       - name: Build common packages
         run: |
+          nix build -L .\#gonvim-tools
           nix build -L .\#helm-ls
+          nix build -L .\#icat
           nix build -L .\#jq-lsp
           nix build -L .\#mopidy-podcast-itunes
           nix build -L .\#wezterm-nightly

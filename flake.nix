@@ -39,6 +39,7 @@
         apple-cursor = pkgs.callPackage ./pkgs/apple-cursor {};
         cura = pkgs.callPackage ./pkgs/cura {};
         discover-overlay = pkgs.callPackage ./pkgs/discover-overlay {};
+        gonvim-tools = pkgs.callPackage ./pkgs/gonvim-tools {};
         helm-ls = pkgs.callPackage ./pkgs/helm-ls {};
         icat = inputs.icat.packages.${system}.icat;
         jq-lsp = pkgs.callPackage ./pkgs/jq-lsp {};
