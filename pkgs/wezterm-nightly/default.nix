@@ -1,12 +1,27 @@
 {
   craneLib,
-  pkgs,
-  wezterm-src,
+  darwin,
+  fontconfig,
+  installShellFiles,
+  lib,
+  libGL,
+  libiconv,
+  libxkbcommon,
+  ncurses,
+  nixosTests,
+  openssl,
+  perl,
+  pkg-config,
+  python3,
+  runCommand,
   stdenv,
+  xorg,
+  vulkan-loader,
+  wayland,
+  wezterm-src,
+  zlib,
 }: let
-  inherit (pkgs) fontconfig installShellFiles lib libGL libiconv libxkbcommon ncurses nixosTests openssl perl pkg-config python3 runCommand vulkan-loader wayland zlib;
-  inherit (pkgs.xorg) libX11 libxcb xcbutil xcbutilimage xcbutilkeysyms xcbutilwm;
-  inherit (pkgs.darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation UserNotifications;
+  inherit (darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation UserNotifications;
 
   pname = "wezterm";
   src = craneLib.cleanCargoSource wezterm-src;
@@ -23,15 +38,15 @@
   buildInputs =
     [fontconfig zlib]
     ++ lib.optionals stdenv.isLinux [
-      libX11
-      libxcb
       libxkbcommon
       openssl
       wayland
-      xcbutil
-      xcbutilimage
-      xcbutilkeysyms
-      xcbutilwm # contains xcb-ewmh among others
+      xorg.libX11
+      xorg.libxcb
+      xorg.xcbutil
+      xorg.xcbutilimage
+      xorg.xcbutilkeysyms
+      xorg.xcbutilwm # contains xcb-ewmh among others
     ]
     ++ lib.optionals stdenv.isDarwin
     [

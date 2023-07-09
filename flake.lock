@@ -91,9 +91,7 @@
     },
     "icat": {
       "inputs": {
-        "flake-utils": [
-          "flake-utils"
-        ],
+        "flake-utils": "flake-utils_2",
         "nixpkgs": [
           "nixpkgs"
         ]
@@ -132,7 +130,6 @@
       "inputs": {
         "crane": "crane",
         "flake-compat": "flake-compat_2",
-        "flake-utils": "flake-utils_2",
         "icat": "icat",
         "nixpkgs": "nixpkgs",
         "wezterm-src": "wezterm-src"
