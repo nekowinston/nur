@@ -1,0 +1,27 @@
+<book xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      version="5.0"
+      xml:id="nekowinston-nur-manual">
+  <info>
+    <title>nekowinston's NUR</title>
+  </info>
+  <chapter>
+    <title>Preface</title>
+    <simpara>Basic documentation of nekowinston's NUR.</simpara>
+  </chapter>
+  <appendix xml:id="ch-darwin-options">
+    <title>Darwin configuration options</title>
+    <section xml:id="sec-darwin-options">
+     <title>Options</title>
+     <xi:include href="./nmd-result/nekowinston-nur-darwin-options.xml" />
+    </section>
+  </appendix>
+  <appendix xml:id="ch-hm-options">
+    <title>Home Manager configuration options</title>
+    <section xml:id="sec-hm-options">
+     <title>Options</title>
+     <xi:include href="./nmd-result/nekowinston-nur-hm-options.xml" />
+    </section>
+  </appendix>
+</book>

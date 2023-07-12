@@ -34,6 +34,10 @@
         inherit (inputs) wezterm-src;
         craneLib = inputs.crane.lib.${system};
         pkgs = import nixpkgs {inherit system;};
+        docs = import ./docs {
+          inherit pkgs;
+          lib = pkgs.lib;
+        };
       in {
         apple-cursor = pkgs.callPackage ./pkgs/apple-cursor {};
         cura = pkgs.callPackage ./pkgs/cura {};
@@ -54,6 +58,8 @@
             else stdenv;
           inherit wezterm-src craneLib;
         };
+
+        docs-html = docs.html;
       });
     }
     // {
