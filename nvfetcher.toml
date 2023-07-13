@@ -1,0 +1,44 @@
+# apps
+
+[cura]
+src.github_tag = "Ultimaker/Cura"
+src.include_regex = "5.\\d+\\.\\d+"
+fetch.url = "https://github.com/Ultimaker/Cura/releases/download/$ver/Ultimaker-Cura-$ver-linux-modern.AppImage"
+
+[discover-overlay]
+src.pypi = "discover-overlay"
+fetch.pypi = "discover-overlay"
+
+[wezterm]
+src.git = "https://github.com/wez/wezterm"
+fetch.github = "wez/wezterm"
+git.fetchSubmodules = true
+
+# extensions
+
+[mopidy-podcast-itunes]
+src.pypi = "Mopidy-Podcast-iTunes"
+fetch.pypi = "Mopidy-Podcast-iTunes"
+
+# go packages are very likely to break my CI, so it's all manual
+# gonvim-tools
+[go-enum]
+src.manual = "v0.5.6"
+fetch.github = "abice/go-enum"
+
+[gomvp]
+src.manual = "v0.0.4"
+fetch.github = "abenz1267/gomvp"
+
+[json-to-struct]
+src.manual = "1f65fffbfdbb2b0e56a3f6f6cd24daad58e90dec"
+fetch.github = "tmc/json-to-struct"
+
+# LSPs
+[helm-ls]
+src.manual = "61debb2d6cdafc978c217c9641e606314c0a42d5"
+fetch.github = "mrjosh/helm-ls"
+
+[jq-lsp]
+src.manual = "3e03c22ede27a39a0fff5c1a60a81f7397cd0811"
+fetch.github = "wader/jq-lsp"

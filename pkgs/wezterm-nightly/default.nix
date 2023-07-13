@@ -1,7 +1,7 @@
 {
+  callPackage,
   craneLib,
   darwin,
-  fetchFromGitHub,
   fontconfig,
   installShellFiles,
   lib,
@@ -29,15 +29,10 @@
     else stdenv;
 
   pname = "wezterm";
-  meta = (builtins.fromJSON (builtins.readFile ../../nurl/wezterm.json)).args;
-  wezterm-src = fetchFromGitHub {
-    owner = "wez";
-    repo = "wezterm";
-    fetchSubmodules = true;
-    inherit (meta) rev hash;
-  };
-  src = craneLib.cleanCargoSource wezterm-src;
-  version = builtins.substring 0 7 wezterm-src.rev;
+  nvfetcher = (callPackage ../../_sources/generated.nix {}).wezterm;
+  wezterm-src = nvfetcher.src;
+  src = craneLib.cleanCargoSource nvfetcher.src;
+  version = nvfetcher.date;
 
   nativeBuildInputs =
     [
@@ -80,7 +75,7 @@ in
     stdenv = chosenStdenv;
 
     postPatch = ''
-      echo "${version}" > .tag
+      echo "${version} (${(builtins.substring 0 7 nvfetcher.version)})" > .tag
       # tests are failing with: Unable to exchange encryption keys
       rm -r wezterm-ssh/tests
     '';
@@ -139,5 +134,6 @@ in
       description = "GPU-accelerated cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust";
       homepage = "https://wezfurlong.org/wezterm";
       license = licenses.mit;
+      platforms = platforms.unix;
     };
   }

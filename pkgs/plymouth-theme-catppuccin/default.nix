@@ -4,7 +4,7 @@
   stdenvNoCC,
 }:
 stdenvNoCC.mkDerivation {
-  name = "plymouth-theme-catppuccin";
+  pname = "plymouth-theme-catppuccin";
   version = "2022-12-10";
 
   src = pkgs.fetchFromGitHub {

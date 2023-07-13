@@ -1,0 +1,167 @@
+{
+    "cura": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "cura",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-QVv7Wkfo082PH6n6rpsB79st2xK2+Np9ivBg/PYZd74=",
+            "type": "url",
+            "url": "https://github.com/Ultimaker/Cura/releases/download/5.4.0/Ultimaker-Cura-5.4.0-linux-modern.AppImage"
+        },
+        "version": "5.4.0"
+    },
+    "discover-overlay": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "discover-overlay",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-o20Q+3VF60khXuvh4RmHkyt25cK7y9Svr+1NqsZ0o9s=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.6.5.tar.gz"
+        },
+        "version": "0.6.5"
+    },
+    "go-enum": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "go-enum",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "abice",
+            "repo": "go-enum",
+            "rev": "v0.5.6",
+            "sha256": "sha256-epGtBHngAFClrU63y5QQ130Me/lrZw4J2ZDWEuOh8Uo=",
+            "type": "github"
+        },
+        "version": "v0.5.6"
+    },
+    "gomvp": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "gomvp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "abenz1267",
+            "repo": "gomvp",
+            "rev": "v0.0.4",
+            "sha256": "sha256-dXjI+nItJCAGKxyC9tX11hxWHCP+NgXtTYtm5+6dqDU=",
+            "type": "github"
+        },
+        "version": "v0.0.4"
+    },
+    "helm-ls": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "helm-ls",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mrjosh",
+            "repo": "helm-ls",
+            "rev": "61debb2d6cdafc978c217c9641e606314c0a42d5",
+            "sha256": "sha256-cEwF52rxQVNrUK7XJHoyBj/PXEueHCrRi7sLe4HoD6I=",
+            "type": "github"
+        },
+        "version": "61debb2d6cdafc978c217c9641e606314c0a42d5"
+    },
+    "jq-lsp": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "jq-lsp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "wader",
+            "repo": "jq-lsp",
+            "rev": "3e03c22ede27a39a0fff5c1a60a81f7397cd0811",
+            "sha256": "sha256-+cJgRRopeTwtJT6nqcpeCKfBVNFA+vDgg4VY0ZQ/roE=",
+            "type": "github"
+        },
+        "version": "3e03c22ede27a39a0fff5c1a60a81f7397cd0811"
+    },
+    "json-to-struct": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "json-to-struct",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tmc",
+            "repo": "json-to-struct",
+            "rev": "1f65fffbfdbb2b0e56a3f6f6cd24daad58e90dec",
+            "sha256": "sha256-l/XLZstZFVnYXRqtng1oiCSvhNAomyeTuI1OtCb8UHo=",
+            "type": "github"
+        },
+        "version": "1f65fffbfdbb2b0e56a3f6f6cd24daad58e90dec"
+    },
+    "mopidy-podcast-itunes": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "mopidy-podcast-itunes",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-sxowRHUGiUr7dKoNKs4htFJccEaBqvyvzINmrZIZIds=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/M/Mopidy-Podcast-iTunes/Mopidy-Podcast-iTunes-3.0.1.tar.gz"
+        },
+        "version": "3.0.1"
+    },
+    "wezterm": {
+        "cargoLocks": null,
+        "date": "2023-07-12",
+        "extract": null,
+        "name": "wezterm",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "wez",
+            "repo": "wezterm",
+            "rev": "4924fd51378f53609171b56b0a9cf9b013b7d77f",
+            "sha256": "sha256-SXPqBvCDqdxyPFs2hsMoRThC1reqa7r252Ho4re9jt8=",
+            "type": "github"
+        },
+        "version": "4924fd51378f53609171b56b0a9cf9b013b7d77f"
+    }
+}

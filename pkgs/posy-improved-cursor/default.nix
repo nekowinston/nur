@@ -22,6 +22,7 @@ stdenvNoCC.mkDerivation rec {
   meta = with lib; {
     description = "Posy's improved cursors by Michiel de Boer, available as cursor themes.";
     homepage = "https://github.com/simtrami/posy-improved-cursor-linux";
-    platforms = platforms.all;
+    license = licenses.free;
+    platforms = platforms.linux;
   };
 }

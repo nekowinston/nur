@@ -1,25 +1,19 @@
 {
-  buildGo118Module,
-  fetchFromGitHub,
+  buildGoModule,
+  callPackage,
   lib,
-  ...
-}:
-buildGo118Module rec {
-  pname = "helm-ls";
-  version = "v0.0.3";
+}: let
+  nvfetcher = (callPackage ../../_sources/generated.nix {}).helm-ls;
+in
+  buildGoModule {
+    inherit (nvfetcher) pname version src;
 
-  src = fetchFromGitHub {
-    owner = "mrjosh";
-    repo = "helm-ls";
-    rev = version;
-    sha256 = "sha256-MiDbV+mfr1wcc0e0iwFPL8WniWKbPnr4zb79qniT2Kc=";
-  };
+    vendorSha256 = "sha256-wMYrgAgAEgwfjMLP81H0cKWm/kh63ppDkSiymfsaj7U=";
 
-  vendorSha256 = "sha256-EqZlmOoQtC3Iuf0LG2PL0K2pluGqbyA6132lzgF4+ic=";
-
-  meta = with lib; {
-    description = "helm language server";
-    homepage = "https://github.com/mrjosh/helm-ls";
-    license = licenses.mit;
-  };
-}
+    meta = with lib; {
+      description = "helm language server";
+      homepage = "https://github.com/mrjosh/helm-ls";
+      license = licenses.mit;
+      platforms = platforms.unix;
+    };
+  }
