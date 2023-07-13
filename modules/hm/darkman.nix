@@ -65,16 +65,12 @@ with lib; let
     dark,
     light,
   }: let
-    shebang = ''
-      #!/usr/bin/env bash
-      set -euo pipefail
-    '';
+    darkScript = pkgs.writeShellScript "darkman-activation-dark" dark;
+    lightScript = pkgs.writeShellScript "darkman-activation-light" light;
   in
     pkgs.runCommand "darkman-activation" {} ''
-      mkdir -p $out/dark-mode.d $out/light-mode.d
-      echo "${shebang + dark}" > $out/dark-mode.d/nix-hm-module-darkman.sh
-      echo "${shebang + light}" > $out/light-mode.d/nix-hm-module-darkman.sh
-      chmod +x $out/dark-mode.d/nix-hm-module-darkman.sh $out/light-mode.d/nix-hm-module-darkman.sh
+      install -Dm755 ${darkScript}  $out/dark-mode.d/nix-hm-module-darkman.sh
+      install -Dm755 ${lightScript} $out/light-mode.d/nix-hm-module-darkman.sh
     '';
 in {
   options.services.darkman = {
@@ -85,16 +81,26 @@ in {
       default = {};
       description = "Config for darkman.";
     };
-    activationScript = {
+    activationScript = let
+      doc = mode: ''
+        Commands to run when ${mode} mode is activated.
+
+        The scripts are placed in a Nix derivation,
+        <literal>${mode}-mode.d/nix-hm-module-darkman.sh</literal>, which is then added
+        to <literal>xdg.systemDirs.data</literal> (<literal>$XDG_DATA_DIRS</literal>).
+        The interpreter of these script is <literal>pkgs.bash</literal>, as they are
+        created by <literal>pkgs.writeShellScript</literal>.
+      '';
+    in {
       dark = mkOption {
         type = types.str;
         default = "";
-        description = "Commands to run when dark mode is activated. The interpreter is bash.";
+        description = doc "dark";
       };
       light = mkOption {
         type = types.str;
         default = "";
-        description = "Commands to run when light mode is activated. The interpreter is bash.";
+        description = doc "light";
       };
     };
   };
@@ -105,12 +111,15 @@ in {
         (hm.assertions.assertPlatform "services.darkman" pkgs platforms.linux)
         {
           assertion = cfg.config.useGeoclue || (cfg.config.lat != null || cfg.config.lng != null);
-          message = "You're not using geoclue, and have not set a latitude and longitude.
-        Please either enable geoclue, or set lat and lng to the coordinates of your location.";
+          message = ''
+            You're not using geoclue, and have not set a latitude and longitude.
+            Please either enable geoclue, or set lat and lng to the coordinates of your location.
+          '';
         }
       ];
 
       home.packages = [cfg.package];
+
       systemd.user.services.darkman = {
         Unit = {
           Description = "Framework for dark-mode and light-mode transitions.";

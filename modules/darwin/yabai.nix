@@ -24,25 +24,34 @@ in {
   # overwrite the default nix-darwin module, as this fixes the Scripting Addition
   disabledModules = ["services/yabai"];
 
-  options.services.yabai = with types; {
-    enable = mkEnableOption "Whether to enable the yabai window manager.";
+  options.services.yabai = {
+    enable = mkEnableOption "yabai window manager";
 
     package = mkPackageOption pkgs "yabai" {};
 
     logFile = mkOption {
       type = types.str;
       default = "";
-      example = "/var/tmp/yabai.log";
+      example = literalExpression "/var/tmp/yabai.log";
       description = "Path where you want to write daemon logs.";
     };
 
-    enableScriptingAddition = mkEnableOption ''
-      Whether to enable yabai's scripting-addition.
-      SIP must be disabled for this to work.
-    '';
+    enableScriptingAddition = mkOption {
+      type = types.bool;
+      default = false;
+      example = true;
+      description = ''
+        Whether to enable yabai's scripting-addition.
+        SIP must be (partially) disabled for this to work. See
+        https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection
+
+        Compared to Nix-Darwin's default module, this option also injects the necessary
+        sha256 hash into the <literal>/etc/sudoers.d/yabai</literal> file.
+      '';
+    };
 
     config = mkOption {
-      type = attrs;
+      type = types.attrs;
       default = {};
       example = literalExpression ''
         {
@@ -62,7 +71,7 @@ in {
       '';
     };
     extraConfig = mkOption {
-      type = str;
+      type = types.str;
       default = "";
       example = literalExpression ''
         yabai -m rule --add app='System Preferences' manage=off
