@@ -7,6 +7,7 @@
     # builders
     crane.url = "github:ipetkov/crane/v0.12.2";
     crane.inputs.nixpkgs.follows = "nixpkgs";
+    crane.inputs.flake-compat.follows = "";
 
     # upstreams
     icat.url = "github:nekowinston/icat";
