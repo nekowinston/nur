@@ -4,25 +4,13 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-    # utils
-    flake-compat = {
-      url = "github:edolstra/flake-compat";
-      flake = false;
-    };
-
     # builders
-    crane.url = "github:ipetkov/crane/v0.11.3";
+    crane.url = "github:ipetkov/crane/v0.12.2";
     crane.inputs.nixpkgs.follows = "nixpkgs";
 
     # upstreams
     icat.url = "github:nekowinston/icat";
     icat.inputs.nixpkgs.follows = "nixpkgs";
-    wezterm-src = {
-      type = "git";
-      url = "https://github.com/wez/wezterm";
-      submodules = true;
-      flake = false;
-    };
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
@@ -31,7 +19,6 @@
   in
     {
       packages = forAllSystems (system: let
-        inherit (inputs) wezterm-src;
         craneLib = inputs.crane.lib.${system};
         pkgs = import nixpkgs {inherit system;};
         docs = import ./docs {
@@ -51,13 +38,7 @@
         plymouth-theme-catppuccin = pkgs.callPackage ./pkgs/plymouth-theme-catppuccin {};
         posy-improved-cursor = pkgs.callPackage ./pkgs/posy-improved-cursor {};
         swww = pkgs.callPackage ./pkgs/swww {};
-        wezterm-nightly = pkgs.darwin.apple_sdk_11_0.callPackage ./pkgs/wezterm-nightly {
-          stdenv = with pkgs;
-            if stdenv.isDarwin
-            then darwin.apple_sdk_11_0.stdenv
-            else stdenv;
-          inherit wezterm-src craneLib;
-        };
+        wezterm-nightly = pkgs.callPackage ./pkgs/wezterm-nightly {inherit craneLib;};
 
         docs-html = docs.html;
       });

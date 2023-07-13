@@ -1,6 +1,7 @@
 {
   craneLib,
   darwin,
+  fetchFromGitHub,
   fontconfig,
   installShellFiles,
   lib,
@@ -15,15 +16,26 @@
   python3,
   runCommand,
   stdenv,
-  xorg,
   vulkan-loader,
   wayland,
-  wezterm-src,
+  xorg,
   zlib,
 }: let
   inherit (darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation UserNotifications;
+  # overwriting the stdenv on Darwin for x86_64 builds, see nekowinston/nur#5
+  chosenStdenv =
+    if stdenv.isDarwin
+    then darwin.apple_sdk_11_0.stdenv
+    else stdenv;
 
   pname = "wezterm";
+  meta = (builtins.fromJSON (builtins.readFile ../../nurl/wezterm.json)).args;
+  wezterm-src = fetchFromGitHub {
+    owner = "wez";
+    repo = "wezterm";
+    fetchSubmodules = true;
+    inherit (meta) rev hash;
+  };
   src = craneLib.cleanCargoSource wezterm-src;
   version = builtins.substring 0 7 wezterm-src.rev;
 
@@ -57,16 +69,18 @@
       UserNotifications
     ];
   cargoArtifacts = craneLib.buildDepsOnly {
-    inherit src pname version nativeBuildInputs buildInputs stdenv;
+    inherit src pname version nativeBuildInputs buildInputs;
+    stdenv = chosenStdenv;
   };
 in
   craneLib.buildPackage rec {
-    inherit pname version cargoArtifacts nativeBuildInputs buildInputs stdenv;
+    inherit pname version cargoArtifacts nativeBuildInputs buildInputs;
     name = "${pname}-${version}";
     src = wezterm-src;
+    stdenv = chosenStdenv;
 
     postPatch = ''
-      echo "${builtins.substring 0 8 wezterm-src.lastModifiedDate} (${version})" > .tag
+      echo "${version}" > .tag
       # tests are failing with: Unable to exchange encryption keys
       rm -r wezterm-ssh/tests
     '';

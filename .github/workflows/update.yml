@@ -22,7 +22,10 @@ jobs:
           nix_path: nixpkgs=channel:nixpkgs-unstable
 
       - name: Update via nix-update
-        run: nix flake update
+        run: "nix flake update"
+
+      - name: Prefetch latest WezTerm commit
+        run: "nix run nixpkgs#nurl -- -S=true --json https://github.com/wez/wezterm > nurl-wezterm.json"
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
