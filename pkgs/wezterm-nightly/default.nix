@@ -1,4 +1,5 @@
 {
+  callPackage,
   craneLib,
   darwin,
   fontconfig,
@@ -15,17 +16,23 @@
   python3,
   runCommand,
   stdenv,
-  xorg,
   vulkan-loader,
   wayland,
-  wezterm-src,
+  xorg,
   zlib,
 }: let
   inherit (darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation UserNotifications;
+  # overwriting the stdenv on Darwin for x86_64 builds, see nekowinston/nur#5
+  chosenStdenv =
+    if stdenv.isDarwin
+    then darwin.apple_sdk_11_0.stdenv
+    else stdenv;
 
   pname = "wezterm";
-  src = craneLib.cleanCargoSource wezterm-src;
-  version = builtins.substring 0 7 wezterm-src.rev;
+  nvfetcher = (callPackage ../../_sources/generated.nix {}).wezterm;
+  wezterm-src = nvfetcher.src;
+  src = craneLib.cleanCargoSource nvfetcher.src;
+  version = nvfetcher.date;
 
   nativeBuildInputs =
     [
@@ -57,16 +64,18 @@
       UserNotifications
     ];
   cargoArtifacts = craneLib.buildDepsOnly {
-    inherit src pname version nativeBuildInputs buildInputs stdenv;
+    inherit src pname version nativeBuildInputs buildInputs;
+    stdenv = chosenStdenv;
   };
 in
   craneLib.buildPackage rec {
-    inherit pname version cargoArtifacts nativeBuildInputs buildInputs stdenv;
+    inherit pname version cargoArtifacts nativeBuildInputs buildInputs;
     name = "${pname}-${version}";
     src = wezterm-src;
+    stdenv = chosenStdenv;
 
     postPatch = ''
-      echo "${builtins.substring 0 8 wezterm-src.lastModifiedDate} (${version})" > .tag
+      echo "${version} (${(builtins.substring 0 7 nvfetcher.version)})" > .tag
       # tests are failing with: Unable to exchange encryption keys
       rm -r wezterm-ssh/tests
     '';
@@ -125,5 +134,6 @@ in
       description = "GPU-accelerated cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust";
       homepage = "https://wezfurlong.org/wezterm";
       license = licenses.mit;
+      platforms = platforms.unix;
     };
   }

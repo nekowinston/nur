@@ -21,8 +21,11 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
 
-      - name: Update via nix-update
-        run: nix flake update
+      - name: Update flake inputs
+        run: "nix flake update"
+
+      - name: Prefetch latest commits of packages
+        run: "nix run nixpkgs#nvfetcher"
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4

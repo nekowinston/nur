@@ -1,22 +1,17 @@
 {
   appimageTools,
-  fetchurl,
+  callPackage,
   lib,
 }: let
-  pname = "cura";
-  version = "5.2.2";
+  nvfetcher = (callPackage ../../_sources/generated.nix {}).cura;
+  inherit (nvfetcher) pname version src;
   name = "${pname}-${version}";
-
-  src = fetchurl {
-    url = "https://github.com/Ultimaker/Cura/releases/download/${version}/Ultimaker-Cura-${version}-linux-modern.AppImage";
-    sha256 = "sha256-GTMRrGh+2NRtdkqcoDfjZgDjIVv9kZhFpU5+/wYWEuc=";
-  };
 
   appimageContents = appimageTools.extractType1 {
     inherit name src;
   };
 in
-  appimageTools.wrapType1 rec {
+  appimageTools.wrapType1 {
     inherit name version src;
 
     extraInstallCommands = ''
