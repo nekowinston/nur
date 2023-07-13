@@ -31,7 +31,6 @@
     channelName = "nekowinston-nur";
     docBook = {
       id = "nekowinston-nur-darwin-options";
-
       optionIdPrefix = "darwin-opt";
     };
   };
