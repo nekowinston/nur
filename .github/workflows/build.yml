@@ -44,8 +44,9 @@ jobs:
           nix build -L .\#apple-cursor
           nix build -L .\#cura
           nix build -L .\#discover-overlay
-          nix build -L .\#posy-improved-cursor
+          nix build -L .\#mopidy-podcast-itunes
           nix build -L .\#plymouth-theme-catppuccin
+          nix build -L .\#posy-improved-cursor
         if: runner.os == 'Linux'
 
       - name: Build macOS packages
@@ -59,7 +60,6 @@ jobs:
           nix build -L .\#helm-ls
           nix build -L .\#icat
           nix build -L .\#jq-lsp
-          nix build -L .\#mopidy-podcast-itunes
           nix build -L .\#wezterm-nightly
 
       # TODO: enable if I ever add it to NUR
