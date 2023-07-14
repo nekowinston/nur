@@ -27,6 +27,7 @@
       };
     in {
       apple-cursor = pkgs.callPackage ./pkgs/apple-cursor {};
+      apple-sf-mono = pkgs.callPackage ./pkgs/apple-sf-mono {};
       cura = pkgs.callPackage ./pkgs/cura {};
       discover-overlay = pkgs.callPackage ./pkgs/discover-overlay {};
       gonvim-tools = pkgs.callPackage ./pkgs/gonvim-tools {};
