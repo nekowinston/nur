@@ -80,6 +80,14 @@
       sha256 = "sha256-sxowRHUGiUr7dKoNKs4htFJccEaBqvyvzINmrZIZIds=";
     };
   };
+  sf-mono = {
+    pname = "sf-mono";
+    version = "unknown";
+    src = fetchurl {
+      url = "https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg";
+      sha256 = "sha256-pqkYgJZttKKHqTYobBUjud0fW79dS5tdzYJ23we9TW4=";
+    };
+  };
   wezterm = {
     pname = "wezterm";
     version = "115e629ec14757430462ce4d0ba8e8bd4e193fab";

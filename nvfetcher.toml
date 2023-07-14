@@ -9,6 +9,11 @@ fetch.url = "https://github.com/Ultimaker/Cura/releases/download/$ver/Ultimaker-
 src.pypi = "discover-overlay"
 fetch.pypi = "discover-overlay"
 
+[gpt4all]
+src.git = "https://github.com/nomic-ai/gpt4all"
+fetch.github = "nomic-ai/gpt4all"
+git.fetchSubmodules = true
+
 [wezterm]
 src.git = "https://github.com/wez/wezterm"
 fetch.github = "wez/wezterm"
@@ -42,3 +47,8 @@ fetch.github = "mrjosh/helm-ls"
 [jq-lsp]
 src.manual = "3e03c22ede27a39a0fff5c1a60a81f7397cd0811"
 fetch.github = "wader/jq-lsp"
+
+# fonts
+[sf-mono]
+src.manual = "unknown"
+fetch.url = "https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg"

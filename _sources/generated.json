@@ -144,6 +144,21 @@
         },
         "version": "3.0.1"
     },
+    "sf-mono": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "sf-mono",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-pqkYgJZttKKHqTYobBUjud0fW79dS5tdzYJ23we9TW4=",
+            "type": "url",
+            "url": "https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg"
+        },
+        "version": "unknown"
+    },
     "wezterm": {
         "cargoLocks": null,
         "date": "2023-07-13",
