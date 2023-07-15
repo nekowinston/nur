@@ -69,6 +69,26 @@
         },
         "version": "v0.0.4"
     },
+    "gpt4all": {
+        "cargoLocks": null,
+        "date": "2023-07-14",
+        "extract": null,
+        "name": "gpt4all",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nomic-ai",
+            "repo": "gpt4all",
+            "rev": "cfd70b69fcf5e587b8e0e3e9b9aaa90e19cbbc51",
+            "sha256": "sha256-1Fpi1wymSg1B8hAEIKK8Z57YcZgTEznClBuDZzwcryc=",
+            "type": "github"
+        },
+        "version": "cfd70b69fcf5e587b8e0e3e9b9aaa90e19cbbc51"
+    },
     "helm-ls": {
         "cargoLocks": null,
         "date": null,
@@ -161,7 +181,7 @@
     },
     "wezterm": {
         "cargoLocks": null,
-        "date": "2023-07-13",
+        "date": "2023-07-14",
         "extract": null,
         "name": "wezterm",
         "passthru": null,
@@ -173,10 +193,10 @@
             "name": null,
             "owner": "wez",
             "repo": "wezterm",
-            "rev": "115e629ec14757430462ce4d0ba8e8bd4e193fab",
-            "sha256": "sha256-zbmZGmNDFTc1TijhnnCxvNANzR6NdcwJou42T2GLZLA=",
+            "rev": "b54b0ce40428a8f910cd7c6fd94fd58e2f0ff88b",
+            "sha256": "sha256-zbkdGRrwms2NnUYq/GHrO1pOCewz+ClKLP4sbfrjQtU=",
             "type": "github"
         },
-        "version": "115e629ec14757430462ce4d0ba8e8bd4e193fab"
+        "version": "b54b0ce40428a8f910cd7c6fd94fd58e2f0ff88b"
     }
 }
