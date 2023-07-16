@@ -49,6 +49,18 @@ src.manual = "3e03c22ede27a39a0fff5c1a60a81f7397cd0811"
 fetch.github = "wader/jq-lsp"
 
 # fonts
+[sf-compact]
+src.manual = "unknown"
+fetch.url = "https://devimages-cdn.apple.com/design/resources/download/SF-Compact.dmg"
+
 [sf-mono]
 src.manual = "unknown"
 fetch.url = "https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg"
+
+[sf-pro]
+src.manual = "unknown"
+fetch.url = "https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg"
+
+[apple-emoji]
+src.github = "samuelngs/apple-emoji-linux"
+fetch.url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/$ver/AppleColorEmoji.ttf"

@@ -17,7 +17,8 @@ in {
   overlays = import ./overlays; # nixpkgs overlays
 
   apple-cursor = pkgs.callPackage ./pkgs/apple-cursor {};
-  apple-sf-mono = pkgs.callPackage ./pkgs/apple-sf-mono {};
+  apple-fonts = pkgs.callPackage ./pkgs/apple-fonts {};
+  apple-emoji = pkgs.callPackage ./pkgs/apple-emoji {};
   cura = pkgs.callPackage ./pkgs/cura {};
   discover-overlay = pkgs.callPackage ./pkgs/discover-overlay {};
   gonvim-tools = pkgs.callPackage ./pkgs/gonvim-tools {};
