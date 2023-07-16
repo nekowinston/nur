@@ -2,7 +2,8 @@ name: "Auto-update metadata"
 
 on:
   schedule:
-    - cron: "0 7 * * *"
+    - cron: "0 7 * * 1-6"
+    - cron: "0 7 * * 0"
   workflow_dispatch:
 
 jobs:
@@ -23,6 +24,8 @@ jobs:
 
       - name: Update flake inputs
         run: "nix flake update"
+        # Only do this once a week
+        if: github.event.schedule == '0 7 * * 0'
 
       - name: Prefetch latest commits of packages
         run: "nix run nixpkgs#nvfetcher"
