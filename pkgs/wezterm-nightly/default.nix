@@ -30,8 +30,8 @@
 
   pname = "wezterm";
   nvfetcher = (callPackage ../../_sources/generated.nix {}).wezterm;
-  wezterm-src = nvfetcher.src;
-  src = craneLib.cleanCargoSource nvfetcher.src;
+  src = lib.cleanSource nvfetcher.src;
+
   version = nvfetcher.date;
 
   nativeBuildInputs =
@@ -69,10 +69,12 @@
   };
 in
   craneLib.buildPackage rec {
-    inherit pname version cargoArtifacts nativeBuildInputs buildInputs;
+    inherit pname version src cargoArtifacts nativeBuildInputs buildInputs;
     name = "${pname}-${version}";
-    src = wezterm-src;
     stdenv = chosenStdenv;
+
+    # Prevent cargo test from duplicating tests
+    doCheck = false;
 
     postPatch = ''
       echo "${version} (${(builtins.substring 0 7 nvfetcher.version)})" > .tag
@@ -80,7 +82,7 @@ in
       rm -r wezterm-ssh/tests
     '';
 
-    cargoExtraArgs = "--features distro-defaults";
+    cargoExtraArgs = "-p wezterm-gui --features distro-defaults";
 
     postInstall = ''
       mkdir -p $out/nix-support
@@ -126,7 +128,7 @@ in
           nativeBuildInputs = [ncurses];
         } ''
           mkdir -p $out/share/terminfo $out/nix-support
-          tic -x -o $out/share/terminfo ${wezterm-src}/termwiz/data/wezterm.terminfo
+          tic -x -o $out/share/terminfo ${src}/termwiz/data/wezterm.terminfo
         '';
     };
 
