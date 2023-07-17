@@ -82,7 +82,7 @@ in
       rm -r wezterm-ssh/tests
     '';
 
-    cargoExtraArgs = "-p wezterm-gui --features distro-defaults";
+    cargoExtraArgs = "--features distro-defaults";
 
     postInstall = ''
       mkdir -p $out/nix-support
