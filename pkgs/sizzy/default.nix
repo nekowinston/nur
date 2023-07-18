@@ -19,10 +19,26 @@
     license = licenses.unfree;
     platforms = platforms.unix;
   };
+
+  darwinBuilder = arch:
+    stdenvNoCC.mkDerivation {
+      inherit pname meta;
+      inherit (nvfetcher.${"sizzy-darwin-" + arch}) version;
+
+      src = nvfetcher.${"sizzy-darwin-" + arch}.src.overrideAttrs (f: {
+        name = "Sizzy.dmg";
+      });
+      buildInputs = [undmg];
+      sourceRoot = ".";
+
+      installPhase = ''
+        mkdir -p $out/Applications
+        mv Sizzy.app $out/Applications
+      '';
+    };
 in
   {
     aarch64-linux = throw "Unsupported platform ${stdenvNoCC.hostPlatform.system}";
-
     x86_64-linux = appimageTools.wrapType2 rec {
       inherit pname meta;
       inherit (nvfetcher.${"sizzy-linux"}) version src;
@@ -39,31 +55,8 @@ in
       '';
     };
 
-    x86_64-darwin = stdenvNoCC.mkDerivation {
-      inherit pname meta;
-      inherit (nvfetcher.${"sizzy-darwin-x64"}) version src;
-
-      buildInputs = [undmg];
-      sourceRoot = ".";
-
-      installPhase = ''
-        mkdir -p $out/Applications
-        mv Sizzy.app $out/Applications
-      '';
-    };
-
-    aarch64-darwin = stdenvNoCC.mkDerivation {
-      inherit pname meta;
-      inherit (nvfetcher.${"sizzy-darwin-arm"}) version src;
-
-      buildInputs = [undmg];
-      sourceRoot = ".";
-
-      installPhase = ''
-        mkdir -p $out/Applications
-        mv Sizzy.app $out/Applications
-      '';
-    };
+    aarch64-darwin = darwinBuilder "arm64";
+    x86_64-darwin = darwinBuilder "x64";
   }
   .${stdenvNoCC.hostPlatform.system}
   or (throw "Unsupported platform ${stdenvNoCC.hostPlatform.system}")
