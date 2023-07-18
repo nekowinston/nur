@@ -55,7 +55,7 @@ in
       '';
     };
 
-    aarch64-darwin = darwinBuilder "arm64";
+    aarch64-darwin = darwinBuilder "arm";
     x86_64-darwin = darwinBuilder "x64";
   }
   .${stdenvNoCC.hostPlatform.system}
