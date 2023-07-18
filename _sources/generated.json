@@ -224,6 +224,51 @@
         },
         "version": "unknown"
     },
+    "sizzy-darwin-arm": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "sizzy-darwin-arm",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-j/xzsEoMn3/r2Q1zw9MMiGGiTM/r2v4yELfOoIFPp60=",
+            "type": "url",
+            "url": "https://proxy.sizzy.co/updates/download/mac?arch=arm"
+        },
+        "version": "71.5.0"
+    },
+    "sizzy-darwin-x64": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "sizzy-darwin-x64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-j/xzsEoMn3/r2Q1zw9MMiGGiTM/r2v4yELfOoIFPp60=",
+            "type": "url",
+            "url": "https://proxy.sizzy.co/updates/download/mac?arch=x64"
+        },
+        "version": "71.5.0"
+    },
+    "sizzy-linux": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "sizzy-linux",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-ygXw4P241umCG/3ml4rQpNgFkYUUALEXwH53wtUQIgY=",
+            "type": "url",
+            "url": "https://proxy.sizzy.co/updates/download/linux?arch=x64"
+        },
+        "version": "71.5.0"
+    },
     "wezterm": {
         "cargoLocks": null,
         "date": "2023-07-17",
