@@ -19,7 +19,7 @@ src.follow_redirects = true
 src.header = "Content-Disposition"
 src.httpheader = "https://proxy.sizzy.co/updates/download/mac?arch=arm"
 src.regex = '(\d+\.\d\.\d)'
-fetch.url = "https://proxy.sizzy.co/updates/download/mac?arch=arm"
+fetch.url = "https://proxy.sizzy.co/updates/download/mac?arch=arm64"
 
 [sizzy-darwin-x64]
 src.follow_redirects = true

@@ -128,8 +128,8 @@
     pname = "sizzy-darwin-arm";
     version = "71.5.0";
     src = fetchurl {
-      url = "https://proxy.sizzy.co/updates/download/mac?arch=arm";
-      sha256 = "sha256-j/xzsEoMn3/r2Q1zw9MMiGGiTM/r2v4yELfOoIFPp60=";
+      url = "https://proxy.sizzy.co/updates/download/mac?arch=arm64";
+      sha256 = "sha256-SA0RzCU9Kp6Fj1l3uZewc+JxEkwDi8cjgWlqgQqMVQw=";
     };
   };
   sizzy-darwin-x64 = {
