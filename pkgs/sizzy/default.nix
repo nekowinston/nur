@@ -1,7 +1,9 @@
 {
   appimageTools,
   callPackage,
+  glib,
   lib,
+  makeWrapper,
   stdenvNoCC,
   undmg,
 }: let
@@ -45,9 +47,13 @@ in
       name = "${pname}-${version}";
 
       extraInstallCommands = ''
-        mv $out/bin/${name} $out/bin/${pname}
-        install -m 444 -D ${appimageContents}/${pname}.desktop $out/share/applications/${pname}.desktop
+        mv $out/bin/{${name},${pname}}
 
+        source "${makeWrapper}/nix-support/setup-hook"
+        wrapProgram $out/bin/${pname} \
+          --add-flags "\''${NIXOS_OZONE_WL:+\''${WAYLAND_DISPLAY:+--ozone-platform-hint=auto --enable-features=WaylandWindowDecorations}}"
+
+        install -m 444 -D ${appimageContents}/${pname}.desktop $out/share/applications/${pname}.desktop
         for size in 16 32 48 64 128 256 512; do
           install -m 444 -D ${appimageContents}/usr/share/icons/hicolor/''${size}x''${size}/apps/${pname}.png $out/share/icons/hicolor/''${size}x''${size}/apps/${pname}.png
         done
