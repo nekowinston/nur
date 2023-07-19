@@ -20,14 +20,14 @@
     platforms = platforms.unix;
   };
 
-  darwinBuilder = arch:
+  darwinBuilder = arch: let
+    source = nvfetcher.${"sizzy-darwin-" + arch};
+  in
     stdenvNoCC.mkDerivation {
       inherit pname meta;
-      inherit (nvfetcher.${"sizzy-darwin-" + arch}) version;
+      inherit (source) version;
 
-      src = nvfetcher.${"sizzy-darwin-" + arch}.src.overrideAttrs (f: {
-        name = "Sizzy.dmg";
-      });
+      src = source.src.overrideAttrs (_: {name = "Sizzy.dmg";});
       buildInputs = [undmg];
       sourceRoot = ".";
 
@@ -41,9 +41,11 @@ in
     aarch64-linux = throw "Unsupported platform ${stdenvNoCC.hostPlatform.system}";
     x86_64-linux = appimageTools.wrapType2 rec {
       inherit pname meta;
-      inherit (nvfetcher.${"sizzy-linux"}) version src;
+      inherit (nvfetcher.sizzy-linux) version src;
+      name = "${pname}-${version}";
 
       extraInstallCommands = ''
+        mv $out/bin/${name} $out/bin/${pname}
         install -m 444 -D ${appimageContents}/${pname}.desktop $out/share/applications/${pname}.desktop
 
         for size in 16 32 48 64 128 256 512; do
