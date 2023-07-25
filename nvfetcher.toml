@@ -35,6 +35,11 @@ src.httpheader = "https://proxy.sizzy.co/updates/download/linux?arch=x64"
 src.regex = '(\d+\.\d\.\d)'
 fetch.url = "https://proxy.sizzy.co/updates/download/linux?arch=x64"
 
+[uhk-agent]
+src.github_tag = "UltimateHackingKeyboard/agent"
+src.prefix = "v"
+fetch.url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v$ver/UHK.Agent-$ver-linux-x86_64.AppImage"
+
 [wezterm]
 src.git = "https://github.com/wez/wezterm"
 fetch.github = "wez/wezterm"

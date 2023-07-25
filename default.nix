@@ -32,6 +32,7 @@ in {
   plymouth-theme-catppuccin = pkgs.callPackage ./pkgs/plymouth-theme-catppuccin {};
   posy-improved-cursor = pkgs.callPackage ./pkgs/posy-improved-cursor {};
   sizzy = pkgs.callPackage ./pkgs/sizzy {};
+  uhk-agent = pkgs.callPackage ./pkgs/uhk-agent {};
   wezterm-nightly = pkgs.callPackage ./pkgs/wezterm-nightly {inherit craneLib;};
 
   docs-html = docs.html;

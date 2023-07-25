@@ -269,6 +269,21 @@
         },
         "version": "71.5.0"
     },
+    "uhk-agent": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "uhk-agent",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-oRdV2pbUlXHqBED51ThLdS4kyLuSAXxFmeSLoCbCGUI=",
+            "type": "url",
+            "url": "https://github.com/UltimateHackingKeyboard/agent/releases/download/v3.0.0/UHK.Agent-3.0.0-linux-x86_64.AppImage"
+        },
+        "version": "3.0.0"
+    },
     "wezterm": {
         "cargoLocks": null,
         "date": "2023-07-22",
