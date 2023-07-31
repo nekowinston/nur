@@ -49,15 +49,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "91a32c0e84a091ce7e0a3c4d08a058c75c770306";
+    version = "55f96aacc638f68578bf2f8a41c45f5d3d7f8517";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "91a32c0e84a091ce7e0a3c4d08a058c75c770306";
+      rev = "55f96aacc638f68578bf2f8a41c45f5d3d7f8517";
       fetchSubmodules = true;
-      sha256 = "sha256-Rs2tC9bhwOcCEGwnTGpCCdnDvXaJWEzfGyX1Z4mFu8M=";
+      sha256 = "sha256-sVk033AP20o723prlfJDlBZmEOIo2NzpF7K3ke+ai30=";
     };
-    date = "2023-07-28";
+    date = "2023-07-31";
   };
   helm-ls = {
     pname = "helm-ls";
@@ -158,14 +158,14 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "3aa7da611a9e99e50819aa09ca19db4f91131ed8";
+    version = "d1d4db20be445c8bac02a37887938af63922bdcc";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "3aa7da611a9e99e50819aa09ca19db4f91131ed8";
+      rev = "d1d4db20be445c8bac02a37887938af63922bdcc";
       fetchSubmodules = true;
-      sha256 = "sha256-Q6RJRJkInZjMtGhIr0IRNCZRuxfa9w/f4XUlcELuG/4=";
+      sha256 = "sha256-6cYKnXu//3d0MqJ9/lDsD/rlb4e0zgIeUEEdO1DMUeA=";
     };
-    date = "2023-07-26";
+    date = "2023-07-30";
   };
 }
