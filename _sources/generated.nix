@@ -49,13 +49,13 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "55f96aacc638f68578bf2f8a41c45f5d3d7f8517";
+    version = "cbdcde8b75868e145b973725c7c18970091a7f2f";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "55f96aacc638f68578bf2f8a41c45f5d3d7f8517";
+      rev = "cbdcde8b75868e145b973725c7c18970091a7f2f";
       fetchSubmodules = true;
-      sha256 = "sha256-sVk033AP20o723prlfJDlBZmEOIo2NzpF7K3ke+ai30=";
+      sha256 = "sha256-rSB9DN7oOl1Lt/Yas/9QUdLtv4atmwU/pIRsd4qyvXM=";
     };
     date = "2023-07-31";
   };
@@ -158,14 +158,14 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "d1d4db20be445c8bac02a37887938af63922bdcc";
+    version = "ca9cf23019105b8093dc7ad44b91a68078514b5e";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "d1d4db20be445c8bac02a37887938af63922bdcc";
+      rev = "ca9cf23019105b8093dc7ad44b91a68078514b5e";
       fetchSubmodules = true;
       sha256 = "sha256-6cYKnXu//3d0MqJ9/lDsD/rlb4e0zgIeUEEdO1DMUeA=";
     };
-    date = "2023-07-30";
+    date = "2023-07-31";
   };
 }
