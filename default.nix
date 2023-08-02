@@ -4,7 +4,11 @@
       url = "https://github.com/ipetkov/crane/archive/refs/tags/v0.12.2.tar.gz";
       sha256 = "sha256:0r8327gz6dwn9jxdqby98yprs4d221yd2w125smqfqqxjcghp2ln";
     }) {inherit pkgs;},
-  pkgs ? import <nixpkgs> {inherit system;},
+  pkgs ?
+    import <nixpkgs> {
+      inherit system;
+      overlays = [(import (builtins.fetchTarball "https://github.com/oxalica/rust-overlay/archive/master.tar.gz"))];
+    },
   system ? builtins.currentSystem,
 }: let
   docs = import ./docs {

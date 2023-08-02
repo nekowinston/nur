@@ -1,7 +1,22 @@
 {
   description = "nekowinston NUR repository";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
+    crane = {
+      url = "github:ipetkov/crane/v0.12.2";
+      inputs.flake-compat.follows = "";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.rust-overlay.follows = "rust-overlay";
+    };
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 
   outputs = {nixpkgs, ...} @ inputs: let
     systems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
@@ -9,7 +24,11 @@
   in {
     legacyPackages = forAllSystems (system:
       import ./default.nix {
-        pkgs = import nixpkgs {inherit system;};
+        craneLib = inputs.crane;
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [inputs.rust-overlay.overlays.default];
+        };
       });
     packages = forAllSystems (
       system:

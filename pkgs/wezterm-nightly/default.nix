@@ -13,6 +13,7 @@
   openssl,
   perl,
   pkg-config,
+  pkgs,
   python3,
   runCommand,
   stdenv,
@@ -63,12 +64,15 @@
       libiconv
       UserNotifications
     ];
-  cargoArtifacts = craneLib.buildDepsOnly {
+
+  customCraneLib = (craneLib.mkLib pkgs).overrideToolchain pkgs.rust-bin.stable.latest.default;
+
+  cargoArtifacts = customCraneLib.buildDepsOnly {
     inherit src pname version nativeBuildInputs buildInputs;
     stdenv = chosenStdenv;
   };
 in
-  craneLib.buildPackage rec {
+  customCraneLib.buildPackage rec {
     inherit pname version src cargoArtifacts nativeBuildInputs buildInputs;
     name = "${pname}-${version}";
     stdenv = chosenStdenv;
