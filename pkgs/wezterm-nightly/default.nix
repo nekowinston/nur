@@ -22,7 +22,7 @@
   xorg,
   zlib,
 }: let
-  inherit (darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation UserNotifications;
+  inherit (darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation Security UserNotifications;
   # overwriting the stdenv on Darwin for x86_64 builds, see nekowinston/nur#5
   chosenStdenv =
     if stdenv.isDarwin
@@ -61,8 +61,9 @@
       Cocoa
       CoreGraphics
       Foundation
-      libiconv
+      Security
       UserNotifications
+      libiconv
     ];
 
   customCraneLib = (craneLib.mkLib pkgs).overrideToolchain pkgs.rust-bin.stable.latest.default;
