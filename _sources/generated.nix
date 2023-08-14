@@ -150,22 +150,22 @@
   };
   uhk-agent = {
     pname = "uhk-agent";
-    version = "3.0.1";
+    version = "3.0.2";
     src = fetchurl {
-      url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v3.0.1/UHK.Agent-3.0.1-linux-x86_64.AppImage";
-      sha256 = "sha256-TX7mL6BWAZHZ2W9/BneOt1vxt2slC2Lv6eFWPAgS2a8=";
+      url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v3.0.2/UHK.Agent-3.0.2-linux-x86_64.AppImage";
+      sha256 = "sha256-RrZ2J6bmk8VXVmpUi9bjqQRJBYjGIczMaSEG9aQ4U4I=";
     };
   };
   wezterm = {
     pname = "wezterm";
-    version = "bf1726343131f0dae4eb5d2dd7e6b15e3e6754fc";
+    version = "0f1ffacefcf1db3ac9354d8932841829bf073b34";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "bf1726343131f0dae4eb5d2dd7e6b15e3e6754fc";
+      rev = "0f1ffacefcf1db3ac9354d8932841829bf073b34";
       fetchSubmodules = true;
-      sha256 = "sha256-sG7uj2qnSzwLLKc/S92exRd5k/g2JLzHumCJQEvnsW0=";
+      sha256 = "sha256-/B/KwSJOqkWgWtPoA1tYg6Pv4k3twpCOuCs1qYmlzRw=";
     };
-    date = "2023-08-06";
+    date = "2023-08-13";
   };
 }
