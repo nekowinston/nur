@@ -49,15 +49,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "36f7fb584824961dc692c9f2354ee8f60c50587b";
+    version = "27a8b020c36b0df8f8b82a252d261cda47cf44b8";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "36f7fb584824961dc692c9f2354ee8f60c50587b";
+      rev = "27a8b020c36b0df8f8b82a252d261cda47cf44b8";
       fetchSubmodules = true;
-      sha256 = "sha256-9J5sxifFWGc+Iw4DTZxce7ykFTBDWYtD9TsTLHKqNBc=";
+      sha256 = "sha256-djq1eK6ncvhkO3MNDgasDBUY/7WWcmZt/GJsHAulLdI=";
     };
-    date = "2023-08-17";
+    date = "2023-08-23";
   };
   helm-ls = {
     pname = "helm-ls";
@@ -126,26 +126,26 @@
   };
   sizzy-darwin-arm = {
     pname = "sizzy-darwin-arm";
-    version = "71.5.0";
+    version = "72.0.0";
     src = fetchurl {
       url = "https://proxy.sizzy.co/updates/download/mac?arch=arm64";
-      sha256 = "sha256-SA0RzCU9Kp6Fj1l3uZewc+JxEkwDi8cjgWlqgQqMVQw=";
+      sha256 = "sha256-tCOiUhUDmwo44xFPG/PFKwgrJ6ta8OeWDN2rfDEAd9U=";
     };
   };
   sizzy-darwin-x64 = {
     pname = "sizzy-darwin-x64";
-    version = "71.5.0";
+    version = "72.0.0";
     src = fetchurl {
       url = "https://proxy.sizzy.co/updates/download/mac?arch=x64";
-      sha256 = "sha256-j/xzsEoMn3/r2Q1zw9MMiGGiTM/r2v4yELfOoIFPp60=";
+      sha256 = "sha256-fbdxR4nb1P6A+b03uRWBy7SB0IOBsnfBLdSL8leXcQA=";
     };
   };
   sizzy-linux = {
     pname = "sizzy-linux";
-    version = "71.5.0";
+    version = "72.0.0";
     src = fetchurl {
       url = "https://proxy.sizzy.co/updates/download/linux?arch=x64";
-      sha256 = "sha256-ygXw4P241umCG/3ml4rQpNgFkYUUALEXwH53wtUQIgY=";
+      sha256 = "sha256-Eqz5S104VU2/i7oS7govbjokKfYyVLF+4DzSSMrKobY=";
     };
   };
   uhk-agent = {
@@ -158,14 +158,14 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "87a009924c94460f8e78761283bc09e8623b2c44";
+    version = "b904ed7677aae82e185c63113f5d87df6edeef63";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "87a009924c94460f8e78761283bc09e8623b2c44";
+      rev = "b904ed7677aae82e185c63113f5d87df6edeef63";
       fetchSubmodules = true;
-      sha256 = "sha256-/cMAT904+RWRPTAVvr5PaXXRbaWpBGTQ0qsg/relagM=";
+      sha256 = "sha256-fp8Sp/TG8bKafvtyiYJLwMS6DgL4DQcVQyUX+bdsTi0=";
     };
-    date = "2023-08-17";
+    date = "2023-08-25";
   };
 }
