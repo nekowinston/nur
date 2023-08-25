@@ -28,7 +28,7 @@ jobs:
         if: github.event.schedule == '0 7 * * 0'
 
       - name: Prefetch latest commits of packages
-        run: "nix run nixpkgs#nvfetcher"
+        run: "nix run github:berberman/nvfetcher"
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
