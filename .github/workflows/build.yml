@@ -60,7 +60,7 @@ jobs:
           nix build -L .\#helm-ls
           nix build -L .\#icat
           nix build -L .\#jq-lsp
-          nix build -L .\#wezterm-nightly
+          # nix build -L .\#wezterm-nightly
 
       # TODO: enable if I ever add it to NUR
       # - name: Trigger NUR update
