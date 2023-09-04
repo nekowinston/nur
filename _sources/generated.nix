@@ -126,26 +126,26 @@
   };
   sizzy-darwin-arm = {
     pname = "sizzy-darwin-arm";
-    version = "72.0.0";
+    version = "72.1.0";
     src = fetchurl {
       url = "https://proxy.sizzy.co/updates/download/mac?arch=arm64";
-      sha256 = "sha256-tCOiUhUDmwo44xFPG/PFKwgrJ6ta8OeWDN2rfDEAd9U=";
+      sha256 = "sha256-uS83jAP78QK4ELnL6xl/bzMPjhESwUW6yiT14F1PwsQ=";
     };
   };
   sizzy-darwin-x64 = {
     pname = "sizzy-darwin-x64";
-    version = "72.0.0";
+    version = "72.1.0";
     src = fetchurl {
       url = "https://proxy.sizzy.co/updates/download/mac?arch=x64";
-      sha256 = "sha256-fbdxR4nb1P6A+b03uRWBy7SB0IOBsnfBLdSL8leXcQA=";
+      sha256 = "sha256-KC3zdy3i1noLLXEL4p3AZg2Tmi/8fTfJLRe7wqc8sOk=";
     };
   };
   sizzy-linux = {
     pname = "sizzy-linux";
-    version = "72.0.0";
+    version = "72.1.0";
     src = fetchurl {
       url = "https://proxy.sizzy.co/updates/download/linux?arch=x64";
-      sha256 = "sha256-Eqz5S104VU2/i7oS7govbjokKfYyVLF+4DzSSMrKobY=";
+      sha256 = "sha256-8iJb65lSvI/MBieOhuhdWM5F4WjXi1BZOYQmZWEZ+4Y=";
     };
   };
   uhk-agent = {
