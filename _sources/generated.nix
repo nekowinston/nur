@@ -9,6 +9,17 @@
       sha256 = "sha256-goY9lWBtOnOUotitjVfe96zdmjYTPT6PVOnZ0MEWh0U=";
     };
   };
+  catppuccin-gtk = {
+    pname = "catppuccin-gtk";
+    version = "v0.6.1";
+    src = fetchFromGitHub {
+      owner = "catppuccin";
+      repo = "gtk";
+      rev = "v0.6.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-b03V/c2do5FSm4Q0yN7V0RuoQX1fYsBd//Hj3R5MESI=";
+    };
+  };
   cura = {
     pname = "cura";
     version = "5.4.0";
@@ -167,5 +178,24 @@
       sha256 = "sha256-seuTWNzE3uMd7URZ1TTSQgujRaliGaJ8sD0/gWKsCsw=";
     };
     date = "2023-09-04";
+  };
+  yabai-aarch64 = {
+    pname = "yabai-aarch64";
+    version = "v5.0.7";
+    src = fetchurl {
+      url = "https://github.com/koekeishiya/yabai/releases/download/v5.0.7/yabai-v5.0.7.tar.gz";
+      sha256 = "sha256-slZuTTjR9xAXTORqnm3FRROVTRMNP6qhRUUutJAAERs=";
+    };
+  };
+  yabai-x86_64 = {
+    pname = "yabai-x86_64";
+    version = "v5.0.7";
+    src = fetchFromGitHub {
+      owner = "koekeishiya";
+      repo = "yabai";
+      rev = "v5.0.7";
+      fetchSubmodules = false;
+      sha256 = "sha256-wFrMMiy+K+bnEeVyY3RGVZBoxiKQ69Q+Bp1xa+IcWas=";
+    };
   };
 }

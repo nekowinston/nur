@@ -1,27 +1,18 @@
 final: prev: {
-  catppuccin-gtk = prev.catppuccin-gtk.overrideAttrs (final: rec {
-    version = "0.6.0";
-    src = prev.fetchFromGitHub {
-      owner = "catppuccin";
-      repo = "gtk";
-      rev = "v${version}";
-      sha256 = "sha256-3HplAmlj8hK9Myy8mgvR88sMa2COmYAU75Fk1JuKtMc=";
-    };
+  catppuccin-gtk = prev.catppuccin-gtk.overrideAttrs (final: let
+    nvfetcher = prev.callPackage ../../_sources/generated.nix {}.catppuccin-gtk;
+  in {
+    inherit (nvfetcher) src version;
   });
   yabai = prev.yabai.overrideAttrs (oldAttrs: let
-    version = "5.0.6";
+    nvfetcher = prev.callPackage ../../_sources/generated.nix {};
+    # the x86 build here uses the git fetch, aarch64 uses the release
     sources = {
-      "aarch64-darwin" = prev.fetchzip {
-        url = "https://github.com/koekeishiya/yabai/releases/download/v${version}/yabai-v${version}.tar.gz";
-        sha256 = "sha256-wpm9VnR4yPk6Ybo/V2DMLgRcSzDl3dWGSKDCjYfz+xQ=";
-      };
-      "x86_64-darwin" = prev.fetchFromGitHub {
-        owner = "koekeishiya";
-        repo = "yabai";
-        rev = "v${version}";
-        sha256 = "sha256-1/h8f1FQNHn5eVprPVd0can8XHjNyF7j4H3LSN0K8rI=";
-      };
+      "aarch64-darwin" = nvfetcher.yabai-aarch64;
+      "x86_64-darwin" = nvfetcher.yabai-x86_64;
     };
+    # take the version from the git tags
+    version = nvfetcher.yabai-x86_64.version;
   in {
     inherit version;
     src = sources."${prev.stdenv.hostPlatform.system}" or (throw "Unsupported platform");
