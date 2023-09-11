@@ -169,15 +169,15 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "914f18b19cc5bab3dd04f699d9cea17bbcf74d5b";
+    version = "b902034eacafb70326e0b75778b6e0fb46972bc1";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "914f18b19cc5bab3dd04f699d9cea17bbcf74d5b";
+      rev = "b902034eacafb70326e0b75778b6e0fb46972bc1";
       fetchSubmodules = true;
-      sha256 = "sha256-seuTWNzE3uMd7URZ1TTSQgujRaliGaJ8sD0/gWKsCsw=";
+      sha256 = "sha256-xzgNfFf0ADOQ6gWCuOKpZuMcEpFDb5ecH8hfWMVomDM=";
     };
-    date = "2023-09-04";
+    date = "2023-09-10";
   };
   yabai-aarch64 = {
     pname = "yabai-aarch64";
