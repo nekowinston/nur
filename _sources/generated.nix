@@ -60,15 +60,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "b6e38d69eda9920f4fddb438093e02f88aa3cf60";
+    version = "0ad1472b6211c054df93b3efcb6868ec1c68b4b1";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "b6e38d69eda9920f4fddb438093e02f88aa3cf60";
+      rev = "0ad1472b6211c054df93b3efcb6868ec1c68b4b1";
       fetchSubmodules = true;
-      sha256 = "sha256-eK6/eWmGN88+6e36vWtUe/NcahURSTEqLFuLgjVetLc=";
+      sha256 = "sha256-7LwkUC7Vu/5TFz9U17fboBInWyoefBgT2VaKVnd6JG0=";
     };
-    date = "2023-09-01";
+    date = "2023-09-11";
   };
   helm-ls = {
     pname = "helm-ls";
@@ -169,33 +169,33 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "b902034eacafb70326e0b75778b6e0fb46972bc1";
+    version = "70931f58f1c7a57fd377f9862597e7b1fe070b52";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "b902034eacafb70326e0b75778b6e0fb46972bc1";
+      rev = "70931f58f1c7a57fd377f9862597e7b1fe070b52";
       fetchSubmodules = true;
-      sha256 = "sha256-xzgNfFf0ADOQ6gWCuOKpZuMcEpFDb5ecH8hfWMVomDM=";
+      sha256 = "sha256-MPwX1kGGo/bPlyWu8O+U0dohMpN0E89vuFAUOcHFACc=";
     };
-    date = "2023-09-10";
+    date = "2023-09-11";
   };
   yabai-aarch64 = {
     pname = "yabai-aarch64";
-    version = "v5.0.7";
+    version = "v5.0.8";
     src = fetchurl {
-      url = "https://github.com/koekeishiya/yabai/releases/download/v5.0.7/yabai-v5.0.7.tar.gz";
-      sha256 = "sha256-slZuTTjR9xAXTORqnm3FRROVTRMNP6qhRUUutJAAERs=";
+      url = "https://github.com/koekeishiya/yabai/releases/download/v5.0.8/yabai-v5.0.8.tar.gz";
+      sha256 = "sha256-EXgbAip4ygurwo47+BiKAqHZHc7ryK7StIalr7vpXlI=";
     };
   };
   yabai-x86_64 = {
     pname = "yabai-x86_64";
-    version = "v5.0.7";
+    version = "v5.0.8";
     src = fetchFromGitHub {
       owner = "koekeishiya";
       repo = "yabai";
-      rev = "v5.0.7";
+      rev = "v5.0.8";
       fetchSubmodules = false;
-      sha256 = "sha256-wFrMMiy+K+bnEeVyY3RGVZBoxiKQ69Q+Bp1xa+IcWas=";
+      sha256 = "sha256-VahfeKYz/cATb0RF9QykngMtRpCh392jY8aJuggpqMU=";
     };
   };
 }
