@@ -18,8 +18,8 @@ in {
     mkIf (cfg != null && pkgs.stdenv.isDarwin)
     {
       home.activation.set-wallpaper = let
-        killall = lib.getExe pkgs.killall;
-        sqlite = lib.getExe pkgs.sqlite;
+        killall = "${pkgs.killall}/bin/killall";
+        sqlite = "${pkgs.sqlite}/bin/sqlite3";
       in
         lib.hm.dag.entryAfter ["writeBoundary"] ''
           dpdb="$HOME/Library/Application Support/Dock/desktoppicture.db"

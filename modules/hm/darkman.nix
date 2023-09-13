@@ -128,7 +128,7 @@ in {
         Service = {
           Type = "dbus";
           BusName = "nl.whynothugo.darkman";
-          ExecStart = "${lib.getExe cfg.package} run";
+          ExecStart = "${cfg.package}/bin/darkman run";
           Restart = "on-failure";
           TimeoutStopSec = 15;
           Slice = "background.slice";
