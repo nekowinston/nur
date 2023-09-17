@@ -49,14 +49,6 @@ src.git = "https://github.com/wez/wezterm"
 fetch.github = "wez/wezterm"
 git.fetchSubmodules = true
 
-[yabai-aarch64]
-src.github_tag = "koekeishiya/yabai"
-fetch.url = "https://github.com/koekeishiya/yabai/releases/download/$ver/yabai-$ver.tar.gz"
-
-[yabai-x86_64]
-src.github_tag = "koekeishiya/yabai"
-fetch.github = "koekeishiya/yabai"
-
 # extensions
 
 [mopidy-podcast-itunes]
