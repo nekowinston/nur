@@ -60,15 +60,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "0f046cf905067219b4030800beee778c98eae007";
+    version = "e86c63750de248ae2b277145fc252da11e53bc87";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "0f046cf905067219b4030800beee778c98eae007";
+      rev = "e86c63750de248ae2b277145fc252da11e53bc87";
       fetchSubmodules = true;
-      sha256 = "sha256-wnWTY5oy5q3njinze4Mj6R+1ZJDYA+nSoLVvRI+CNy0=";
+      sha256 = "sha256-4t+mAJkrvIWZEsuGdAGdcBHjwPLKBIm+hIyQkQqwDNM=";
     };
-    date = "2023-09-15";
+    date = "2023-09-16";
   };
   helm-ls = {
     pname = "helm-ls";
@@ -178,24 +178,5 @@
       sha256 = "sha256-MPwX1kGGo/bPlyWu8O+U0dohMpN0E89vuFAUOcHFACc=";
     };
     date = "2023-09-11";
-  };
-  yabai-aarch64 = {
-    pname = "yabai-aarch64";
-    version = "v5.0.8";
-    src = fetchurl {
-      url = "https://github.com/koekeishiya/yabai/releases/download/v5.0.8/yabai-v5.0.8.tar.gz";
-      sha256 = "sha256-EXgbAip4ygurwo47+BiKAqHZHc7ryK7StIalr7vpXlI=";
-    };
-  };
-  yabai-x86_64 = {
-    pname = "yabai-x86_64";
-    version = "v5.0.8";
-    src = fetchFromGitHub {
-      owner = "koekeishiya";
-      repo = "yabai";
-      rev = "v5.0.8";
-      fetchSubmodules = false;
-      sha256 = "sha256-VahfeKYz/cATb0RF9QykngMtRpCh392jY8aJuggpqMU=";
-    };
   };
 }

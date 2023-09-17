@@ -106,7 +106,7 @@
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2023-09-15",
+        "date": "2023-09-16",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -118,11 +118,11 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "0f046cf905067219b4030800beee778c98eae007",
-            "sha256": "sha256-wnWTY5oy5q3njinze4Mj6R+1ZJDYA+nSoLVvRI+CNy0=",
+            "rev": "e86c63750de248ae2b277145fc252da11e53bc87",
+            "sha256": "sha256-4t+mAJkrvIWZEsuGdAGdcBHjwPLKBIm+hIyQkQqwDNM=",
             "type": "github"
         },
-        "version": "0f046cf905067219b4030800beee778c98eae007"
+        "version": "e86c63750de248ae2b277145fc252da11e53bc87"
     },
     "helm-ls": {
         "cargoLocks": null,
@@ -323,40 +323,5 @@
             "type": "github"
         },
         "version": "70931f58f1c7a57fd377f9862597e7b1fe070b52"
-    },
-    "yabai-aarch64": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "yabai-aarch64",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-EXgbAip4ygurwo47+BiKAqHZHc7ryK7StIalr7vpXlI=",
-            "type": "url",
-            "url": "https://github.com/koekeishiya/yabai/releases/download/v5.0.8/yabai-v5.0.8.tar.gz"
-        },
-        "version": "v5.0.8"
-    },
-    "yabai-x86_64": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "yabai-x86_64",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "koekeishiya",
-            "repo": "yabai",
-            "rev": "v5.0.8",
-            "sha256": "sha256-VahfeKYz/cATb0RF9QykngMtRpCh392jY8aJuggpqMU=",
-            "type": "github"
-        },
-        "version": "v5.0.8"
     }
 }
