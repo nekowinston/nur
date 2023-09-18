@@ -15,24 +15,18 @@
   python3,
   runCommand,
   rustPlatform,
-  # overwriting the stdenv on Darwin for x86_64 builds, see
-  # https://github.com/nekowinston/nur/pull/5
-  stdenv ?
-    if stdenv.hostPlatform.isDarwin
-    then darwin.apple_sdk_11_0.stdenv
-    else stdenv,
+  stdenv,
   vulkan-loader,
   wayland,
   xorg,
   zlib,
 }: let
-  inherit (darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation Security UserNotifications;
+  inherit (darwin.apple_sdk.frameworks) CoreGraphics Cocoa Foundation Security UserNotifications System;
   nvfetcher = (callPackage ../../_sources/generated.nix {}).wezterm;
 in
   rustPlatform.buildRustPackage rec {
     inherit (nvfetcher) pname src;
-    inherit stdenv;
-    version = nvfetcher.date;
+    version = "${builtins.replaceStrings ["-"] [""] nvfetcher.date}-nekowinston-${builtins.substring 0 7 nvfetcher.version}";
 
     cargoLock = nvfetcher.cargoLock."Cargo.lock";
     doCheck = false;
@@ -47,13 +41,16 @@ in
       ++ lib.optionals stdenv.isDarwin [perl];
 
     buildInputs =
-      [fontconfig zlib]
+      [
+        fontconfig
+        zlib
+      ]
       ++ lib.optionals stdenv.isLinux [
+        xorg.libX11
+        xorg.libxcb
         libxkbcommon
         openssl
         wayland
-        xorg.libX11
-        xorg.libxcb
         xorg.xcbutil
         xorg.xcbutilimage
         xorg.xcbutilkeysyms
@@ -64,18 +61,20 @@ in
         Cocoa
         CoreGraphics
         Foundation
-        Security
-        UserNotifications
         libiconv
+        Security
+        System
+        UserNotifications
       ];
 
     postPatch = ''
-      echo "${version} (${(builtins.substring 0 7 nvfetcher.version)})" > .tag
+      echo "${version}" > .tag
       # tests are failing with: Unable to exchange encryption keys
       rm -r wezterm-ssh/tests
     '';
 
-    cargoExtraArgs = "--features distro-defaults";
+    buildFeatures = ["distro-defaults"];
+    env.NIX_LDFLAGS = lib.optionalString stdenv.isDarwin "-framework System";
 
     postInstall = ''
       mkdir -p $out/nix-support
