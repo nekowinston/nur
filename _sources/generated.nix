@@ -177,6 +177,13 @@
       fetchSubmodules = true;
       sha256 = "sha256-MPwX1kGGo/bPlyWu8O+U0dohMpN0E89vuFAUOcHFACc=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./wezterm-70931f58f1c7a57fd377f9862597e7b1fe070b52/Cargo.lock;
+      outputHashes = {
+        "xcb-1.2.1" = "sha256-zkuW5ATix3WXBAj2hzum1MJ5JTX3+uVQ01R1vL6F1rY=";
+        "xcb-imdkit-0.2.0" = "sha256-L+NKD0rsCk9bFABQF4FZi9YoqBHr4VAZeKAWgsaAegw=";
+      };
+    };
     date = "2023-09-11";
   };
 }

@@ -1,9 +1,4 @@
 {
-  craneLib ?
-    import (builtins.fetchTarball {
-      url = "https://github.com/ipetkov/crane/archive/refs/tags/v0.12.2.tar.gz";
-      sha256 = "sha256:0r8327gz6dwn9jxdqby98yprs4d221yd2w125smqfqqxjcghp2ln";
-    }) {inherit pkgs;},
   pkgs ?
     import <nixpkgs> {
       inherit system;
@@ -37,7 +32,7 @@ in {
   posy-improved-cursor = pkgs.callPackage ./pkgs/posy-improved-cursor {};
   sizzy = pkgs.callPackage ./pkgs/sizzy {};
   uhk-agent = pkgs.callPackage ./pkgs/uhk-agent {};
-  # wezterm-nightly = pkgs.callPackage ./pkgs/wezterm-nightly {inherit craneLib;};
+  wezterm-nightly = pkgs.callPackage ./pkgs/wezterm-nightly {};
 
   docs-html = docs.html;
 }

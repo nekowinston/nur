@@ -48,6 +48,7 @@ fetch.url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/
 src.git = "https://github.com/wez/wezterm"
 fetch.github = "wez/wezterm"
 git.fetchSubmodules = true
+cargo_locks = ["Cargo.lock"]
 
 # extensions
 

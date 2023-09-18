@@ -1,6 +1,5 @@
 {
   callPackage,
-  craneLib,
   darwin,
   fontconfig,
   installShellFiles,
@@ -13,73 +12,62 @@
   openssl,
   perl,
   pkg-config,
-  pkgs,
   python3,
   runCommand,
-  stdenv,
+  rustPlatform,
+  # overwriting the stdenv on Darwin for x86_64 builds, see
+  # https://github.com/nekowinston/nur/pull/5
+  stdenv ?
+    if stdenv.hostPlatform.isDarwin
+    then darwin.apple_sdk_11_0.stdenv
+    else stdenv,
   vulkan-loader,
   wayland,
   xorg,
   zlib,
 }: let
   inherit (darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation Security UserNotifications;
-  # overwriting the stdenv on Darwin for x86_64 builds, see nekowinston/nur#5
-  chosenStdenv =
-    if stdenv.isDarwin
-    then darwin.apple_sdk_11_0.stdenv
-    else stdenv;
-
-  pname = "wezterm";
   nvfetcher = (callPackage ../../_sources/generated.nix {}).wezterm;
-  src = lib.cleanSource nvfetcher.src;
-
-  version = nvfetcher.date;
-
-  nativeBuildInputs =
-    [
-      installShellFiles
-      ncurses # tic for terminfo
-      pkg-config
-      python3
-    ]
-    ++ lib.optionals stdenv.isDarwin [perl];
-  buildInputs =
-    [fontconfig zlib]
-    ++ lib.optionals stdenv.isLinux [
-      libxkbcommon
-      openssl
-      wayland
-      xorg.libX11
-      xorg.libxcb
-      xorg.xcbutil
-      xorg.xcbutilimage
-      xorg.xcbutilkeysyms
-      xorg.xcbutilwm # contains xcb-ewmh among others
-    ]
-    ++ lib.optionals stdenv.isDarwin
-    [
-      Cocoa
-      CoreGraphics
-      Foundation
-      Security
-      UserNotifications
-      libiconv
-    ];
-
-  customCraneLib = (craneLib.mkLib pkgs).overrideToolchain pkgs.rust-bin.stable.latest.default;
-
-  cargoArtifacts = customCraneLib.buildDepsOnly {
-    inherit src pname version nativeBuildInputs buildInputs;
-    stdenv = chosenStdenv;
-  };
 in
-  customCraneLib.buildPackage rec {
-    inherit pname version src cargoArtifacts nativeBuildInputs buildInputs;
-    name = "${pname}-${version}";
-    stdenv = chosenStdenv;
+  rustPlatform.buildRustPackage rec {
+    inherit (nvfetcher) pname src;
+    inherit stdenv;
+    version = nvfetcher.date;
 
-    # Prevent cargo test from duplicating tests
+    cargoLock = nvfetcher.cargoLock."Cargo.lock";
     doCheck = false;
+
+    nativeBuildInputs =
+      [
+        installShellFiles
+        ncurses # tic for terminfo
+        pkg-config
+        python3
+      ]
+      ++ lib.optionals stdenv.isDarwin [perl];
+
+    buildInputs =
+      [fontconfig zlib]
+      ++ lib.optionals stdenv.isLinux [
+        libxkbcommon
+        openssl
+        wayland
+        xorg.libX11
+        xorg.libxcb
+        xorg.xcbutil
+        xorg.xcbutilimage
+        xorg.xcbutilkeysyms
+        xorg.xcbutilwm # contains xcb-ewmh among others
+      ]
+      ++ lib.optionals stdenv.isDarwin
+      [
+        Cocoa
+        CoreGraphics
+        Foundation
+        Security
+        UserNotifications
+        libiconv
+      ];
 
     postPatch = ''
       echo "${version} (${(builtins.substring 0 7 nvfetcher.version)})" > .tag
