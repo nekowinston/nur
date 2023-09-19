@@ -21,7 +21,7 @@
   xorg,
   zlib,
 }: let
-  inherit (darwin.apple_sdk.frameworks) CoreGraphics Cocoa Foundation Security UserNotifications System;
+  inherit (darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation Security UserNotifications System;
   nvfetcher = (callPackage ../../_sources/generated.nix {}).wezterm;
 in
   rustPlatform.buildRustPackage rec {
