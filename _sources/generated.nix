@@ -11,13 +11,13 @@
   };
   catppuccin-gtk = {
     pname = "catppuccin-gtk";
-    version = "v0.6.1";
+    version = "v0.6.2";
     src = fetchFromGitHub {
       owner = "catppuccin";
       repo = "gtk";
-      rev = "v0.6.1";
+      rev = "v0.6.2";
       fetchSubmodules = false;
-      sha256 = "sha256-b03V/c2do5FSm4Q0yN7V0RuoQX1fYsBd//Hj3R5MESI=";
+      sha256 = "sha256-BjdPe3wQBSVMYpeCifq93Cqt/G4bzsZYgOPBTilHqD8=";
     };
   };
   cura = {
@@ -169,21 +169,21 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "3141131014596d4dec8727dec9a57456288b71d2";
+    version = "0f894d7948bccc20c0b802e54a860069c4a443b6";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "3141131014596d4dec8727dec9a57456288b71d2";
+      rev = "0f894d7948bccc20c0b802e54a860069c4a443b6";
       fetchSubmodules = true;
-      sha256 = "sha256-yI9ZsD7VLO4qHIoaq0STpbtZupeMvLthKBWdYleYGow=";
+      sha256 = "sha256-agqPu6momfDpCL3bAqTS/y/mBpRds0YL58Rf48ZxiCs=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./wezterm-3141131014596d4dec8727dec9a57456288b71d2/Cargo.lock;
+      lockFile = ./wezterm-0f894d7948bccc20c0b802e54a860069c4a443b6/Cargo.lock;
       outputHashes = {
         "xcb-1.2.1" = "sha256-zkuW5ATix3WXBAj2hzum1MJ5JTX3+uVQ01R1vL6F1rY=";
         "xcb-imdkit-0.2.0" = "sha256-L+NKD0rsCk9bFABQF4FZi9YoqBHr4VAZeKAWgsaAegw=";
       };
     };
-    date = "2023-09-21";
+    date = "2023-09-22";
   };
 }
