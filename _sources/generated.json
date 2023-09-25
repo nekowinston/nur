@@ -58,11 +58,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-o20Q+3VF60khXuvh4RmHkyt25cK7y9Svr+1NqsZ0o9s=",
+            "sha256": "sha256-vWFiz2qPKvNdT+AoHQThwPODA4r/MTFJA+uBF8/Y2jc=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.6.5.tar.gz"
+            "url": "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.6.7.tar.gz"
         },
-        "version": "0.6.5"
+        "version": "0.6.7"
     },
     "go-enum": {
         "cargoLocks": null,

@@ -30,10 +30,10 @@
   };
   discover-overlay = {
     pname = "discover-overlay";
-    version = "0.6.5";
+    version = "0.6.7";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.6.5.tar.gz";
-      sha256 = "sha256-o20Q+3VF60khXuvh4RmHkyt25cK7y9Svr+1NqsZ0o9s=";
+      url = "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.6.7.tar.gz";
+      sha256 = "sha256-vWFiz2qPKvNdT+AoHQThwPODA4r/MTFJA+uBF8/Y2jc=";
     };
   };
   go-enum = {
