@@ -32,7 +32,13 @@ in {
   posy-improved-cursor = pkgs.callPackage ./pkgs/posy-improved-cursor {};
   sizzy = pkgs.callPackage ./pkgs/sizzy {};
   uhk-agent = pkgs.callPackage ./pkgs/uhk-agent {};
-  wezterm-nightly = pkgs.callPackage ./pkgs/wezterm-nightly {};
+  wezterm-nightly = let
+    callPackage =
+      if pkgs.stdenv.isDarwin
+      then pkgs.darwin.apple_sdk_11_0.callPackage
+      else pkgs.callPackage;
+  in
+    callPackage ./pkgs/wezterm-nightly {};
 
   docs-html = docs.html;
 }

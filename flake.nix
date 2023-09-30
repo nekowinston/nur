@@ -32,14 +32,5 @@
     darwinModules.default = import ./modules/darwin;
     homeManagerModules.default = import ./modules/hm;
     overlays.default = import ./overlays;
-
-    devShells = forAllSystems (system: let
-      pkgs = import nixpkgs {inherit system;};
-    in {
-      default = pkgs.mkShell {
-        name = "nekowinston-nur";
-        buildInputs = with pkgs; [nvfetcher];
-      };
-    });
   };
 }
