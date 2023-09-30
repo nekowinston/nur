@@ -74,7 +74,6 @@ in
     '';
 
     buildFeatures = ["distro-defaults"];
-    env.NIX_LDFLAGS = lib.optionalString stdenv.isDarwin "-framework System";
 
     postInstall = ''
       mkdir -p $out/nix-support
