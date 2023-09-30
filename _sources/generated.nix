@@ -30,10 +30,10 @@
   };
   discover-overlay = {
     pname = "discover-overlay";
-    version = "0.6.7";
+    version = "0.6.9";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.6.7.tar.gz";
-      sha256 = "sha256-vWFiz2qPKvNdT+AoHQThwPODA4r/MTFJA+uBF8/Y2jc=";
+      url = "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.6.9.tar.gz";
+      sha256 = "sha256-14UmxAF4X0GnPokZeXAqeZYdSDUPrE3ZpNDUdk64Bik=";
     };
   };
   go-enum = {
@@ -169,21 +169,21 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "845fa5d4aef9924eb591019c054d41542306af5d";
+    version = "5e0fd1a06e10d23e2a61696d0b0ebdacffecb661";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "845fa5d4aef9924eb591019c054d41542306af5d";
+      rev = "5e0fd1a06e10d23e2a61696d0b0ebdacffecb661";
       fetchSubmodules = true;
-      sha256 = "sha256-yvRrX1Rk05cpFkpdCjaOgnqkqEUx+DPlcMbJk2N/9+Q=";
+      sha256 = "sha256-B3ZsF9IDrZzB573NcpWHPM+Ss5YjV8LDRLjce8RZJd0=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./wezterm-845fa5d4aef9924eb591019c054d41542306af5d/Cargo.lock;
+      lockFile = ./wezterm-5e0fd1a06e10d23e2a61696d0b0ebdacffecb661/Cargo.lock;
       outputHashes = {
         "xcb-1.2.1" = "sha256-zkuW5ATix3WXBAj2hzum1MJ5JTX3+uVQ01R1vL6F1rY=";
         "xcb-imdkit-0.2.0" = "sha256-L+NKD0rsCk9bFABQF4FZi9YoqBHr4VAZeKAWgsaAegw=";
       };
     };
-    date = "2023-09-28";
+    date = "2023-09-29";
   };
 }

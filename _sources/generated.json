@@ -58,11 +58,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-vWFiz2qPKvNdT+AoHQThwPODA4r/MTFJA+uBF8/Y2jc=",
+            "sha256": "sha256-14UmxAF4X0GnPokZeXAqeZYdSDUPrE3ZpNDUdk64Bik=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.6.7.tar.gz"
+            "url": "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.6.9.tar.gz"
         },
-        "version": "0.6.7"
+        "version": "0.6.9"
     },
     "go-enum": {
         "cargoLocks": null,
@@ -307,14 +307,14 @@
     "wezterm": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./wezterm-845fa5d4aef9924eb591019c054d41542306af5d/Cargo.lock",
+                "./wezterm-5e0fd1a06e10d23e2a61696d0b0ebdacffecb661/Cargo.lock",
                 {
                     "xcb-1.2.1": "sha256-zkuW5ATix3WXBAj2hzum1MJ5JTX3+uVQ01R1vL6F1rY=",
                     "xcb-imdkit-0.2.0": "sha256-L+NKD0rsCk9bFABQF4FZi9YoqBHr4VAZeKAWgsaAegw="
                 }
             ]
         },
-        "date": "2023-09-28",
+        "date": "2023-09-29",
         "extract": null,
         "name": "wezterm",
         "passthru": null,
@@ -326,10 +326,10 @@
             "name": null,
             "owner": "wez",
             "repo": "wezterm",
-            "rev": "845fa5d4aef9924eb591019c054d41542306af5d",
-            "sha256": "sha256-yvRrX1Rk05cpFkpdCjaOgnqkqEUx+DPlcMbJk2N/9+Q=",
+            "rev": "5e0fd1a06e10d23e2a61696d0b0ebdacffecb661",
+            "sha256": "sha256-B3ZsF9IDrZzB573NcpWHPM+Ss5YjV8LDRLjce8RZJd0=",
             "type": "github"
         },
-        "version": "845fa5d4aef9924eb591019c054d41542306af5d"
+        "version": "5e0fd1a06e10d23e2a61696d0b0ebdacffecb661"
     }
 }
