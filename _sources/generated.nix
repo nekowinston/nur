@@ -11,13 +11,13 @@
   };
   catppuccin-gtk = {
     pname = "catppuccin-gtk";
-    version = "v0.6.2";
+    version = "v0.7.0";
     src = fetchFromGitHub {
       owner = "catppuccin";
       repo = "gtk";
-      rev = "v0.6.2";
+      rev = "v0.7.0";
       fetchSubmodules = false;
-      sha256 = "sha256-BjdPe3wQBSVMYpeCifq93Cqt/G4bzsZYgOPBTilHqD8=";
+      sha256 = "sha256-J1iLN2FF3Ml/3zmntXYlfkv6dZcwl62A9X4ruAH1ll4=";
     };
   };
   cura = {
@@ -161,29 +161,29 @@
   };
   uhk-agent = {
     pname = "uhk-agent";
-    version = "3.0.2";
+    version = "3.1.0";
     src = fetchurl {
-      url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v3.0.2/UHK.Agent-3.0.2-linux-x86_64.AppImage";
-      sha256 = "sha256-RrZ2J6bmk8VXVmpUi9bjqQRJBYjGIczMaSEG9aQ4U4I=";
+      url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v3.1.0/UHK.Agent-3.1.0-linux-x86_64.AppImage";
+      sha256 = "sha256-KFuB1cbrEDfqeRyrhXZs4ClhdIjZqIT5a+rnvdi3kpA=";
     };
   };
   wezterm = {
     pname = "wezterm";
-    version = "5e0fd1a06e10d23e2a61696d0b0ebdacffecb661";
+    version = "79ae543bc9c0766c24cdf3fb06a13f20ea26a540";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "5e0fd1a06e10d23e2a61696d0b0ebdacffecb661";
+      rev = "79ae543bc9c0766c24cdf3fb06a13f20ea26a540";
       fetchSubmodules = true;
-      sha256 = "sha256-B3ZsF9IDrZzB573NcpWHPM+Ss5YjV8LDRLjce8RZJd0=";
+      sha256 = "sha256-dSWQU3HldiY2CmRT4Brj2+r+RTKVyeeGWfNbiQDvn4Y=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./wezterm-5e0fd1a06e10d23e2a61696d0b0ebdacffecb661/Cargo.lock;
+      lockFile = ./wezterm-79ae543bc9c0766c24cdf3fb06a13f20ea26a540/Cargo.lock;
       outputHashes = {
         "xcb-1.2.1" = "sha256-zkuW5ATix3WXBAj2hzum1MJ5JTX3+uVQ01R1vL6F1rY=";
         "xcb-imdkit-0.2.0" = "sha256-L+NKD0rsCk9bFABQF4FZi9YoqBHr4VAZeKAWgsaAegw=";
       };
     };
-    date = "2023-09-29";
+    date = "2023-10-02";
   };
 }
