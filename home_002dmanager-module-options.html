@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<!-- Created by GNU Texinfo 7.0.3, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>home-manager module options (Top)</title>
+
+<meta name="description" content="home-manager module options (Top)">
+<meta name="keywords" content="home-manager module options (Top)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2any">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="index.html" rel="up" title="Top">
+<link href="darwin-module-options.html#darwin-module-options" rel="prev" title="darwin module options">
+<style type="text/css">
+<!--
+/*! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com*/
+
+*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:initial}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:initial;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:initial}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*,::backdrop,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }html{--ctp-rosewater:220,138,120;--ctp-flamingo:221,120,120;--ctp-pink:234,118,203;--ctp-mauve:136,57,239;--ctp-red:210,15,57;--ctp-maroon:230,69,83;--ctp-peach:254,100,11;--ctp-yellow:223,142,29;--ctp-green:64,160,43;--ctp-teal:23,146,153;--ctp-sky:4,165,229;--ctp-sapphire:32,159,181;--ctp-blue:30,102,245;--ctp-lavender:114,135,253;--ctp-text:76,79,105;--ctp-subtext1:92,95,119;--ctp-subtext0:108,111,133;--ctp-overlay2:124,127,147;--ctp-overlay1:140,143,161;--ctp-overlay0:156,160,176;--ctp-surface2:172,176,190;--ctp-surface1:188,192,204;--ctp-surface0:204,208,218;--ctp-base:239,241,245;--ctp-mantle:230,233,239;--ctp-crust:220,224,232}@media (prefers-color-scheme:dark){html{--ctp-rosewater:245,224,220;--ctp-flamingo:242,205,205;--ctp-pink:245,194,231;--ctp-mauve:203,166,247;--ctp-red:243,139,168;--ctp-maroon:235,160,172;--ctp-peach:250,179,135;--ctp-yellow:249,226,175;--ctp-green:166,227,161;--ctp-teal:148,226,213;--ctp-sky:137,220,235;--ctp-sapphire:116,199,236;--ctp-blue:137,180,250;--ctp-lavender:180,190,254;--ctp-text:205,214,244;--ctp-subtext1:186,194,222;--ctp-subtext0:166,173,200;--ctp-overlay2:147,153,178;--ctp-overlay1:127,132,156;--ctp-overlay0:108,112,134;--ctp-surface2:88,91,112;--ctp-surface1:69,71,90;--ctp-surface0:49,50,68;--ctp-base:30,30,46;--ctp-mantle:24,24,37;--ctp-crust:17,17,27}}html{background-color:rgba(var(--ctp-mantle),var(--tw-bg-opacity))}body,html{--tw-bg-opacity:1;--tw-text-opacity:1;color:rgba(var(--ctp-text),var(--tw-text-opacity))}body{max-width:48rem;background-color:rgba(var(--ctp-base),var(--tw-bg-opacity));margin-left:auto;margin-right:auto;border-left-width:1px;border-right-width:1px;--tw-border-opacity:1;border-color:rgba(var(--ctp-surface2),var(--tw-border-opacity));padding-left:1rem;padding-right:1rem}pre{border-width:1px;border-style:dotted;--tw-border-opacity:1;border-color:rgba(var(--ctp-surface2),var(--tw-border-opacity));--tw-bg-opacity:1;background-color:rgba(var(--ctp-mantle),var(--tw-bg-opacity));padding:.5rem}code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}h1,h2,h3,h4,h5{--tw-text-opacity:1;color:rgba(var(--ctp-pink),var(--tw-text-opacity));font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-weight:700;padding-top:.75rem;padding-bottom:.25rem}h2,h3,h4,h5{border-bottom-width:1px;border-style:dotted;--tw-border-opacity:1;border-color:rgba(var(--ctp-surface2),var(--tw-border-opacity))}h1{font-size:1.25rem}h1,h2{line-height:1.75rem}h2{font-size:1.125rem}h4{font-size:.875rem;line-height:1.25rem}h5{font-size:.75rem;line-height:1rem}a{--tw-text-opacity:1;color:rgba(var(--ctp-rosewater),var(--tw-text-opacity))}a:hover{text-decoration-line:underline}p{padding-top:.5rem;padding-bottom:.5rem}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<div class="chapter-level-extent" id="home_002dmanager-module-options">
+<div class="nav-panel">
+<p>
+Previous: <a href="darwin-module-options.html#darwin-module-options" accesskey="p" rel="prev">darwin module options</a>, Up: <a href="index.html" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+<h2 class="chapter" id="home_002dmanager-module-options-1">3 home-manager module options</h2>
+<a class="anchor" id="g_t_0023home_002dmanager_002dmodule_002doptions"></a>
+
+<ul class="mini-toc">
+<li><a href="#homemac_002dwallpaper" accesskey="1">home.mac-wallpaper</a></li>
+<li><a href="#servicesdarkmanenable" accesskey="2">services.darkman.enable</a></li>
+<li><a href="#servicesdarkmanpackage" accesskey="3">services.darkman.package</a></li>
+<li><a href="#servicesdarkmanactivationScriptdark" accesskey="4">services.darkman.activationScript.dark</a></li>
+<li><a href="#servicesdarkmanactivationScriptlight" accesskey="5">services.darkman.activationScript.light</a></li>
+<li><a href="#servicesdarkmanconfig" accesskey="6">services.darkman.config</a></li>
+<li><a href="#servicesdarkmanconfiglat" accesskey="7">services.darkman.config.lat</a></li>
+<li><a href="#servicesdarkmanconfiglng" accesskey="8">services.darkman.config.lng</a></li>
+<li><a href="#servicesdarkmanconfigportal" accesskey="9">services.darkman.config.portal</a></li>
+<li><a href="#servicesdarkmanconfiguseDbus">services.darkman.config.useDbus</a></li>
+<li><a href="#servicesdarkmanconfiguseGeoclue">services.darkman.config.useGeoclue</a></li>
+</ul>
+<hr>
+<div class="section-level-extent" id="homemac_002dwallpaper">
+<div class="nav-panel">
+<p>
+Next: <a href="#servicesdarkmanenable" accesskey="n" rel="next">services.darkman.enable</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="home_002emac_002dwallpaper">3.1 home.mac-wallpaper</h3>
+<a class="anchor" id="g_t_0023home_002emac_002dwallpaper"></a><p>Path to the wallpaper to set.
+</p>
+<p><em class="emph">Type:</em> null or path
+</p>
+<p><em class="emph">Default:</em> <code class="code">null</code>
+</p>
+<p><em class="emph">Example:</em>
+<code class="code">&quot;/Users/winston/Pictures/Wallpapers/wallpaper.png&quot;</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/nekowinston/nur/tree/master/modules/hm/mac-wallpaper.nix">modules/hm/mac-wallpaper.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="servicesdarkmanenable">
+<div class="nav-panel">
+<p>
+Next: <a href="#servicesdarkmanpackage" accesskey="n" rel="next">services.darkman.package</a>, Previous: <a href="#homemac_002dwallpaper" accesskey="p" rel="prev">home.mac-wallpaper</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="services_002edarkman_002eenable">3.2 services.darkman.enable</h3>
+<a class="anchor" id="g_t_0023services_002edarkman_002eenable"></a><p>Whether to enable darkman.
+</p>
+<p><em class="emph">Type:</em> boolean
+</p>
+<p><em class="emph">Default:</em> <code class="code">false</code>
+</p>
+<p><em class="emph">Example:</em> <code class="code">true</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/nekowinston/nur/tree/master/modules/hm/darkman.nix">modules/hm/darkman.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="servicesdarkmanpackage">
+<div class="nav-panel">
+<p>
+Next: <a href="#servicesdarkmanactivationScriptdark" accesskey="n" rel="next">services.darkman.activationScript.dark</a>, Previous: <a href="#servicesdarkmanenable" accesskey="p" rel="prev">services.darkman.enable</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="services_002edarkman_002epackage">3.3 services.darkman.package</h3>
+<a class="anchor" id="g_t_0023services_002edarkman_002epackage"></a><p>The darkman package to use.
+</p>
+<p><em class="emph">Type:</em> package
+</p>
+<p><em class="emph">Default:</em> <code class="code">pkgs.darkman</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/nekowinston/nur/tree/master/modules/hm/darkman.nix">modules/hm/darkman.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="servicesdarkmanactivationScriptdark">
+<div class="nav-panel">
+<p>
+Next: <a href="#servicesdarkmanactivationScriptlight" accesskey="n" rel="next">services.darkman.activationScript.light</a>, Previous: <a href="#servicesdarkmanpackage" accesskey="p" rel="prev">services.darkman.package</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="services_002edarkman_002eactivationScript_002edark">3.4 services.darkman.activationScript.dark</h3>
+<a class="anchor" id="g_t_0023services_002edarkman_002eactivationscript_002edark"></a><p>Commands to run when dark mode is activated.
+</p>
+<p>The scripts are placed in a Nix derivation,
+<code class="code">dark-mode.d/nix-hm-module-darkman.sh</code>, which is then added to
+<code class="code">xdg.systemDirs.data</code> (<code class="code">$XDG_DATA_DIRS</code>). The interpreter of
+these script is <code class="code">pkgs.bash</code>, as they are created by
+<code class="code">pkgs.writeShellScript</code>.
+</p>
+<p><em class="emph">Type:</em> string
+</p>
+<p><em class="emph">Default:</em> <code class="code">&quot;&quot;</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/nekowinston/nur/tree/master/modules/hm/darkman.nix">modules/hm/darkman.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="servicesdarkmanactivationScriptlight">
+<div class="nav-panel">
+<p>
+Next: <a href="#servicesdarkmanconfig" accesskey="n" rel="next">services.darkman.config</a>, Previous: <a href="#servicesdarkmanactivationScriptdark" accesskey="p" rel="prev">services.darkman.activationScript.dark</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="services_002edarkman_002eactivationScript_002elight">3.5 services.darkman.activationScript.light</h3>
+<a class="anchor" id="g_t_0023services_002edarkman_002eactivationscript_002elight"></a><p>Commands to run when light mode is activated.
+</p>
+<p>The scripts are placed in a Nix derivation,
+<code class="code">light-mode.d/nix-hm-module-darkman.sh</code>, which is then added to
+<code class="code">xdg.systemDirs.data</code> (<code class="code">$XDG_DATA_DIRS</code>). The interpreter of
+these script is <code class="code">pkgs.bash</code>, as they are created by
+<code class="code">pkgs.writeShellScript</code>.
+</p>
+<p><em class="emph">Type:</em> string
+</p>
+<p><em class="emph">Default:</em> <code class="code">&quot;&quot;</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/nekowinston/nur/tree/master/modules/hm/darkman.nix">modules/hm/darkman.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="servicesdarkmanconfig">
+<div class="nav-panel">
+<p>
+Next: <a href="#servicesdarkmanconfiglat" accesskey="n" rel="next">services.darkman.config.lat</a>, Previous: <a href="#servicesdarkmanactivationScriptlight" accesskey="p" rel="prev">services.darkman.activationScript.light</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="services_002edarkman_002econfig">3.6 services.darkman.config</h3>
+<a class="anchor" id="g_t_0023services_002edarkman_002econfig"></a><p>Config for darkman.
+</p>
+<p><em class="emph">Type:</em> submodule
+</p>
+<p><em class="emph">Default:</em> <code class="code">{ }</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/nekowinston/nur/tree/master/modules/hm/darkman.nix">modules/hm/darkman.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="servicesdarkmanconfiglat">
+<div class="nav-panel">
+<p>
+Next: <a href="#servicesdarkmanconfiglng" accesskey="n" rel="next">services.darkman.config.lng</a>, Previous: <a href="#servicesdarkmanconfig" accesskey="p" rel="prev">services.darkman.config</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="services_002edarkman_002econfig_002elat">3.7 services.darkman.config.lat</h3>
+<a class="anchor" id="g_t_0023services_002edarkman_002econfig_002elat"></a><p>Your current latitude, between <code class="code">-90.0</code> and <code class="code">90.0</code> Must be
+provided along with longitude.
+</p>
+<p><em class="emph">Type:</em> null or floating point number
+</p>
+<p><em class="emph">Default:</em> <code class="code">null</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/nekowinston/nur/tree/master/modules/hm/darkman.nix">modules/hm/darkman.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="servicesdarkmanconfiglng">
+<div class="nav-panel">
+<p>
+Next: <a href="#servicesdarkmanconfigportal" accesskey="n" rel="next">services.darkman.config.portal</a>, Previous: <a href="#servicesdarkmanconfiglat" accesskey="p" rel="prev">services.darkman.config.lat</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="services_002edarkman_002econfig_002elng">3.8 services.darkman.config.lng</h3>
+<a class="anchor" id="g_t_0023services_002edarkman_002econfig_002elng"></a><p>Your current longitude, between <code class="code">-180.0</code> and <code class="code">180.0</code> Must be
+provided along with latitude.
+</p>
+<p><em class="emph">Type:</em> null or floating point number
+</p>
+<p><em class="emph">Default:</em> <code class="code">null</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/nekowinston/nur/tree/master/modules/hm/darkman.nix">modules/hm/darkman.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="servicesdarkmanconfigportal">
+<div class="nav-panel">
+<p>
+Next: <a href="#servicesdarkmanconfiguseDbus" accesskey="n" rel="next">services.darkman.config.useDbus</a>, Previous: <a href="#servicesdarkmanconfiglng" accesskey="p" rel="prev">services.darkman.config.lng</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="services_002edarkman_002econfig_002eportal">3.9 services.darkman.config.portal</h3>
+<a class="anchor" id="g_t_0023services_002edarkman_002econfig_002eportal"></a><p>Whether to use the portal for communication.
+</p>
+<p>You will need to add <code class="code">pkgs.darkman</code> to your NixOS
+<code class="code">xdg.portal.extraPortals</code> for this to work.
+</p>
+<p><em class="emph">Type:</em> null or boolean
+</p>
+<p><em class="emph">Default:</em> <code class="code">true</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/nekowinston/nur/tree/master/modules/hm/darkman.nix">modules/hm/darkman.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="servicesdarkmanconfiguseDbus">
+<div class="nav-panel">
+<p>
+Next: <a href="#servicesdarkmanconfiguseGeoclue" accesskey="n" rel="next">services.darkman.config.useGeoclue</a>, Previous: <a href="#servicesdarkmanconfigportal" accesskey="p" rel="prev">services.darkman.config.portal</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="services_002edarkman_002econfig_002euseDbus">3.10 services.darkman.config.useDbus</h3>
+<a class="anchor" id="g_t_0023services_002edarkman_002econfig_002eusedbus"></a><p>Whether to expose the current mode via darkman&rsquo;s own D-Bus API. The
+command line tool uses this API to apply changes, so it will not work if
+this setting is disabled.
+</p>
+<p>You will need to add <code class="code">pkgs.darkman</code> to your NixOS
+<code class="code">services.dbus.packages</code> for this to work.
+</p>
+<p><em class="emph">Type:</em> null or boolean
+</p>
+<p><em class="emph">Default:</em> <code class="code">true</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/nekowinston/nur/tree/master/modules/hm/darkman.nix">modules/hm/darkman.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="servicesdarkmanconfiguseGeoclue">
+<div class="nav-panel">
+<p>
+Previous: <a href="#servicesdarkmanconfiguseDbus" accesskey="p" rel="prev">services.darkman.config.useDbus</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="services_002edarkman_002econfig_002euseGeoclue">3.11 services.darkman.config.useGeoclue</h3>
+<a class="anchor" id="g_t_0023services_002edarkman_002econfig_002eusegeoclue"></a><p>Whether to use a local geoclue instance to determine the current
+location.
+</p>
+<p>You must also enable the system-wide geoclue2 service on NixOS:
+<code class="code">services.geoclue.enable = true;</code>
+</p>
+<p><em class="emph">Type:</em> null or boolean
+</p>
+<p><em class="emph">Default:</em> <code class="code">false</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/nekowinston/nur/tree/master/modules/hm/darkman.nix">modules/hm/darkman.nix</a>
+</p></div>
+</div>
+<hr>
+<div class="nav-panel">
+<p>
+Previous: <a href="darwin-module-options.html#darwin-module-options" accesskey="p" rel="prev">darwin module options</a>, Up: <a href="index.html" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+
+
+
+</body>
+</html>
