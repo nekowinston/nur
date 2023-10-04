@@ -144,6 +144,26 @@
         },
         "version": "61debb2d6cdafc978c217c9641e606314c0a42d5"
     },
+    "icat": {
+        "cargoLocks": null,
+        "date": "2023-07-15",
+        "extract": null,
+        "name": "icat",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nekowinston",
+            "repo": "icat",
+            "rev": "4c3497a35d4f5a665c25b6ad468025f4126eaa40",
+            "sha256": "sha256-ouOU4MuqpngtSwcmlVRnuoECiRPpVIMY4QpC0EWjNEg=",
+            "type": "github"
+        },
+        "version": "4c3497a35d4f5a665c25b6ad468025f4126eaa40"
+    },
     "jq-lsp": {
         "cargoLocks": null,
         "date": null,

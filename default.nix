@@ -6,10 +6,7 @@
     },
   system ? builtins.currentSystem,
 }: let
-  docs = import ./docs {
-    inherit pkgs;
-    lib = pkgs.lib;
-  };
+  nvfetcher = pkgs.callPackage ./_sources/generated.nix {};
 in {
   lib = import ./lib {inherit pkgs;}; # functions
   modules = import ./modules;
@@ -22,10 +19,7 @@ in {
   discover-overlay = pkgs.callPackage ./pkgs/discover-overlay {};
   gonvim-tools = pkgs.callPackage ./pkgs/gonvim-tools {};
   helm-ls = pkgs.callPackage ./pkgs/helm-ls {};
-  icat = import (builtins.fetchTarball {
-    url = "https://github.com/nekowinston/icat/archive/4c3497a35d4f5a665c25b6ad468025f4126eaa40.tar.gz";
-    sha256 = "sha256:0j1lld2x0hhaw4c86m792f4h50dscxa9a9h79cnpi9margh99qx2";
-  }) {inherit pkgs;};
+  icat = import (nvfetcher.icat.src) {inherit pkgs;};
   jq-lsp = pkgs.callPackage ./pkgs/jq-lsp {};
   mopidy-podcast-itunes = pkgs.callPackage ./pkgs/mopidy-podcast-itunes {};
   plymouth-theme-catppuccin = pkgs.callPackage ./pkgs/plymouth-theme-catppuccin {};
@@ -39,6 +33,4 @@ in {
       else pkgs.callPackage;
   in
     callPackage ./pkgs/wezterm-nightly {};
-
-  docs-html = docs.html;
 }

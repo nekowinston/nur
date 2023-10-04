@@ -81,6 +81,18 @@
       sha256 = "sha256-cEwF52rxQVNrUK7XJHoyBj/PXEueHCrRi7sLe4HoD6I=";
     };
   };
+  icat = {
+    pname = "icat";
+    version = "4c3497a35d4f5a665c25b6ad468025f4126eaa40";
+    src = fetchFromGitHub {
+      owner = "nekowinston";
+      repo = "icat";
+      rev = "4c3497a35d4f5a665c25b6ad468025f4126eaa40";
+      fetchSubmodules = false;
+      sha256 = "sha256-ouOU4MuqpngtSwcmlVRnuoECiRPpVIMY4QpC0EWjNEg=";
+    };
+    date = "2023-07-15";
+  };
   jq-lsp = {
     pname = "jq-lsp";
     version = "3e03c22ede27a39a0fff5c1a60a81f7397cd0811";
