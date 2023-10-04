@@ -13,17 +13,16 @@ with lib; let
         type = with types; nullOr float;
         default = null;
         description = ''
-          Your current latitude, between <literal>-90.0</literal> and
-          <literal>90.0</literal>. Must be provided along with
-          longitude.
+          Your current latitude, between `-90.0` and `90.0`
+          Must be provided along with longitude.
         '';
       };
       lng = mkOption {
         type = with types; nullOr float;
         default = null;
         description = ''
-          Your current longitude, between <literal>-180.0</literal> and
-          <literal>180.0</literal>. Must be provided along with
+          Your current longitude, between `-180.0` and
+          `180.0` Must be provided along with
           latitude.
         '';
       };
@@ -34,7 +33,7 @@ with lib; let
           Whether to use a local geoclue instance to determine the current location.
 
           You must also enable the system-wide geoclue2 service on NixOS:
-          <literal>services.geoclue.enable = true;</literal>
+          `services.geoclue.enable = true;`
         '';
       };
       useDbus = mkOption {
@@ -44,8 +43,8 @@ with lib; let
           Whether to expose the current mode via darkman's own D-Bus API.
           The command line tool uses this API to apply changes, so it will not work if this setting is disabled.
 
-          You will need to add <literal>pkgs.darkman</literal> to your
-          NixOS <literal>services.dbus.packages</literal> for this to work.
+          You will need to add `pkgs.darkman` to your
+          NixOS `services.dbus.packages` for this to work.
         '';
       };
       portal = mkOption {
@@ -54,8 +53,8 @@ with lib; let
         description = ''
           Whether to use the portal for communication.
 
-          You will need to add <literal>pkgs.darkman</literal> to your
-          NixOS <literal>xdg.portal.extraPortals</literal> for this to work.
+          You will need to add `pkgs.darkman` to your
+          NixOS `xdg.portal.extraPortals` for this to work.
         '';
       };
     };
@@ -86,10 +85,10 @@ in {
         Commands to run when ${mode} mode is activated.
 
         The scripts are placed in a Nix derivation,
-        <literal>${mode}-mode.d/nix-hm-module-darkman.sh</literal>, which is then added
-        to <literal>xdg.systemDirs.data</literal> (<literal>$XDG_DATA_DIRS</literal>).
-        The interpreter of these script is <literal>pkgs.bash</literal>, as they are
-        created by <literal>pkgs.writeShellScript</literal>.
+        `${mode}-mode.d/nix-hm-module-darkman.sh`, which is then added
+        to `xdg.systemDirs.data` (`$XDG_DATA_DIRS`).
+        The interpreter of these script is `pkgs.bash`, as they are
+        created by `pkgs.writeShellScript`.
       '';
     in {
       dark = mkOption {

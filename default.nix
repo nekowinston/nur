@@ -7,6 +7,7 @@
   system ? builtins.currentSystem,
 }: let
   nvfetcher = pkgs.callPackage ./_sources/generated.nix {};
+  docs = pkgs.callPackage ./docs {};
 in {
   lib = import ./lib {inherit pkgs;}; # functions
   modules = import ./modules;
@@ -33,4 +34,7 @@ in {
       else pkgs.callPackage;
   in
     callPackage ./pkgs/wezterm-nightly {};
+
+  docs-md = docs.md;
+  docs-html = docs.html;
 }

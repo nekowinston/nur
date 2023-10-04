@@ -43,10 +43,10 @@ in {
       description = ''
         Whether to enable yabai's scripting-addition.
         SIP must be (partially) disabled for this to work. See
-        https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection
+        [https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection]()
 
         Compared to Nix-Darwin's default module, this option also injects the necessary
-        sha256 hash into the <literal>/etc/sudoers.d/yabai</literal> file.
+        sha256 hash into the `/etc/sudoers.d/yabai` file.
       '';
     };
 
