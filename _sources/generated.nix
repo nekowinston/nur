@@ -60,15 +60,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "6711bddc4c343ecc94c2e2a9cbff3a19259e9b67";
+    version = "eec906aa057b63c566b2fa81a35d3c7c572c001c";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "6711bddc4c343ecc94c2e2a9cbff3a19259e9b67";
+      rev = "eec906aa057b63c566b2fa81a35d3c7c572c001c";
       fetchSubmodules = true;
-      sha256 = "sha256-2LhyuNrqIq2dor+eQ2Nxx8xKICPTlSzjBsA/yTnB1P4=";
+      sha256 = "sha256-w9XAPWVn0GYZx4D7vCEZOrGD2GHj/a9Dc849AQgQAOI=";
     };
-    date = "2023-09-27";
+    date = "2023-10-05";
   };
   helm-ls = {
     pname = "helm-ls";
@@ -128,7 +128,7 @@
     version = "unknown";
     src = fetchurl {
       url = "https://devimages-cdn.apple.com/design/resources/download/SF-Compact.dmg";
-      sha256 = "sha256-7mk4i36CWPy08RdNTuFyahL3gb6HL7wwjWS9Zs1LH6s=";
+      sha256 = "sha256-+Q4HInJBl3FLb29/x9utf7A55uh5r79eh/7hdQDdbSI=";
     };
   };
   sf-mono = {
@@ -144,7 +144,7 @@
     version = "unknown";
     src = fetchurl {
       url = "https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg";
-      sha256 = "sha256-XoTegyl5BTBPHrKfaxJ18U2mzzxqCXLS9yUtN0hcB7I=";
+      sha256 = "sha256-nkuHge3/Vy8lwYx9z+pvsQZfzrNIP4K0OutpPl4yXn0=";
     };
   };
   sizzy-darwin-arm = {
