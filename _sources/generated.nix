@@ -60,15 +60,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "eec906aa057b63c566b2fa81a35d3c7c572c001c";
+    version = "56c0d2898dce1984cbbaa2881e712c6a3eaecb89";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "eec906aa057b63c566b2fa81a35d3c7c572c001c";
+      rev = "56c0d2898dce1984cbbaa2881e712c6a3eaecb89";
       fetchSubmodules = true;
-      sha256 = "sha256-w9XAPWVn0GYZx4D7vCEZOrGD2GHj/a9Dc849AQgQAOI=";
+      sha256 = "sha256-l5MCB/NTm95bYwCUsL80GaTiDUdCO2tMO6ouMhX8k0g=";
     };
-    date = "2023-10-05";
+    date = "2023-10-06";
   };
   helm-ls = {
     pname = "helm-ls";
