@@ -1,6 +1,3 @@
 {
-  imports = [
-    ./darkman.nix
-    ./mac-wallpaper.nix
-  ];
+  imports = [./mac-wallpaper.nix];
 }
