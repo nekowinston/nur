@@ -3,10 +3,10 @@
 {
   apple-emoji = {
     pname = "apple-emoji";
-    version = "v16.4";
+    version = "v16.4-patch.1";
     src = fetchurl {
-      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/v16.4/AppleColorEmoji.ttf";
-      sha256 = "sha256-goY9lWBtOnOUotitjVfe96zdmjYTPT6PVOnZ0MEWh0U=";
+      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/v16.4-patch.1/AppleColorEmoji.ttf";
+      sha256 = "sha256-1e1Xz7wF1NhCe0zUdJWXE6hPGmkylAeggsN01T3WWpU=";
     };
   };
   catppuccin-gtk = {
@@ -60,15 +60,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "d50803ff8e5f48f6550605efc77facacd555e6c4";
+    version = "c25dc5193530cd9848a1cce493653543f901d6ef";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "d50803ff8e5f48f6550605efc77facacd555e6c4";
+      rev = "c25dc5193530cd9848a1cce493653543f901d6ef";
       fetchSubmodules = true;
-      sha256 = "sha256-CN3ZQx9gK9XqNmjcZDoixE516Wa1/aWUXWe8dAPGRvA=";
+      sha256 = "sha256-sw4z+Y7hVwxF9nI6s6wpEsK1IePMP5f7VWBCKINXj94=";
     };
-    date = "2023-10-19";
+    date = "2023-10-21";
   };
   helm-ls = {
     pname = "helm-ls";
