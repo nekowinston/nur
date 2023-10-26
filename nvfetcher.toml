@@ -7,7 +7,7 @@ fetch.github = "catppuccin/gtk"
 [cura]
 src.github_tag = "Ultimaker/Cura"
 src.include_regex = "5.\\d+\\.\\d+"
-fetch.url = "https://github.com/Ultimaker/Cura/releases/download/$ver/Ultimaker-Cura-$ver-linux-modern.AppImage"
+fetch.url = "https://github.com/Ultimaker/Cura/releases/download/$ver/Ultimaker-Cura-$ver-linux-X64.AppImage"
 
 [discover-overlay]
 src.pypi = "discover-overlay"
