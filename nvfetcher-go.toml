@@ -1,0 +1,22 @@
+# go packages are very likely to break my CI, so it's all manually managed
+# gonvim-tools
+[go-enum]
+fetch.github = "abice/go-enum"
+src.github = "abice/go-enum"
+
+[gomvp]
+fetch.github = "abenz1267/gomvp"
+src.git = "https://github.com/abenz1267/gomvp"
+
+[json-to-struct]
+fetch.github = "tmc/json-to-struct"
+src.git = "https://github.com/tmc/json-to-struct"
+
+# LSPs
+[helm-ls]
+fetch.github = "mrjosh/helm-ls"
+src.github = "mrjosh/helm-ls"
+
+[jq-lsp]
+fetch.github = "wader/jq-lsp"
+src.git = "https://github.com/wader/jq-lsp"

@@ -5,12 +5,12 @@
   nurPkgs =
     builtins.mapAttrs (name: content:
       pkgs.buildGoModule ({
-          inherit ((pkgs.callPackage ../../_sources/generated.nix {}).${name}) pname version src;
+          inherit ((pkgs.callPackage ../../_sources/go/generated.nix {}).${name}) pname version src;
         }
         // content))
     {
       go-enum = {
-        vendorHash = "sha256-+iQCOUg7rGfOgNvmj+lMLYb4A749hDK/3hexEw9IRmI=";
+        vendorHash = "sha256-qe7nfVkCn4YqFpiBXLyiWSuSnr/ObLauT9yAt4GfqlA=";
         meta = with lib; {
           description = "An enum generator for go";
           homepage = "https://github.com/abice/go-enum";
