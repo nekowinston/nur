@@ -46,7 +46,8 @@ jobs:
             .#discover-overlay \
             .#mopidy-podcast-itunes \
             .#plymouth-theme-catppuccin \
-            .#posy-improved-cursor
+            .#posy-improved-cursor \
+            .#wezterm-nightly
         if: runner.os == 'Linux'
 
       - name: Build macOS packages
@@ -60,8 +61,7 @@ jobs:
             .#gonvim-tools \
             .#helm-ls \
             .#icat \
-            .#jq-lsp \
-            .#wezterm-nightly
+            .#jq-lsp
 
       # TODO: enable if I ever add it to NUR
       # - name: Trigger NUR update
