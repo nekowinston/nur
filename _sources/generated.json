@@ -106,7 +106,7 @@
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2023-11-03",
+        "date": "2023-11-07",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -118,11 +118,11 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "8fabf0be4a1bc7629762a1456a4adeb6941c71c7",
-            "sha256": "sha256-Y1wizN2prgY2zKYLRpIi9wZLH0RdNe4s9lqDpWAXz7Y=",
+            "rev": "d4ce9f4a7cbf9c16794fafe1b4a822fcfa88c5d2",
+            "sha256": "sha256-qqFy9YOx+coeT/FeBWEVU34EHv3jfF6Iu4A3OHDc5U8=",
             "type": "github"
         },
-        "version": "8fabf0be4a1bc7629762a1456a4adeb6941c71c7"
+        "version": "d4ce9f4a7cbf9c16794fafe1b4a822fcfa88c5d2"
     },
     "helm-ls": {
         "cargoLocks": null,
@@ -327,14 +327,14 @@
     "wezterm": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./wezterm-d6809533215e273ca23e52614c886929ad702715/Cargo.lock",
+                "./wezterm-f0e3eecba6faec0aa963a6f0067577afc99e11db/Cargo.lock",
                 {
                     "xcb-1.2.1": "sha256-zkuW5ATix3WXBAj2hzum1MJ5JTX3+uVQ01R1vL6F1rY=",
                     "xcb-imdkit-0.2.0": "sha256-L+NKD0rsCk9bFABQF4FZi9YoqBHr4VAZeKAWgsaAegw="
                 }
             ]
         },
-        "date": "2023-11-04",
+        "date": "2023-11-07",
         "extract": null,
         "name": "wezterm",
         "passthru": null,
@@ -346,10 +346,10 @@
             "name": null,
             "owner": "wez",
             "repo": "wezterm",
-            "rev": "d6809533215e273ca23e52614c886929ad702715",
-            "sha256": "sha256-ZnmBKBiaqKGKKrItTrPf/LGJvtu7BBvu1+QAk5PBi6g=",
+            "rev": "f0e3eecba6faec0aa963a6f0067577afc99e11db",
+            "sha256": "sha256-VxN3qv+uRuS1Yo51zWkooZdJkodEbZ4F50iYRihCQIU=",
             "type": "github"
         },
-        "version": "d6809533215e273ca23e52614c886929ad702715"
+        "version": "f0e3eecba6faec0aa963a6f0067577afc99e11db"
     }
 }
