@@ -41,11 +41,12 @@ jobs:
       # TODO: build all packages in the repo with devour-flake, or similar
       - name: Build Linux packages
         run: |
-          nix build -L .\#apple-cursor
-          nix build -L .\#discover-overlay
-          nix build -L .\#mopidy-podcast-itunes
-          nix build -L .\#plymouth-theme-catppuccin
-          nix build -L .\#posy-improved-cursor
+          nix build -L --keep-going \
+            .#apple-cursor \
+            .#discover-overlay \
+            .#mopidy-podcast-itunes \
+            .#plymouth-theme-catppuccin \
+            .#posy-improved-cursor
         if: runner.os == 'Linux'
 
       - name: Build macOS packages
@@ -55,11 +56,12 @@ jobs:
 
       - name: Build common packages
         run: |
-          nix build -L .\#gonvim-tools
-          nix build -L .\#helm-ls
-          nix build -L .\#icat
-          nix build -L .\#jq-lsp
-          nix build -L .\#wezterm-nightly
+          nix build -L --keep-going \
+            .#gonvim-tools \
+            .#helm-ls \
+            .#icat \
+            .#jq-lsp \
+            .#wezterm-nightly
 
       # TODO: enable if I ever add it to NUR
       # - name: Trigger NUR update
