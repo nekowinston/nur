@@ -36,28 +36,6 @@
       sha256 = "sha256-14UmxAF4X0GnPokZeXAqeZYdSDUPrE3ZpNDUdk64Bik=";
     };
   };
-  go-enum = {
-    pname = "go-enum";
-    version = "v0.5.6";
-    src = fetchFromGitHub {
-      owner = "abice";
-      repo = "go-enum";
-      rev = "v0.5.6";
-      fetchSubmodules = false;
-      sha256 = "sha256-epGtBHngAFClrU63y5QQ130Me/lrZw4J2ZDWEuOh8Uo=";
-    };
-  };
-  gomvp = {
-    pname = "gomvp";
-    version = "v0.0.4";
-    src = fetchFromGitHub {
-      owner = "abenz1267";
-      repo = "gomvp";
-      rev = "v0.0.4";
-      fetchSubmodules = false;
-      sha256 = "sha256-dXjI+nItJCAGKxyC9tX11hxWHCP+NgXtTYtm5+6dqDU=";
-    };
-  };
   gpt4all = {
     pname = "gpt4all";
     version = "d4ce9f4a7cbf9c16794fafe1b4a822fcfa88c5d2";
@@ -70,17 +48,6 @@
     };
     date = "2023-11-07";
   };
-  helm-ls = {
-    pname = "helm-ls";
-    version = "61debb2d6cdafc978c217c9641e606314c0a42d5";
-    src = fetchFromGitHub {
-      owner = "mrjosh";
-      repo = "helm-ls";
-      rev = "61debb2d6cdafc978c217c9641e606314c0a42d5";
-      fetchSubmodules = false;
-      sha256 = "sha256-cEwF52rxQVNrUK7XJHoyBj/PXEueHCrRi7sLe4HoD6I=";
-    };
-  };
   icat = {
     pname = "icat";
     version = "4c3497a35d4f5a665c25b6ad468025f4126eaa40";
@@ -92,28 +59,6 @@
       sha256 = "sha256-ouOU4MuqpngtSwcmlVRnuoECiRPpVIMY4QpC0EWjNEg=";
     };
     date = "2023-07-15";
-  };
-  jq-lsp = {
-    pname = "jq-lsp";
-    version = "3e03c22ede27a39a0fff5c1a60a81f7397cd0811";
-    src = fetchFromGitHub {
-      owner = "wader";
-      repo = "jq-lsp";
-      rev = "3e03c22ede27a39a0fff5c1a60a81f7397cd0811";
-      fetchSubmodules = false;
-      sha256 = "sha256-+cJgRRopeTwtJT6nqcpeCKfBVNFA+vDgg4VY0ZQ/roE=";
-    };
-  };
-  json-to-struct = {
-    pname = "json-to-struct";
-    version = "1f65fffbfdbb2b0e56a3f6f6cd24daad58e90dec";
-    src = fetchFromGitHub {
-      owner = "tmc";
-      repo = "json-to-struct";
-      rev = "1f65fffbfdbb2b0e56a3f6f6cd24daad58e90dec";
-      fetchSubmodules = false;
-      sha256 = "sha256-l/XLZstZFVnYXRqtng1oiCSvhNAomyeTuI1OtCb8UHo=";
-    };
   };
   mopidy-podcast-itunes = {
     pname = "mopidy-podcast-itunes";
