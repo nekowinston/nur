@@ -3,7 +3,7 @@
   callPackage,
   lib,
 }: let
-  nvfetcher = (callPackage ../../_sources/generated.nix {}).helm-ls;
+  nvfetcher = (callPackage ../../_sources/go/generated.nix {}).helm-ls;
 in
   buildGoModule {
     inherit (nvfetcher) pname version src;
