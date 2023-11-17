@@ -11,13 +11,13 @@
   };
   catppuccin-gtk = {
     pname = "catppuccin-gtk";
-    version = "v0.7.0";
+    version = "v0.7.1";
     src = fetchFromGitHub {
       owner = "catppuccin";
       repo = "gtk";
-      rev = "v0.7.0";
+      rev = "v0.7.1";
       fetchSubmodules = false;
-      sha256 = "sha256-J1iLN2FF3Ml/3zmntXYlfkv6dZcwl62A9X4ruAH1ll4=";
+      sha256 = "sha256-V3JasiHaATbVDQJeJPeFq5sjbkQnSMbDRWsaRzGccXU=";
     };
   };
   cura = {
@@ -118,10 +118,10 @@
   };
   uhk-agent = {
     pname = "uhk-agent";
-    version = "3.2.0";
+    version = "3.2.1";
     src = fetchurl {
-      url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v3.2.0/UHK.Agent-3.2.0-linux-x86_64.AppImage";
-      sha256 = "sha256-YMm84jKtWz5DeGJhBlmo2hlIy4iarEvWylgAWY/itII=";
+      url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v3.2.1/UHK.Agent-3.2.1-linux-x86_64.AppImage";
+      sha256 = "sha256-qAZ92/iN5E+1KGPs6u9Bb6vLfi0Keog/yOcLtnRD7yc=";
     };
   };
   wezterm = {
