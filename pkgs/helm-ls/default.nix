@@ -8,7 +8,7 @@ in
   buildGoModule {
     inherit (nvfetcher) pname version src;
 
-    vendorSha256 = "sha256-wMYrgAgAEgwfjMLP81H0cKWm/kh63ppDkSiymfsaj7U=";
+    vendorHash = "sha256-wMYrgAgAEgwfjMLP81H0cKWm/kh63ppDkSiymfsaj7U=";
 
     meta = with lib; {
       description = "helm language server";
