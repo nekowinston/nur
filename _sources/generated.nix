@@ -22,10 +22,10 @@
   };
   cura = {
     pname = "cura";
-    version = "5.5.0";
+    version = "5.6.0";
     src = fetchurl {
-      url = "https://github.com/Ultimaker/Cura/releases/download/5.5.0/Ultimaker-Cura-5.5.0-linux-X64.AppImage";
-      sha256 = "sha256-EG5LMiDFUSXFbtRhd15egPkbp12kEp2TdUdLssSy7Jg=";
+      url = "https://github.com/Ultimaker/Cura/releases/download/5.6.0/Ultimaker-Cura-5.6.0-linux-X64.AppImage";
+      sha256 = "sha256-EHiWoNpLKHPzv6rZrtNgEr7y//iVcRYeV/TaCn8QpEA=";
     };
   };
   discover-overlay = {
@@ -126,21 +126,21 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "f07cc837166dc5f29df56afb42af3d6887ec6a33";
+    version = "90ca1117bc68e3644b1763460e17cf4b6ffbf1c3";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "f07cc837166dc5f29df56afb42af3d6887ec6a33";
+      rev = "90ca1117bc68e3644b1763460e17cf4b6ffbf1c3";
       fetchSubmodules = true;
-      sha256 = "sha256-Sk+tmAT3wuJPGLsiMAk75IuxfQmNgxTEYyqlcERxNVk=";
+      sha256 = "sha256-h0L+D8OOilaVPizLqVj2wYzPfrcpqVNwni79I0ebsms=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./wezterm-f07cc837166dc5f29df56afb42af3d6887ec6a33/Cargo.lock;
+      lockFile = ./wezterm-90ca1117bc68e3644b1763460e17cf4b6ffbf1c3/Cargo.lock;
       outputHashes = {
         "xcb-1.2.1" = "sha256-zkuW5ATix3WXBAj2hzum1MJ5JTX3+uVQ01R1vL6F1rY=";
         "xcb-imdkit-0.2.0" = "sha256-L+NKD0rsCk9bFABQF4FZi9YoqBHr4VAZeKAWgsaAegw=";
       };
     };
-    date = "2023-11-24";
+    date = "2023-11-28";
   };
 }
