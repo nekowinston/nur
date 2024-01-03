@@ -33,4 +33,9 @@
     homeManagerModules.default = import ./modules/hm;
     overlays.default = import ./overlays;
   };
+
+  nixConfig = {
+    extra-substituters = ["https://nekowinston.cachix.org"];
+    extra-trusted-public-keys = ["nekowinston.cachix.org-1:lucpmaO+JwtoZj16HCO1p1fOv68s/RL1gumpVzRHRDs="];
+  };
 }
