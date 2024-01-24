@@ -118,29 +118,28 @@
   };
   uhk-agent = {
     pname = "uhk-agent";
-    version = "3.2.2";
+    version = "3.3.0";
     src = fetchurl {
-      url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v3.2.2/UHK.Agent-3.2.2-linux-x86_64.AppImage";
-      sha256 = "sha256-0kNcpdYktgzIPVvfSitJ5aIuhJvCEcbubumHhW00QUE=";
+      url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v3.3.0/UHK.Agent-3.3.0-linux-x86_64.AppImage";
+      sha256 = "sha256-jkIuXKTm8imq1U7kbQhK7LkEeI2qz0Gu7rWuDn6Ex+c=";
     };
   };
   wezterm = {
     pname = "wezterm";
-    version = "76028ca15404c049866692b06411f654d544ce2b";
+    version = "516add5a4b162839e781555fa342682fca539ef1";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "76028ca15404c049866692b06411f654d544ce2b";
+      rev = "516add5a4b162839e781555fa342682fca539ef1";
       fetchSubmodules = true;
-      sha256 = "sha256-E9RHs49cvwVdNlpPKxv9LKWHcCeQuAWESKeDRCtfnYM=";
+      sha256 = "sha256-iqh1IG+qb/pH2PE52krpGp3WFm/7ie01gQyT1IRQVMI=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./wezterm-76028ca15404c049866692b06411f654d544ce2b/Cargo.lock;
+      lockFile = ./wezterm-516add5a4b162839e781555fa342682fca539ef1/Cargo.lock;
       outputHashes = {
-        "xcb-1.2.1" = "sha256-zkuW5ATix3WXBAj2hzum1MJ5JTX3+uVQ01R1vL6F1rY=";
-        "xcb-imdkit-0.2.0" = "sha256-L+NKD0rsCk9bFABQF4FZi9YoqBHr4VAZeKAWgsaAegw=";
+        "xcb-imdkit-0.3.0" = "sha256-fTpJ6uNhjmCWv7dZqVgYuS2Uic36XNYTbqlaly5QBjI=";
       };
     };
-    date = "2024-01-21";
+    date = "2024-01-23";
   };
 }

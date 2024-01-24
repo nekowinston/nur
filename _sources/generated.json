@@ -218,23 +218,22 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-0kNcpdYktgzIPVvfSitJ5aIuhJvCEcbubumHhW00QUE=",
+            "sha256": "sha256-jkIuXKTm8imq1U7kbQhK7LkEeI2qz0Gu7rWuDn6Ex+c=",
             "type": "url",
-            "url": "https://github.com/UltimateHackingKeyboard/agent/releases/download/v3.2.2/UHK.Agent-3.2.2-linux-x86_64.AppImage"
+            "url": "https://github.com/UltimateHackingKeyboard/agent/releases/download/v3.3.0/UHK.Agent-3.3.0-linux-x86_64.AppImage"
         },
-        "version": "3.2.2"
+        "version": "3.3.0"
     },
     "wezterm": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./wezterm-76028ca15404c049866692b06411f654d544ce2b/Cargo.lock",
+                "./wezterm-516add5a4b162839e781555fa342682fca539ef1/Cargo.lock",
                 {
-                    "xcb-1.2.1": "sha256-zkuW5ATix3WXBAj2hzum1MJ5JTX3+uVQ01R1vL6F1rY=",
-                    "xcb-imdkit-0.2.0": "sha256-L+NKD0rsCk9bFABQF4FZi9YoqBHr4VAZeKAWgsaAegw="
+                    "xcb-imdkit-0.3.0": "sha256-fTpJ6uNhjmCWv7dZqVgYuS2Uic36XNYTbqlaly5QBjI="
                 }
             ]
         },
-        "date": "2024-01-21",
+        "date": "2024-01-23",
         "extract": null,
         "name": "wezterm",
         "passthru": null,
@@ -246,10 +245,10 @@
             "name": null,
             "owner": "wez",
             "repo": "wezterm",
-            "rev": "76028ca15404c049866692b06411f654d544ce2b",
-            "sha256": "sha256-E9RHs49cvwVdNlpPKxv9LKWHcCeQuAWESKeDRCtfnYM=",
+            "rev": "516add5a4b162839e781555fa342682fca539ef1",
+            "sha256": "sha256-iqh1IG+qb/pH2PE52krpGp3WFm/7ie01gQyT1IRQVMI=",
             "type": "github"
         },
-        "version": "76028ca15404c049866692b06411f654d544ce2b"
+        "version": "516add5a4b162839e781555fa342682fca539ef1"
     }
 }
