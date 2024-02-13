@@ -66,7 +66,7 @@
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2024-02-11",
+        "date": "2024-02-12",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -78,11 +78,11 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "85435a84f5679ea5fbf94891e086d603ee86d82c",
-            "sha256": "sha256-MV4bYk/HB7p9xtbzFlDKesDD8QMWGIQr5whzIymyuxs=",
+            "rev": "a1471becf3602dd2df4b732e4ae2df5275861345",
+            "sha256": "sha256-+S0vlWtGsON8TKUNTU+Sp8J8ZlMr8sNXLBHvtCRO+yM=",
             "type": "github"
         },
-        "version": "85435a84f5679ea5fbf94891e086d603ee86d82c"
+        "version": "a1471becf3602dd2df4b732e4ae2df5275861345"
     },
     "icat": {
         "cargoLocks": null,
@@ -227,13 +227,13 @@
     "wezterm": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./wezterm-b61c49fa67c609683a86a8297ae62c5752b9afe5/Cargo.lock",
+                "./wezterm-22f9f8d288521508bd4cdc924d9f209d78b36483/Cargo.lock",
                 {
                     "xcb-imdkit-0.3.0": "sha256-fTpJ6uNhjmCWv7dZqVgYuS2Uic36XNYTbqlaly5QBjI="
                 }
             ]
         },
-        "date": "2024-02-11",
+        "date": "2024-02-12",
         "extract": null,
         "name": "wezterm",
         "passthru": null,
@@ -245,10 +245,10 @@
             "name": null,
             "owner": "wez",
             "repo": "wezterm",
-            "rev": "b61c49fa67c609683a86a8297ae62c5752b9afe5",
-            "sha256": "sha256-mjprdtxGOl5cwNEgYtlaiKo7NZicR+Hx4Y1Ex7WirFs=",
+            "rev": "22f9f8d288521508bd4cdc924d9f209d78b36483",
+            "sha256": "sha256-rn5iGkJlhDSVW/J8Nl/8dTFgFEe3a2dYWvX30S4wiXA=",
             "type": "github"
         },
-        "version": "b61c49fa67c609683a86a8297ae62c5752b9afe5"
+        "version": "22f9f8d288521508bd4cdc924d9f209d78b36483"
     }
 }
