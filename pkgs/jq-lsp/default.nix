@@ -3,7 +3,7 @@
   callPackage,
   lib,
 }: let
-  nvfetcher = (callPackage ../../_sources/go/generated.nix {}).jq-lsp;
+  nvfetcher = (callPackage ../../_sources_go/generated.nix {}).jq-lsp;
 in
   buildGoModule {
     inherit (nvfetcher) pname version src;
