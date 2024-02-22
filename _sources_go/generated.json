@@ -1,0 +1,102 @@
+{
+    "go-enum": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "go-enum",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "abice",
+            "repo": "go-enum",
+            "rev": "v0.5.8",
+            "sha256": "sha256-dJuMcOc+hc7V1jO0QNlOp6tXHzuo4P3haNL1eQo8tgc=",
+            "type": "github"
+        },
+        "version": "v0.5.8"
+    },
+    "gomvp": {
+        "cargoLocks": null,
+        "date": "2022-10-25",
+        "extract": null,
+        "name": "gomvp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "abenz1267",
+            "repo": "gomvp",
+            "rev": "5b06c041c898822fd72cd245188e51d112adae74",
+            "sha256": "sha256-dXjI+nItJCAGKxyC9tX11hxWHCP+NgXtTYtm5+6dqDU=",
+            "type": "github"
+        },
+        "version": "5b06c041c898822fd72cd245188e51d112adae74"
+    },
+    "helm-ls": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "helm-ls",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mrjosh",
+            "repo": "helm-ls",
+            "rev": "v0.0.7",
+            "sha256": "sha256-XTY32B0RkLcZxTuKWUtZlrrUARkoT2+qYkL8Amai2cE=",
+            "type": "github"
+        },
+        "version": "v0.0.7"
+    },
+    "jq-lsp": {
+        "cargoLocks": null,
+        "date": "2023-10-16",
+        "extract": null,
+        "name": "jq-lsp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "wader",
+            "repo": "jq-lsp",
+            "rev": "b4707e7776a4eb3093b1a7533ebd41368240095a",
+            "sha256": "sha256-AU4xGweeFx+kSsrqkTtSjl+N77cITF/qvAVZGUZY5SE=",
+            "type": "github"
+        },
+        "version": "b4707e7776a4eb3093b1a7533ebd41368240095a"
+    },
+    "json-to-struct": {
+        "cargoLocks": null,
+        "date": "2023-06-13",
+        "extract": null,
+        "name": "json-to-struct",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tmc",
+            "repo": "json-to-struct",
+            "rev": "1f65fffbfdbb2b0e56a3f6f6cd24daad58e90dec",
+            "sha256": "sha256-l/XLZstZFVnYXRqtng1oiCSvhNAomyeTuI1OtCb8UHo=",
+            "type": "github"
+        },
+        "version": "1f65fffbfdbb2b0e56a3f6f6cd24daad58e90dec"
+    }
+}

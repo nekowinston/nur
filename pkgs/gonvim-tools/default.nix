@@ -5,7 +5,7 @@
   nurPkgs =
     builtins.mapAttrs (name: content:
       pkgs.buildGoModule ({
-          inherit ((pkgs.callPackage ../../_sources/go/generated.nix {}).${name}) pname version src;
+          inherit ((pkgs.callPackage ../../_sources_go/generated.nix {}).${name}) pname version src;
         }
         // content))
     {
