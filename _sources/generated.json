@@ -58,15 +58,15 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-14UmxAF4X0GnPokZeXAqeZYdSDUPrE3ZpNDUdk64Bik=",
+            "sha256": "sha256-t9adDNx4/lU8573hTr6ihjTHW/bdBDvFjH38KRLV9eM=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.6.9.tar.gz"
+            "url": "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.7.0.tar.gz"
         },
-        "version": "0.6.9"
+        "version": "0.7.0"
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2024-02-21",
+        "date": "2024-02-22",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -78,11 +78,11 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "a010a8a7ca3020e14a5e6c08a3426e0d987eef75",
-            "sha256": "sha256-NSRuocDkkwn1ztfpmvMQG0JX1x2qf5DL0wg3tMbOOw8=",
+            "rev": "ef518fae3e70d67e5b4ade264ffd429db5a3ab83",
+            "sha256": "sha256-gNiY6Ni7m3k9L2jOYLI7BZlmkU5rXByDaFa4LdLgH2s=",
             "type": "github"
         },
-        "version": "a010a8a7ca3020e14a5e6c08a3426e0d987eef75"
+        "version": "ef518fae3e70d67e5b4ade264ffd429db5a3ab83"
     },
     "icat": {
         "cargoLocks": null,
