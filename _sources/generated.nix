@@ -38,15 +38,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "7d1e30766f4a99f74efa6bf86d4a48942a1d855c";
+    version = "f2b4809b727f2566fd7e42160138157152146167";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "7d1e30766f4a99f74efa6bf86d4a48942a1d855c";
+      rev = "f2b4809b727f2566fd7e42160138157152146167";
       fetchSubmodules = true;
-      sha256 = "sha256-pOt9I0TOgCEitBwQpXBSeTF9wFhbmRVFQPLh8p5JQ2k=";
+      sha256 = "sha256-IFUMGkaJpaR40gWqy5gqhcwYzuvmHTgWEgYGDldhulY=";
     };
-    date = "2024-02-27";
+    date = "2024-03-01";
   };
   icat = {
     pname = "icat";
