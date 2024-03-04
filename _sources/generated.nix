@@ -118,10 +118,10 @@
   };
   uhk-agent = {
     pname = "uhk-agent";
-    version = "4.0.0";
+    version = "4.0.1";
     src = fetchurl {
-      url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v4.0.0/UHK.Agent-4.0.0-linux-x86_64.AppImage";
-      sha256 = "sha256-Vf01OANE5mow7ogmzPg0cJgw0fA02DF5SqZ49n9xa5U=";
+      url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v4.0.1/UHK.Agent-4.0.1-linux-x86_64.AppImage";
+      sha256 = "sha256-4N+BjllIMK/dUHL7yEeigOVIO2JyJdqZWGYOoZBMoGg=";
     };
   };
   wezterm = {
