@@ -66,7 +66,7 @@
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2024-03-01",
+        "date": "2024-03-05",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -78,11 +78,11 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "f2b4809b727f2566fd7e42160138157152146167",
-            "sha256": "sha256-IFUMGkaJpaR40gWqy5gqhcwYzuvmHTgWEgYGDldhulY=",
+            "rev": "be6d3bf9dc1e5e358b1d73f1d447637cb5cee381",
+            "sha256": "sha256-pL4vWo8r4RfDY0codkuJjc4W1hnom+Avpm/sxEIb1BQ=",
             "type": "github"
         },
-        "version": "f2b4809b727f2566fd7e42160138157152146167"
+        "version": "be6d3bf9dc1e5e358b1d73f1d447637cb5cee381"
     },
     "icat": {
         "cargoLocks": null,
@@ -218,11 +218,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-4N+BjllIMK/dUHL7yEeigOVIO2JyJdqZWGYOoZBMoGg=",
+            "sha256": "sha256-yx5hOmb1la+vNh8x0PM3edcMn4ojdwzNmGBUg/BH7wE=",
             "type": "url",
-            "url": "https://github.com/UltimateHackingKeyboard/agent/releases/download/v4.0.1/UHK.Agent-4.0.1-linux-x86_64.AppImage"
+            "url": "https://github.com/UltimateHackingKeyboard/agent/releases/download/v4.0.2/UHK.Agent-4.0.2-linux-x86_64.AppImage"
         },
-        "version": "4.0.1"
+        "version": "4.0.2"
     },
     "wezterm": {
         "cargoLocks": {
