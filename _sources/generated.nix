@@ -30,23 +30,23 @@
   };
   discover-overlay = {
     pname = "discover-overlay";
-    version = "0.7.0";
+    version = "0.7.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.7.0.tar.gz";
-      sha256 = "sha256-t9adDNx4/lU8573hTr6ihjTHW/bdBDvFjH38KRLV9eM=";
+      url = "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.7.1.tar.gz";
+      sha256 = "sha256-hpqlk+gaZWueFodMUsZ8Z3tpdpL27FCo5Ve2/nnlT+o=";
     };
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "6c2542e54079c6d5cd00988bb90ce9e8d2a1d5f2";
+    version = "0e9e5237c5fdefcf6452facad7cefdf29396f479";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "6c2542e54079c6d5cd00988bb90ce9e8d2a1d5f2";
+      rev = "0e9e5237c5fdefcf6452facad7cefdf29396f479";
       fetchSubmodules = true;
-      sha256 = "sha256-CCQFch2WgDLmllSdgGDTx8PXPVX89elh7KffVdefJFw=";
+      sha256 = "sha256-lvPrK3vsK1IY+6rEZMWY7whRR+bWIpuHMf9oi0AJTN4=";
     };
-    date = "2024-03-18";
+    date = "2024-03-19";
   };
   icat = {
     pname = "icat";
