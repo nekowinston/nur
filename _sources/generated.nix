@@ -3,10 +3,10 @@
 {
   apple-emoji = {
     pname = "apple-emoji";
-    version = "v16.4-patch.2";
+    version = "v17.4";
     src = fetchurl {
-      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/v16.4-patch.2/AppleColorEmoji.ttf";
-      sha256 = "sha256-wjIcwKZdVPkd7/LedTYSloWlSooUkwkueJ9/7zQyhDo=";
+      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/v17.4/AppleColorEmoji.ttf";
+      sha256 = "sha256-SG3JQLybhY/fMX+XqmB/BKhQSBB0N1VRqa+H6laVUPE=";
     };
   };
   catppuccin-gtk = {
@@ -38,15 +38,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "71db8bdc804bfacb0998684cbb94ac499562d8bb";
+    version = "8d09b2c2642758d068b4185b97194b1533820384";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "71db8bdc804bfacb0998684cbb94ac499562d8bb";
+      rev = "8d09b2c2642758d068b4185b97194b1533820384";
       fetchSubmodules = true;
-      sha256 = "sha256-7Ikw06+f9S67z6D4OyZQzWCxBAfUlCqC9ErZz4zAkQo=";
+      sha256 = "sha256-lbZ0sZyMHkuZX4UzG4tR5JHTRtauVMT0GIDOtlehWd8=";
     };
-    date = "2024-03-21";
+    date = "2024-03-25";
   };
   icat = {
     pname = "icat";
@@ -126,20 +126,20 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "889f8a9cd71a2b3552f28f6d1864aa3cd9461fdf";
+    version = "e5ac32f297cf3dd8f6ea280c130103f3cac4dddb";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "889f8a9cd71a2b3552f28f6d1864aa3cd9461fdf";
+      rev = "e5ac32f297cf3dd8f6ea280c130103f3cac4dddb";
       fetchSubmodules = true;
       sha256 = "sha256-H8c7oSJufX2AEgcBk7eMrlFw+x0SgI9vI4iKlNojvMk=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./wezterm-889f8a9cd71a2b3552f28f6d1864aa3cd9461fdf/Cargo.lock;
+      lockFile = ./wezterm-e5ac32f297cf3dd8f6ea280c130103f3cac4dddb/Cargo.lock;
       outputHashes = {
         "xcb-imdkit-0.3.0" = "sha256-fTpJ6uNhjmCWv7dZqVgYuS2Uic36XNYTbqlaly5QBjI=";
       };
     };
-    date = "2024-03-16";
+    date = "2024-03-25";
   };
 }
