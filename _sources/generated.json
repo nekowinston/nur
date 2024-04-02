@@ -28,11 +28,11 @@
             "name": null,
             "owner": "catppuccin",
             "repo": "gtk",
-            "rev": "v0.7.1",
-            "sha256": "sha256-V3JasiHaATbVDQJeJPeFq5sjbkQnSMbDRWsaRzGccXU=",
+            "rev": "v0.7.2",
+            "sha256": "sha256-7EvKcyh9gH/QbiXKlyAKMSBXMF3DmbHD+wJD3Sq39DE=",
             "type": "github"
         },
-        "version": "v0.7.1"
+        "version": "v0.7.2"
     },
     "cura": {
         "cargoLocks": null,
@@ -66,7 +66,7 @@
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2024-03-28",
+        "date": "2024-04-01",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -78,11 +78,11 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "3313c7de0d26fb1ed602f572247f5aad980b59e4",
-            "sha256": "sha256-qt9BbJArAk5z9EI7+frdYZ7Y7m7lXAivPQ2UhN7CDa4=",
+            "rev": "9c23d44ad32ee145300ca7a8f9711ace760523cb",
+            "sha256": "sha256-6i+momnAN+VMAgcUZytHEIQu4Smg38pTJ1FFNBiLImY=",
             "type": "github"
         },
-        "version": "3313c7de0d26fb1ed602f572247f5aad980b59e4"
+        "version": "9c23d44ad32ee145300ca7a8f9711ace760523cb"
     },
     "icat": {
         "cargoLocks": null,
