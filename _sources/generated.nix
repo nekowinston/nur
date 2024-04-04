@@ -22,31 +22,31 @@
   };
   cura = {
     pname = "cura";
-    version = "5.6.0";
+    version = "5.7.0";
     src = fetchurl {
-      url = "https://github.com/Ultimaker/Cura/releases/download/5.6.0/Ultimaker-Cura-5.6.0-linux-X64.AppImage";
-      sha256 = "sha256-EHiWoNpLKHPzv6rZrtNgEr7y//iVcRYeV/TaCn8QpEA=";
+      url = "https://github.com/Ultimaker/Cura/releases/download/5.7.0/Ultimaker-Cura-5.7.0-linux-X64.AppImage";
+      sha256 = "sha256-5PaBhPJKqa8LxEHTRNTLqkcIfC2PkqmTWx9c1+dc7k0=";
     };
   };
   discover-overlay = {
     pname = "discover-overlay";
-    version = "0.7.1";
+    version = "0.7.3";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.7.1.tar.gz";
-      sha256 = "sha256-hpqlk+gaZWueFodMUsZ8Z3tpdpL27FCo5Ve2/nnlT+o=";
+      url = "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.7.3.tar.gz";
+      sha256 = "sha256-oXLPV0LXyFfQFVmfTcwhABpry+newu92P/lR6rykZmI=";
     };
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "9c23d44ad32ee145300ca7a8f9711ace760523cb";
+    version = "790320e1704b7319f080bfdbd046319efa0c4d53";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "9c23d44ad32ee145300ca7a8f9711ace760523cb";
+      rev = "790320e1704b7319f080bfdbd046319efa0c4d53";
       fetchSubmodules = true;
-      sha256 = "sha256-6i+momnAN+VMAgcUZytHEIQu4Smg38pTJ1FFNBiLImY=";
+      sha256 = "sha256-suw8vN9AXXDsnQEMZgZeJNCB0Q/wfCHgZONqvErHlmo=";
     };
-    date = "2024-04-01";
+    date = "2024-04-03";
   };
   icat = {
     pname = "icat";

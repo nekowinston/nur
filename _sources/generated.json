@@ -43,11 +43,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-EHiWoNpLKHPzv6rZrtNgEr7y//iVcRYeV/TaCn8QpEA=",
+            "sha256": "sha256-5PaBhPJKqa8LxEHTRNTLqkcIfC2PkqmTWx9c1+dc7k0=",
             "type": "url",
-            "url": "https://github.com/Ultimaker/Cura/releases/download/5.6.0/Ultimaker-Cura-5.6.0-linux-X64.AppImage"
+            "url": "https://github.com/Ultimaker/Cura/releases/download/5.7.0/Ultimaker-Cura-5.7.0-linux-X64.AppImage"
         },
-        "version": "5.6.0"
+        "version": "5.7.0"
     },
     "discover-overlay": {
         "cargoLocks": null,
@@ -58,15 +58,15 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-hpqlk+gaZWueFodMUsZ8Z3tpdpL27FCo5Ve2/nnlT+o=",
+            "sha256": "sha256-oXLPV0LXyFfQFVmfTcwhABpry+newu92P/lR6rykZmI=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.7.1.tar.gz"
+            "url": "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.7.3.tar.gz"
         },
-        "version": "0.7.1"
+        "version": "0.7.3"
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2024-04-01",
+        "date": "2024-04-03",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -78,11 +78,11 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "9c23d44ad32ee145300ca7a8f9711ace760523cb",
-            "sha256": "sha256-6i+momnAN+VMAgcUZytHEIQu4Smg38pTJ1FFNBiLImY=",
+            "rev": "790320e1704b7319f080bfdbd046319efa0c4d53",
+            "sha256": "sha256-suw8vN9AXXDsnQEMZgZeJNCB0Q/wfCHgZONqvErHlmo=",
             "type": "github"
         },
-        "version": "9c23d44ad32ee145300ca7a8f9711ace760523cb"
+        "version": "790320e1704b7319f080bfdbd046319efa0c4d53"
     },
     "icat": {
         "cargoLocks": null,
