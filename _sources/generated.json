@@ -28,11 +28,11 @@
             "name": null,
             "owner": "catppuccin",
             "repo": "gtk",
-            "rev": "v0.7.2",
-            "sha256": "sha256-7EvKcyh9gH/QbiXKlyAKMSBXMF3DmbHD+wJD3Sq39DE=",
+            "rev": "v0.7.3",
+            "sha256": "sha256-pGL8vaE63ss2ZT2FoNDfDkeuCxjcbl02RmwwfHC/Vxg=",
             "type": "github"
         },
-        "version": "v0.7.2"
+        "version": "v0.7.3"
     },
     "cura": {
         "cargoLocks": null,

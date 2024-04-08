@@ -11,13 +11,13 @@
   };
   catppuccin-gtk = {
     pname = "catppuccin-gtk";
-    version = "v0.7.2";
+    version = "v0.7.3";
     src = fetchFromGitHub {
       owner = "catppuccin";
       repo = "gtk";
-      rev = "v0.7.2";
+      rev = "v0.7.3";
       fetchSubmodules = false;
-      sha256 = "sha256-7EvKcyh9gH/QbiXKlyAKMSBXMF3DmbHD+wJD3Sq39DE=";
+      sha256 = "sha256-pGL8vaE63ss2ZT2FoNDfDkeuCxjcbl02RmwwfHC/Vxg=";
     };
   };
   cura = {
