@@ -14,15 +14,22 @@
   pkg-config,
   python3,
   runCommand,
-  rustPlatform,
   stdenv,
   vulkan-loader,
   wayland,
   xorg,
   zlib,
+  # rust overlay
+  makeRustPlatform,
+  fenix,
 }: let
   inherit (darwin.apple_sdk_11_0.frameworks) CoreGraphics Cocoa Foundation Security UserNotifications System;
   nvfetcher = (callPackage ../../_sources/generated.nix {}).wezterm;
+  rustPlatform = makeRustPlatform {
+    cargo = toolchain;
+    rustc = toolchain;
+  };
+  toolchain = fenix.default.toolchain;
 in
   rustPlatform.buildRustPackage rec {
     inherit (nvfetcher) pname src;

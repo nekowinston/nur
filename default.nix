@@ -2,7 +2,7 @@
   pkgs ?
     import <nixpkgs> {
       inherit system;
-      overlays = [(import (builtins.fetchTarball "https://github.com/oxalica/rust-overlay/archive/master.tar.gz"))];
+      overlays = [(import (builtins.fetchTarball "https://github.com/nix-community/fenix/archive/master.tar.gz"))];
     },
   system ? builtins.currentSystem,
 }: let
