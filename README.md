@@ -18,11 +18,6 @@
 | [`posy-improved-cursor`][posy-cursor] |                                                      | 2022-09-14   |
 | [`wezterm`][wezterm]                  | nightly builds                                       | git          |
 
-| Catppuccin Packages                         | Note    | Version    |
-| ------------------------------------------- | ------- | ---------- |
-| [`catppuccin-gtk`][ctp-gtk]                 | Overlay | v0.6.0     |
-| [`plymouth-theme-catppuccin`][ctp-plymouth] |         | 2022-12-10 |
-
 ## Usage
 
 <!-- With `packageOverrides`: -->
@@ -74,8 +69,6 @@ With `overlays`:
 
 [apple-cursor]: https://github.com/ful1e5/apple_cursor
 [caarlos0nur]: https://github.com/caarlos0/nur
-[ctp-gtk]: https://github.com/catppuccin/gtk
-[ctp-plymouth]: https://github.com/catppuccin/plymouth
 [cura]: https://ultimaker.com/software/ultimaker-cura
 [darp]: https://github.com/caarlos0/discord-applemusic-rich-presence
 [discover]: https://github.com/trigg/Discover

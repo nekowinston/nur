@@ -44,7 +44,6 @@ jobs:
             .#apple-cursor \
             .#discover-overlay \
             .#mopidy-podcast-itunes \
-            .#plymouth-theme-catppuccin \
             .#posy-improved-cursor \
             .#wezterm-nightly
         if: runner.os == 'Linux'
