@@ -14,26 +14,6 @@
         },
         "version": "v17.4"
     },
-    "catppuccin-gtk": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "catppuccin-gtk",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "catppuccin",
-            "repo": "gtk",
-            "rev": "v0.7.3",
-            "sha256": "sha256-pGL8vaE63ss2ZT2FoNDfDkeuCxjcbl02RmwwfHC/Vxg=",
-            "type": "github"
-        },
-        "version": "v0.7.3"
-    },
     "cura": {
         "cargoLocks": null,
         "date": null,
@@ -66,7 +46,7 @@
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2024-04-15",
+        "date": "2024-04-17",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -78,11 +58,11 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "38cc778a0c8eeebf3d7aa6d358fc926a0e10b2b3",
-            "sha256": "sha256-1wmOk8IpILSV4LuhtAPK410GT8UvxbIEHk3SbwQ/c2w=",
+            "rev": "2c4c101b2e7eeef42e490301557f0af0a1c5840c",
+            "sha256": "sha256-oq/v+umuYXNMegc75zQLVoHn5McI76G5uWhRleImFys=",
             "type": "github"
         },
-        "version": "38cc778a0c8eeebf3d7aa6d358fc926a0e10b2b3"
+        "version": "2c4c101b2e7eeef42e490301557f0af0a1c5840c"
     },
     "icat": {
         "cargoLocks": null,

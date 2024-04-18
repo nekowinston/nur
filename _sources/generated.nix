@@ -9,17 +9,6 @@
       sha256 = "sha256-SG3JQLybhY/fMX+XqmB/BKhQSBB0N1VRqa+H6laVUPE=";
     };
   };
-  catppuccin-gtk = {
-    pname = "catppuccin-gtk";
-    version = "v0.7.3";
-    src = fetchFromGitHub {
-      owner = "catppuccin";
-      repo = "gtk";
-      rev = "v0.7.3";
-      fetchSubmodules = false;
-      sha256 = "sha256-pGL8vaE63ss2ZT2FoNDfDkeuCxjcbl02RmwwfHC/Vxg=";
-    };
-  };
   cura = {
     pname = "cura";
     version = "5.7.0";
@@ -38,15 +27,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "38cc778a0c8eeebf3d7aa6d358fc926a0e10b2b3";
+    version = "2c4c101b2e7eeef42e490301557f0af0a1c5840c";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "38cc778a0c8eeebf3d7aa6d358fc926a0e10b2b3";
+      rev = "2c4c101b2e7eeef42e490301557f0af0a1c5840c";
       fetchSubmodules = true;
-      sha256 = "sha256-1wmOk8IpILSV4LuhtAPK410GT8UvxbIEHk3SbwQ/c2w=";
+      sha256 = "sha256-oq/v+umuYXNMegc75zQLVoHn5McI76G5uWhRleImFys=";
     };
-    date = "2024-04-15";
+    date = "2024-04-17";
   };
   icat = {
     pname = "icat";
