@@ -14,7 +14,6 @@
 | [`helm-ls`][helm-ls]                  |                                                      | 2022-09-21   |
 | [`icat`][icat]                        |                                                      | git          |
 | [`jq-lsp`][jq-lsp]                    |                                                      | 2022-12-20   |
-| [`mopidy-podcast-itunes`][mopidy-pi]  |                                                      | 2022-04-03   |
 | [`posy-improved-cursor`][posy-cursor] |                                                      | 2022-09-14   |
 | [`wezterm`][wezterm]                  | nightly builds                                       | git          |
 
@@ -76,7 +75,6 @@ With `overlays`:
 [helm-ls]: https://github.com/mrjosh/helm-ls
 [icat]: https://github.com/nekowinston/icat
 [jq-lsp]: https://github.com/wader/jq-lsp
-[mopidy-pi]: https://github.com/tkem/mopidy-podcast-itunes
 [org-stats]: https://github.com/caarlos0/org-stats
 [posy-cursor]: https://github.com/simtrami/posy-improved-cursor-linux
 [wezterm]: https://github.com/wez/wezterm

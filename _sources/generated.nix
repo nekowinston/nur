@@ -11,31 +11,34 @@
   };
   cura = {
     pname = "cura";
-    version = "5.7.0";
+    version = "5.7.1";
     src = fetchurl {
-      url = "https://github.com/Ultimaker/Cura/releases/download/5.7.0/Ultimaker-Cura-5.7.0-linux-X64.AppImage";
-      sha256 = "sha256-5PaBhPJKqa8LxEHTRNTLqkcIfC2PkqmTWx9c1+dc7k0=";
+      url = "https://github.com/Ultimaker/Cura/releases/download/5.7.1/Ultimaker-Cura-5.7.1-linux-X64.AppImage";
+      sha256 = "sha256-LZMD0fo8TSlDEJspvTka724lYq5EgrOlDkwMktXqATw=";
     };
   };
   discover-overlay = {
     pname = "discover-overlay";
-    version = "0.7.3";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/d/discover-overlay/discover-overlay-0.7.3.tar.gz";
-      sha256 = "sha256-oXLPV0LXyFfQFVmfTcwhABpry+newu92P/lR6rykZmI=";
+    version = "v0.7.4";
+    src = fetchFromGitHub {
+      owner = "trigg";
+      repo = "discover";
+      rev = "v0.7.4";
+      fetchSubmodules = false;
+      sha256 = "sha256-qA+gvgKQlTjcm0JPUmJp47Ttvm+69CW4lOngnueLVpo=";
     };
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "4193533154fc227bf6ce40ec1dff19aba1ee3929";
+    version = "1b87aa2dbcdebbe6e6ef7f106dba9cd357dac010";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "4193533154fc227bf6ce40ec1dff19aba1ee3929";
+      rev = "1b87aa2dbcdebbe6e6ef7f106dba9cd357dac010";
       fetchSubmodules = true;
-      sha256 = "sha256-js02twRT8Q+2Vk7SiL9S2t9luGkhRF3p3ZTN00cjveQ=";
+      sha256 = "sha256-ZwFiNoCHt6tuMvqoe1KCbRDGiW1h1+aCh/Mdjs5BMaQ=";
     };
-    date = "2024-04-23";
+    date = "2024-04-29";
   };
   icat = {
     pname = "icat";
@@ -48,14 +51,6 @@
       sha256 = "sha256-ouOU4MuqpngtSwcmlVRnuoECiRPpVIMY4QpC0EWjNEg=";
     };
     date = "2023-07-15";
-  };
-  mopidy-podcast-itunes = {
-    pname = "mopidy-podcast-itunes";
-    version = "3.0.1";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/M/Mopidy-Podcast-iTunes/Mopidy-Podcast-iTunes-3.0.1.tar.gz";
-      sha256 = "sha256-sxowRHUGiUr7dKoNKs4htFJccEaBqvyvzINmrZIZIds=";
-    };
   };
   sf-compact = {
     pname = "sf-compact";
@@ -115,20 +110,20 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "cce0706b1f2a9e2d1f02c57f2d1cd367c91df1ae";
+    version = "0184e88e97b6521df613df4ccdb2e896ce8b0ad0";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "cce0706b1f2a9e2d1f02c57f2d1cd367c91df1ae";
+      rev = "0184e88e97b6521df613df4ccdb2e896ce8b0ad0";
       fetchSubmodules = true;
-      sha256 = "sha256-BBPxidOpFrw/tIRTqMSREyJF3QEWOwlIoVRT3FD62sQ=";
+      sha256 = "sha256-exVTh69NeBloqNN1YS2B3tsOcSlGhHOMUaWn4/HciQ4=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./wezterm-cce0706b1f2a9e2d1f02c57f2d1cd367c91df1ae/Cargo.lock;
+      lockFile = ./wezterm-0184e88e97b6521df613df4ccdb2e896ce8b0ad0/Cargo.lock;
       outputHashes = {
         "xcb-imdkit-0.3.0" = "sha256-fTpJ6uNhjmCWv7dZqVgYuS2Uic36XNYTbqlaly5QBjI=";
       };
     };
-    date = "2024-04-05";
+    date = "2024-04-29";
   };
 }

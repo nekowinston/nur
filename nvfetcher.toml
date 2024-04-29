@@ -6,8 +6,8 @@ src.include_regex = "5.\\d+\\.\\d+"
 fetch.url = "https://github.com/Ultimaker/Cura/releases/download/$ver/Ultimaker-Cura-$ver-linux-X64.AppImage"
 
 [discover-overlay]
-src.pypi = "discover-overlay"
-fetch.pypi = "discover-overlay"
+src.github = "trigg/discover"
+fetch.github = "trigg/discover"
 
 [gpt4all]
 src.git = "https://github.com/nomic-ai/gpt4all"
@@ -45,11 +45,6 @@ src.git = "https://github.com/wez/wezterm"
 fetch.github = "wez/wezterm"
 git.fetchSubmodules = true
 cargo_locks = ["Cargo.lock"]
-
-# extensions
-[mopidy-podcast-itunes]
-src.pypi = "Mopidy-Podcast-iTunes"
-fetch.pypi = "Mopidy-Podcast-iTunes"
 
 # fonts
 [sf-compact]
