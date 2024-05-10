@@ -51,7 +51,7 @@
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2024-05-06",
+        "date": "2024-05-09",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -63,11 +63,11 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "cef74c2be20f5b697055d5b8b506861c7b997fab",
-            "sha256": "sha256-z5f1nxAIQWTdlXkeqYrR3QsiWmLi7dqMFkuHvFNLSIo=",
+            "rev": "1427ef7195d796402799891d7607e6d382c7d90c",
+            "sha256": "sha256-K/VlBUp1zpd2Bi+/Uw9OZBvkyFi8317nCz2v/kzGSew=",
             "type": "github"
         },
-        "version": "cef74c2be20f5b697055d5b8b506861c7b997fab"
+        "version": "1427ef7195d796402799891d7607e6d382c7d90c"
     },
     "icat": {
         "cargoLocks": null,
@@ -197,14 +197,14 @@
     "wezterm": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./wezterm-f6fdfeb9fdf3793132cd7147517c563293886290/Cargo.lock",
+                "./wezterm-91a16e52240d37091cd02f7d403a19117fc00489/Cargo.lock",
                 {
                     "sqlite-cache-0.1.3": "sha256-sBAC8MsQZgH+dcWpoxzq9iw5078vwzCijgyQnMOWIkk=",
                     "xcb-imdkit-0.3.0": "sha256-fTpJ6uNhjmCWv7dZqVgYuS2Uic36XNYTbqlaly5QBjI="
                 }
             ]
         },
-        "date": "2024-05-08",
+        "date": "2024-05-09",
         "extract": null,
         "name": "wezterm",
         "passthru": null,
@@ -216,10 +216,10 @@
             "name": null,
             "owner": "wez",
             "repo": "wezterm",
-            "rev": "f6fdfeb9fdf3793132cd7147517c563293886290",
-            "sha256": "sha256-t3vDhCyBLjQmR91DU2EkHUixwthO19/gvq3mX98AotI=",
+            "rev": "91a16e52240d37091cd02f7d403a19117fc00489",
+            "sha256": "sha256-GK27cShSrkmVxIlNMYCdo5nRN4C6x+XYFZGHrOjtUCI=",
             "type": "github"
         },
-        "version": "f6fdfeb9fdf3793132cd7147517c563293886290"
+        "version": "91a16e52240d37091cd02f7d403a19117fc00489"
     }
 }
