@@ -197,7 +197,7 @@
     "wezterm": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./wezterm-44b61d7e822dca92b59e32e32949306e33445664/Cargo.lock",
+                "./wezterm-f1a0842608932a9f17b20ae4123d3a296dda525a/Cargo.lock",
                 {
                     "sqlite-cache-0.1.3": "sha256-sBAC8MsQZgH+dcWpoxzq9iw5078vwzCijgyQnMOWIkk=",
                     "xcb-imdkit-0.3.0": "sha256-77KaJO+QJWy3tJ9AF1TXKaQHpoVOfGIRqteyqpQaSWo="
@@ -216,10 +216,10 @@
             "name": null,
             "owner": "wez",
             "repo": "wezterm",
-            "rev": "44b61d7e822dca92b59e32e32949306e33445664",
-            "sha256": "sha256-ogu0qb6qPtDtFKAY6nBh9BNdmR7euX9YlyJCLAN2ieE=",
+            "rev": "f1a0842608932a9f17b20ae4123d3a296dda525a",
+            "sha256": "sha256-za8UjlbwU3SUmc1AyA0qMKje/sqNTBZ28KUoggHo7HM=",
             "type": "github"
         },
-        "version": "44b61d7e822dca92b59e32e32949306e33445664"
+        "version": "f1a0842608932a9f17b20ae4123d3a296dda525a"
     }
 }
