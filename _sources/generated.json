@@ -197,14 +197,14 @@
     "wezterm": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./wezterm-eb26a5daa1f9ae4d1ff756f165d6b6933e2683f8/Cargo.lock",
+                "./wezterm-11124f0cfed5835d3ca13dcdfcaad9cb74336fc8/Cargo.lock",
                 {
                     "sqlite-cache-0.1.3": "sha256-sBAC8MsQZgH+dcWpoxzq9iw5078vwzCijgyQnMOWIkk=",
                     "xcb-imdkit-0.3.0": "sha256-77KaJO+QJWy3tJ9AF1TXKaQHpoVOfGIRqteyqpQaSWo="
                 }
             ]
         },
-        "date": "2024-06-07",
+        "date": "2024-06-08",
         "extract": null,
         "name": "wezterm",
         "passthru": null,
@@ -216,10 +216,10 @@
             "name": null,
             "owner": "wez",
             "repo": "wezterm",
-            "rev": "eb26a5daa1f9ae4d1ff756f165d6b6933e2683f8",
-            "sha256": "sha256-M7Ojitlqd//U/T7R67qLcJzF3R0ufC8xzbqXj0k5SEw=",
+            "rev": "11124f0cfed5835d3ca13dcdfcaad9cb74336fc8",
+            "sha256": "sha256-gHIonx1TvrRjUSseiEihFZ6Tf8HrSYMddoo+Zae7Wi4=",
             "type": "github"
         },
-        "version": "eb26a5daa1f9ae4d1ff756f165d6b6933e2683f8"
+        "version": "11124f0cfed5835d3ca13dcdfcaad9cb74336fc8"
     }
 }
