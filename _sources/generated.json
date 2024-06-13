@@ -45,13 +45,14 @@
             "repo": "discover",
             "rev": "v0.7.4",
             "sha256": "sha256-qA+gvgKQlTjcm0JPUmJp47Ttvm+69CW4lOngnueLVpo=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "v0.7.4"
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2024-06-11",
+        "date": "2024-06-12",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -63,11 +64,12 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "beaede03fba996071a4b549107bcfa2b8a4066bf",
-            "sha256": "sha256-jMbmQUzdNYn4e1ibYcu4unOPXtrx9cR53/2RHoZdZbo=",
+            "rev": "b999d07d93f1a73e48986a798b3f4d49d69f51f5",
+            "sha256": "sha256-r678aDT6MbztmGgCIxYRSU7baTosvWTFSFMGXGmXldI=",
+            "sparseCheckout": [],
             "type": "github"
         },
-        "version": "beaede03fba996071a4b549107bcfa2b8a4066bf"
+        "version": "b999d07d93f1a73e48986a798b3f4d49d69f51f5"
     },
     "icat": {
         "cargoLocks": null,
@@ -85,6 +87,7 @@
             "repo": "icat",
             "rev": "4c3497a35d4f5a665c25b6ad468025f4126eaa40",
             "sha256": "sha256-ouOU4MuqpngtSwcmlVRnuoECiRPpVIMY4QpC0EWjNEg=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "4c3497a35d4f5a665c25b6ad468025f4126eaa40"
@@ -218,6 +221,7 @@
             "repo": "wezterm",
             "rev": "f5e496ebc233187c076cbb34b3cd0f0c50290f51",
             "sha256": "sha256-1Y/0K1xbXt85YaQMHx/YRXZbeHjsdHiz8uuH+E4172Q=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "f5e496ebc233187c076cbb34b3cd0f0c50290f51"
