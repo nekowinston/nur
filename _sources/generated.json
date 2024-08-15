@@ -43,16 +43,16 @@
             "name": null,
             "owner": "trigg",
             "repo": "discover",
-            "rev": "v0.7.5",
-            "sha256": "sha256-gOUoOvi47h5/WW7d9zAXEzV4XJemdMZkGm305db1W9s=",
+            "rev": "v0.7.6",
+            "sha256": "sha256-fPjAVaKCpGCg4KDIuAPnTLkRBkTZxL5+mtGXTra96UM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.7.5"
+        "version": "v0.7.6"
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2024-08-13",
+        "date": "2024-08-14",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -64,12 +64,12 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "3386ac6331ee79af776a27af4a3b80774ff84d58",
-            "sha256": "sha256-Bo4qsjfUPyiCywe//pSt4XBnzmmsoX2bhos4qjkYd0A=",
+            "rev": "3aa680634195f41c249220f9f6f7b66b6590a6fb",
+            "sha256": "sha256-n2dvsVHPp2P/qRvDY4avP716v/4vlCs2i/iaCddbcy8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "3386ac6331ee79af776a27af4a3b80774ff84d58"
+        "version": "3aa680634195f41c249220f9f6f7b66b6590a6fb"
     },
     "icat": {
         "cargoLocks": null,
