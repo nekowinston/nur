@@ -19,26 +19,26 @@
   };
   discover-overlay = {
     pname = "discover-overlay";
-    version = "v0.7.6";
+    version = "v0.7.8";
     src = fetchFromGitHub {
       owner = "trigg";
       repo = "discover";
-      rev = "v0.7.6";
+      rev = "v0.7.8";
       fetchSubmodules = false;
-      sha256 = "sha256-fPjAVaKCpGCg4KDIuAPnTLkRBkTZxL5+mtGXTra96UM=";
+      sha256 = "sha256-0b0uZDa9Q3pQ6X65C+E31dMpdTPt4vvHDEqFEtRoedg=";
     };
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "3aa680634195f41c249220f9f6f7b66b6590a6fb";
+    version = "10a83a8b26e2303d3f45cd5eae32457e87d2633e";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "3aa680634195f41c249220f9f6f7b66b6590a6fb";
+      rev = "10a83a8b26e2303d3f45cd5eae32457e87d2633e";
       fetchSubmodules = true;
-      sha256 = "sha256-n2dvsVHPp2P/qRvDY4avP716v/4vlCs2i/iaCddbcy8=";
+      sha256 = "sha256-hm2PU19VY1o6Nc1ZOlT3eEBUuPx+seJTWs3YPYRBEaA=";
     };
-    date = "2024-08-14";
+    date = "2024-08-16";
   };
   icat = {
     pname = "icat";
