@@ -11,10 +11,10 @@
   };
   cura = {
     pname = "cura";
-    version = "5.8.0";
+    version = "5.8.1";
     src = fetchurl {
-      url = "https://github.com/Ultimaker/Cura/releases/download/5.8.0/Ultimaker-Cura-5.8.0-linux-X64.AppImage";
-      sha256 = "sha256-EojVAe+o43W80ES5BY3QgGRTxztwS+B6kIOfJOtULOg=";
+      url = "https://github.com/Ultimaker/Cura/releases/download/5.8.1/Ultimaker-Cura-5.8.1-linux-X64.AppImage";
+      sha256 = "sha256-VLd+V00LhRZYplZbKkEp4DXsqAhA9WLQhF933QAZRX0=";
     };
   };
   discover-overlay = {
@@ -30,15 +30,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "e8d74d8bf4611f21cded1fab8eb26c34cb56e96b";
+    version = "e1d49d970f274ba9dbb0bc9c8758b367d7377969";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "e8d74d8bf4611f21cded1fab8eb26c34cb56e96b";
+      rev = "e1d49d970f274ba9dbb0bc9c8758b367d7377969";
       fetchSubmodules = true;
-      sha256 = "sha256-x5qQxhYXb9jHexSl3Bho1V/MXbfbvopzTL/I9md94Q0=";
+      sha256 = "sha256-FIwV0T/sl6PrHgXKPA51VuYr9DLy156dwSe5mIaXk4k=";
     };
-    date = "2024-08-27";
+    date = "2024-08-29";
   };
   icat = {
     pname = "icat";
