@@ -52,7 +52,7 @@
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2024-09-06",
+        "date": "2024-09-09",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -64,12 +64,12 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "1aae4ffe0a29ec41fadbef8098709e8a8ca7156c",
-            "sha256": "sha256-tJO+soR0FoNYl0UxPyjdif52yRI/5qj/KzwQQy0T9mA=",
+            "rev": "3ef582f2724060a8aa6cd7050c39c0a444d8a93d",
+            "sha256": "sha256-1Po4hyc2I5CWtbdoWr9OVUL17CgPrGb+Y8QLuxvFXLs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1aae4ffe0a29ec41fadbef8098709e8a8ca7156c"
+        "version": "3ef582f2724060a8aa6cd7050c39c0a444d8a93d"
     },
     "icat": {
         "cargoLocks": null,
