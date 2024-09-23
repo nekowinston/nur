@@ -110,21 +110,21 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "1c4fdd3f7131785d0afaed08bed6cf1856f84328";
+    version = "2b76c63bb618d26609434c06282c8755229c4099";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "1c4fdd3f7131785d0afaed08bed6cf1856f84328";
+      rev = "2b76c63bb618d26609434c06282c8755229c4099";
       fetchSubmodules = true;
-      sha256 = "sha256-M6rLR7qP/REMesirvWUl1k8+Xy54kXZawG30e+UnDi8=";
+      sha256 = "sha256-mX6Jg29G5UpgItW7zGdR5lxKfAWFX1+eVq2yByyGx9c=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./wezterm-1c4fdd3f7131785d0afaed08bed6cf1856f84328/Cargo.lock;
+      lockFile = ./wezterm-2b76c63bb618d26609434c06282c8755229c4099/Cargo.lock;
       outputHashes = {
         "xcb-imdkit-0.3.0" = "sha256-77KaJO+QJWy3tJ9AF1TXKaQHpoVOfGIRqteyqpQaSWo=";
         "sqlite-cache-0.1.3" = "sha256-sBAC8MsQZgH+dcWpoxzq9iw5078vwzCijgyQnMOWIkk=";
       };
     };
-    date = "2024-09-21";
+    date = "2024-09-22";
   };
 }
