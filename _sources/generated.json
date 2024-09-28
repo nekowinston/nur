@@ -52,7 +52,7 @@
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2024-09-26",
+        "date": "2024-09-27",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -64,12 +64,12 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "27478a7e00c92992e96efcb405b5ebc97d75600c",
-            "sha256": "sha256-RDYf+VaI5pl46Cd04ADvvi4ygNfYa4fY9rTv9Ui3qUk=",
+            "rev": "ea1ade86680c8930109b2616a4bcf6252092112a",
+            "sha256": "sha256-/w1VAfLYlhB5y08cVG2u9RT2kajtFtyTPziQXSwVFcE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "27478a7e00c92992e96efcb405b5ebc97d75600c"
+        "version": "ea1ade86680c8930109b2616a4bcf6252092112a"
     },
     "icat": {
         "cargoLocks": null,
@@ -101,7 +101,7 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-L4oLQ34Epw1/wLehU9sXQwUe/LaeKjHRxQAF6u2pfTo=",
+            "sha256": "sha256-PlraM6SwH8sTxnVBo6Lqt9B6tAZDC//VCPwr/PNcnlk=",
             "type": "url",
             "url": "https://devimages-cdn.apple.com/design/resources/download/SF-Compact.dmg"
         },
@@ -116,7 +116,7 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-Uarx1TKO7g5yVBXAx6Yki065rz/wRuYiHPzzi6cTTl8=",
+            "sha256": "sha256-bUoLeOOqzQb5E/ZCzq0cfbSvNO1IhW1xcaLgtV2aeUU=",
             "type": "url",
             "url": "https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg"
         },
@@ -131,7 +131,7 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-B8xljBAqOoRFXvSOkOKDDWeYUebtMmQLJ8lF05iFnXk=",
+            "sha256": "sha256-IccB0uWWfPCidHYX6sAusuEZX906dVYo8IaqeX7/O88=",
             "type": "url",
             "url": "https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg"
         },
