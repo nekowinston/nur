@@ -30,15 +30,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "7dbb3d298a1d3a8ce539d52bc8133f8e3e23ad6d";
+    version = "1789a3c6d731f64bb4b534941a511a981fffbdef";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "7dbb3d298a1d3a8ce539d52bc8133f8e3e23ad6d";
+      rev = "1789a3c6d731f64bb4b534941a511a981fffbdef";
       fetchSubmodules = true;
-      sha256 = "sha256-E0wGQhHnYe2vvjyjUDllCwh72tSQLH1dnzCz+4fUJkU=";
+      sha256 = "sha256-IsPRWEkdsfDetROGD3ZialN+mIwmND1VOb+tf1w+yoA=";
     };
-    date = "2024-10-09";
+    date = "2024-10-11";
   };
   icat = {
     pname = "icat";
@@ -102,10 +102,10 @@
   };
   uhk-agent = {
     pname = "uhk-agent";
-    version = "4.2.0";
+    version = "4.2.1";
     src = fetchurl {
-      url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v4.2.0/UHK.Agent-4.2.0-linux-x86_64.AppImage";
-      sha256 = "sha256-LemTr18Q5p6t4DKgWKzVDp92ec7E6MxHVOx7tOo8G5I=";
+      url = "https://github.com/UltimateHackingKeyboard/agent/releases/download/v4.2.1/UHK.Agent-4.2.1-linux-x86_64.AppImage";
+      sha256 = "sha256-f6CaXWaIvLJ+Gox7JiSvgQ6jUP8MTv/58g43U6om5R0=";
     };
   };
   wezterm = {
