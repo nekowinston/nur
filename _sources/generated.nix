@@ -30,15 +30,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "ffd29eae0886bac6a39c075a11dc8896f8530d6f";
+    version = "2db59f0092f5be82f4e86ebe31a75aab1a89eb50";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "ffd29eae0886bac6a39c075a11dc8896f8530d6f";
+      rev = "2db59f0092f5be82f4e86ebe31a75aab1a89eb50";
       fetchSubmodules = true;
-      sha256 = "sha256-Iv5ESyFzif0eqE4/K5lTBw1JDyVyiVbqjJnVL3LY2jc=";
+      sha256 = "sha256-XbzDnM9aG0aDJccYzdM1C8VbXjDuNIdyZOnixm6Zpd4=";
     };
-    date = "2024-12-03";
+    date = "2024-12-04";
   };
   icat = {
     pname = "icat";
@@ -110,21 +110,21 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "4906789a6d61da58f73b95f89b59c41af60e0f3b";
+    version = "72e723187ca3596b67bcd3786457234ed40c75d2";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "4906789a6d61da58f73b95f89b59c41af60e0f3b";
+      rev = "72e723187ca3596b67bcd3786457234ed40c75d2";
       fetchSubmodules = true;
-      sha256 = "sha256-mMCZpwqkykvc30ucM0tEjWymo2BH+B881rxjoWb2prQ=";
+      sha256 = "sha256-rbTdWkUinjWtHqh+RrbqCZ9E2rYpqm8SxlFrmoWJrt0=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./wezterm-4906789a6d61da58f73b95f89b59c41af60e0f3b/Cargo.lock;
+      lockFile = ./wezterm-72e723187ca3596b67bcd3786457234ed40c75d2/Cargo.lock;
       outputHashes = {
         "xcb-imdkit-0.3.0" = "sha256-77KaJO+QJWy3tJ9AF1TXKaQHpoVOfGIRqteyqpQaSWo=";
         "sqlite-cache-0.1.3" = "sha256-sBAC8MsQZgH+dcWpoxzq9iw5078vwzCijgyQnMOWIkk=";
       };
     };
-    date = "2024-11-29";
+    date = "2024-12-04";
   };
 }
