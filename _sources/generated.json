@@ -191,11 +191,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-57AGFAUaJ0X18qwuotaybIPZoe5Hm6RzYqE81Z/e6nU=",
+            "sha256": "sha256-A0ALw5noXeeCGvWEFJMyYeNb9mMHyr3DC3T0yK1MQoM=",
             "type": "url",
-            "url": "https://github.com/UltimateHackingKeyboard/agent/releases/download/v5.0.1/UHK.Agent-5.0.1-linux-x86_64.AppImage"
+            "url": "https://github.com/UltimateHackingKeyboard/agent/releases/download/v5.0.2/UHK.Agent-5.0.2-linux-x86_64.AppImage"
         },
-        "version": "5.0.1"
+        "version": "5.0.2"
     },
     "wezterm": {
         "cargoLocks": {
