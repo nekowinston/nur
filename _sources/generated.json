@@ -52,7 +52,7 @@
     },
     "gpt4all": {
         "cargoLocks": null,
-        "date": "2025-01-23",
+        "date": "2025-01-24",
         "extract": null,
         "name": "gpt4all",
         "passthru": null,
@@ -64,12 +64,12 @@
             "name": null,
             "owner": "nomic-ai",
             "repo": "gpt4all",
-            "rev": "49df6464a735bf252c3b0076af8cc42e7117d798",
-            "sha256": "sha256-WMOUq/WDK5rg5agn3iOkYhSvf9HX0zs75CvDKc59e9c=",
+            "rev": "4fbc20ced985703c9cef433363b6b6c9c5526bcf",
+            "sha256": "sha256-1A1RY/O44HZiuo70eGrFDcMA4BQiJvV/jAWSTj9Co24=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "49df6464a735bf252c3b0076af8cc42e7117d798"
+        "version": "4fbc20ced985703c9cef433363b6b6c9c5526bcf"
     },
     "icat": {
         "cargoLocks": null,
@@ -200,14 +200,14 @@
     "wezterm": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./wezterm-6c443bee9a21b6d37e06227085ddcd9633529a69/Cargo.lock",
+                "./wezterm-4bf0007cefff7f1ad139d89b54f074d5ad7d2184/Cargo.lock",
                 {
                     "sqlite-cache-0.1.3": "sha256-sBAC8MsQZgH+dcWpoxzq9iw5078vwzCijgyQnMOWIkk=",
                     "xcb-imdkit-0.3.0": "sha256-77KaJO+QJWy3tJ9AF1TXKaQHpoVOfGIRqteyqpQaSWo="
                 }
             ]
         },
-        "date": "2025-01-16",
+        "date": "2025-01-24",
         "extract": null,
         "name": "wezterm",
         "passthru": null,
@@ -219,11 +219,11 @@
             "name": null,
             "owner": "wez",
             "repo": "wezterm",
-            "rev": "6c443bee9a21b6d37e06227085ddcd9633529a69",
-            "sha256": "sha256-v3zW0/UBrseSgI1irB1pK9C41zZ78Pb0lIgeNEuY2dM=",
+            "rev": "4bf0007cefff7f1ad139d89b54f074d5ad7d2184",
+            "sha256": "sha256-YN1C+cgF2T/dUljCZO5RMdbJsun+7lgqLN7BW+IMZsg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "6c443bee9a21b6d37e06227085ddcd9633529a69"
+        "version": "4bf0007cefff7f1ad139d89b54f074d5ad7d2184"
     }
 }
